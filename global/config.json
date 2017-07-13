@@ -33,13 +33,16 @@
 	"megafon": {
 		"projects": [{
 			"name": "purple",
-			"version": "11"
+			"version": "14"
 		}],
 		"exec": "0",
 		"dirs": []
 	},
 	"beeline": {
-		"projects": [],
+		"projects": [{
+			"name": "purple",
+			"version": "1"
+		}],
 		"exec": "0",
 		"dirs": []
 	},

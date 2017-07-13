@@ -1,3 +1,5 @@
+"use strict";
+
 module.exports = function (gulp, p, s) {
 	return function() {
 		var getVersion = function() {
@@ -8,11 +10,10 @@ module.exports = function (gulp, p, s) {
 
 		var buildArchiv = gulp.src(s.build + '/**/*.*')
 			.pipe(p.zip(s.oss + '-' + s.app + '.v' + getVersion() + '.zip'))
-			.pipe(gulp.dest(s.globalConfig.dirs.release))
 			.pipe(gulp.dest(s.defaultConfig.dirs.history))
 			.pipe(gulp.dest(s.globalConfig.dirs.history));
 
-		console.log('---------- Релиз ' + s.oss + '-' + s.app + '.v' + getVersion() + '.zip добавлен в config.json и историю ');
+		console.log(`---------- Релиз ${s.oss}-${s.app}.v${getVersion()}.zip добавлен в config.json и историю.\n---------- Доступен в ${s.globalConfig.dirs.history}`);
 
 		if (s.oss === 'mts') {
 			return gulp.src("../global/config.json")
