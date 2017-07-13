@@ -20,7 +20,7 @@
 	"mts": {
 		"projects": [{
 			"name": "purple",
-			"version": "3",
+			"version": "7",
 			"wap": false
 		}, {
 			"name": "red",
@@ -33,7 +33,7 @@
 	"megafon": {
 		"projects": [{
 			"name": "purple",
-			"version": "9"
+			"version": "11"
 		}],
 		"exec": "0",
 		"dirs": []
