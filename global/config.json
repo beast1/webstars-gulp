@@ -1,0 +1,51 @@
+{
+	"global": {
+		"dirs": {
+			"history": "D:/webstars/global/history",
+			"release": "D:/webstars/global/latest-release",
+			"oss": {
+				"mts": "D:/webstars/mts",
+				"megafon": "D:/webstars/megafon",
+				"beeline": "D:/webstars/beeline",
+				"tele2": "D:/webstars/tele2"
+			}
+		}
+	},
+	"default": {
+		"dirs": {
+			"build": "build",
+			"history": "history"
+		}
+	},
+	"mts": {
+		"projects": [{
+			"name": "purple",
+			"version": "1",
+			"wap": false
+		}, {
+			"name": "red",
+			"version": "2",
+			"wap": false
+		}],
+		"exec": "0",
+		"dirs": []
+	},
+	"megafon": {
+		"projects": [{
+			"name": "purple",
+			"version": "7"
+		}],
+		"exec": "0",
+		"dirs": []
+	},
+	"beeline": {
+		"projects": [],
+		"exec": "0",
+		"dirs": []
+	},
+	"tele2": {
+		"projects": [],
+		"exec": "0",
+		"dirs": []
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"projects": [
+		{
+			"name": "purple",
+			"wap": "false"
+		}
+	],
+	"exec": "0",
+	"dirs": {
+		"build": "build",
+		"release": "release",
+		"history": "history",
+		"gHistory": "../global-history"
+	}
+}

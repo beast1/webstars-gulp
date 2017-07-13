@@ -1,0 +1,42 @@
+{
+  "global": {
+    "dirs": {
+      "history": "D:/webmasters/global/history",
+      "release": "D:/webmasters/global/latest-release",
+      "oss": {
+        "mts": "D:/webmasters/lp-mts",
+        "megafon": "D:/webmasters/lp-megafon",
+        "beeline": "D:/webmasters/lp-beeline",
+        "tele2": "D:/webmasters/lp-tele2"
+      }
+    }
+  },
+  "default": {
+    "dirs": {
+      "build": "build",
+      "history": "history"
+    }
+  },
+  "mts": {
+    "projects": [
+      {
+        "name": "purple",
+        "wap": false
+      },
+      {
+        "name": "sdh5ew"
+      }
+    ],
+    "exec": 0
+  },
+  "megafon": {},
+  "beeline": {},
+  "tele2": {
+    "projects": [
+      {
+        "name": "purple",
+        "wap": false
+      }
+    ]
+  }
+}
