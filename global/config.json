@@ -33,7 +33,7 @@
 	"megafon": {
 		"projects": [{
 			"name": "purple",
-			"version": "7"
+			"version": "9"
 		}],
 		"exec": "0",
 		"dirs": []

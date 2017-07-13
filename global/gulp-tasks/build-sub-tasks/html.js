@@ -24,6 +24,8 @@ module.exports = function (gulp, p, s) {
 						s.app + '/subscribe.html',
 						s.app + '/describe.html'
 					])
+					.pipe(p.replace('css/', ''))
+					.pipe(p.replace('img/', ''))
 					.pipe(gulp.dest(s.build));
 		}
 	}

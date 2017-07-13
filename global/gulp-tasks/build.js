@@ -8,11 +8,11 @@ module.exports = function (gulp, p, s) {
 	return function () {
 		switch (s.oss) {
 			default:
-				getSubTask('sass');
+				getSubTask('css');
 				getSubTask('html');
 				getSubTask('img');		
 			case 'mts': 
-				getSubTask('sass');
+				getSubTask('css');
 				getSubTask('html');
 				getSubTask('img');		
 				getSubTask('js');

@@ -6,6 +6,7 @@ module.exports = function (gulp, p, s) {
 						s.app + '/css/style.css',
 						s.app + '/css/normalize.css'
 					])
+					.pipe(p.replace('../img/', ''))
 					.pipe(gulp.dest(s.build + '/css'));
 				  }
 	}

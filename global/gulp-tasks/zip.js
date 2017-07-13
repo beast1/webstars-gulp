@@ -48,15 +48,3 @@ module.exports = function (gulp, p, s) {
 		}
 	};
 };
-
-// gulp.task('edit', function() {
-// 	return gulp.src("../global/config.json")
-// 	  .pipe(p.jsonEditor(function(json) {
-// 	    json.mts.projects.push({
-// 	    	"name": "red",
-// 	    	"version": "0.2"
-// 	    });
-// 	    return json; // must return JSON object. 
-// 	  }))
-// 	  .pipe(gulp.dest("../global"));
-// });
