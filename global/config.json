@@ -20,7 +20,7 @@
 	"mts": {
 		"projects": [{
 			"name": "purple",
-			"version": "1",
+			"version": "3",
 			"wap": false
 		}, {
 			"name": "red",

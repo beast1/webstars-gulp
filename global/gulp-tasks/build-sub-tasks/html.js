@@ -1,7 +1,7 @@
 module.exports = function (gulp, p, s) {
-	return function() {
 		switch (s.oss) {
 			case 'mts': 
+				console.log(s.oss);
 				var buildHtml = gulp.src([
 						s.app + '/full-page.html',
 						s.app + '/html/blocks/*.html'
@@ -18,7 +18,9 @@ module.exports = function (gulp, p, s) {
 					}))
 					.pipe(gulp.dest(s.build));
 				}
+			break 
 			case 'megafon':
+				console.log(s.oss);
 				var buildHtml = gulp.src([
 						s.app + '/sign-in.html',
 						s.app + '/subscribe.html',
@@ -27,6 +29,6 @@ module.exports = function (gulp, p, s) {
 					.pipe(p.replace('css/', ''))
 					.pipe(p.replace('img/', ''))
 					.pipe(gulp.dest(s.build));
+			break
 		}
-	}
 }

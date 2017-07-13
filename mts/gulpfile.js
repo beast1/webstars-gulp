@@ -6,14 +6,19 @@ var p = require('gulp-load-plugins')({
 	lazy: false
 });
 
-var	config 				 = require('./const/config.json'),
-		project 			 = config.projects[config.exec],
+var	oss            = "mts",
+		globalConfig   = require('../global/config.json').global,
+		localConfig 	 = require('../global/config.json').mts,
+		defaultConfig  = require('../global/config.json').default,
+		project 			 = localConfig.projects[localConfig.exec],
 		app 					 = project.name,
-		build  				 = config.dirs.build;
+		build  				 = defaultConfig.dirs.build;
 
 var s = {
-	"oss": "mts",
-	"config": config,
+	"oss": oss,
+	"globalConfig": globalConfig,
+	"localConfig": localConfig,
+	"defaultConfig": defaultConfig,
 	"project": project,
 	"app": app,
 	"build": build
