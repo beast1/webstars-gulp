@@ -1,30 +1,21 @@
-// module.exports = function (gulp, p, s) {
-// 	function getSubTask(task) {
-// 	  return require(`sub-tasks/${subTask}`)(gulp, p, s);
-// 	}
-// 	return function () {
-// 	  var buildCss = gulp.src([
-// 			s.app + '/css/style.css',
-// 			s.app + '/css/normalize.css'
-// 		])
-// 		.pipe(gulp.dest(s.build + '/css'));
+"use strict";
 
-// 		getSubTask('build__html');
+module.exports = function (gulp, p, s) {
+	function getSubTask(task) {
+	  return require('D:/webstars/global/gulp-tasks/build-sub-tasks/' + task)(gulp, p, s);
+	}
 
-// 		var buildImg = gulp.src(s.app + '/img/**/*')
-// 			.pipe(p.imagemin([
-// 	        p.imagemin.optipng({
-// 	            optimizationlevel: 3
-// 	        }),
-// 	        p.imagemin.jpegtran({
-// 	            progressive: true
-// 	        })
-// 	    	], {
-// 	    		verbose: true
-// 	    	}))
-// 			.pipe(gulp.dest(s.build + '/img')); 
-
-// 		var buildJs = gulp.src(s.app + '/js/script.js')
-// 			.pipe(gulp.dest(s.build + '/js'));
-// 	};
-// };
+	return function () {
+		switch (s.oss) {
+			default:
+				getSubTask('sass');
+				getSubTask('html');
+				getSubTask('img');		
+			case 'mts': 
+				getSubTask('sass');
+				getSubTask('html');
+				getSubTask('img');		
+				getSubTask('js');
+		}	
+	};
+};

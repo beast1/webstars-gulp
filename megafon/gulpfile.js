@@ -25,10 +25,6 @@ var s = {
 	"build": build
 }
 
-function getTask(task) {
-  return require('../global/gulp-tasks/' + task)(gulp, p, s);
-}
-
 gulp.task('sass', getTask('sass'));
 gulp.task('zip', getTask('zip'));
 gulp.task('serve', getTask('serve'));
@@ -38,30 +34,12 @@ gulp.task('build', ['sass', 'html'], getTask('build'));
 
 gulp.task('default', ['watch']);
 
-gulp.task('build', ['sass'], function() {
-	var buildCss = gulp.src([
-			app + '/css/style.css',
-			app + '/css/normalize.css'
-		])
-		.pipe(replace('../img/', ''))
-		.pipe(gulp.dest(build + '/css'));
-
-	var buildHtml = gulp.src([
-			app + '/sign-in.html',
-			app + '/subscribe.html',
-			app + '/describe.html'
-		])
-		.pipe(replace('css/', ''))
-		.pipe(replace('img/', ''))
-		.pipe(gulp.dest(build));
-
-	var buildImg = gulp.src(app + '/img/**/*')
-		.pipe(cache(imagemin()))
-		.pipe(gulp.dest(build + '/img')); 
-
-	var buildJs = gulp.src(app + '/js/scripts.js')
-		.pipe(gulp.dest(build + '/js'));
-});
+// gulp.task('sass', require('../global/gulp-tasks/sass')(gulp, p, s));
+// gulp.task('zip', require('../global/gulp-tasks/zip')(gulp, p, s));
+// gulp.task('serve', require('../global/gulp-tasks/serve')(gulp, p, s));
+// gulp.task('watch', ['sass', 'html', 'serve'], require('../global/gulp-tasks/watch')(gulp, p, s));
+// gulp.task('html', require('../global/gulp-tasks/html')(gulp, p, s));
+// gulp.task('build', ['sass', 'html'], require('../global/gulp-tasks/build')(gulp, p, s));
 
 gulp.task('clearcache', function () { return cache.clearAll(); });
 
