@@ -2,65 +2,81 @@
 	"page": "sign-in",
 	"title": "Получить доступ к файлам",
 	"inputs": {
-		"MSISDN_INPUT": {
+		"phone": {
+			"id": "MSISDN_INPUT",
 			"label": "Введите ваш номер телефона:",
 			"class": "msisdn"
 		},
-		"SMS_CODE_INPUT": {
+		"sms": {
+			"id": "SMS_CODE_INPUT",
 			"label": "Введите код, присланный в СМС:",
 			"class": "text_input  capt"
 		},
-		"CAPTCHA_INPUT": {
+		"captcha": {
+			"id": "CAPTCHA_INPUT",
 			"label": "Введите код с картинки",
-			"class": "code"
-		},
+			"class": "code",
+			"src": "/col/mds4/adminif/css/newadminif/captcha_sample.png",
+			"reload": "CAPTCHA_RELOAD_ELEM"
+		}
 	},
 	"buttons": {
-		"submit": "Скачать контент",
+		"submit": "Скачать контент"
 	},
-	"footer": "<START_OPTION_INFO_BLOCK>/n  Информация для абонентов - тел. 8-800-500-25-43 (бесплатно в домашнем регионе) |  <a href='ваша ссылка'>Правила подписки поставщика услуг</a> | <a href='#<LK_LINK_URL>'>Личный кабинет</a>/n<END_OPTION_INFO_BLOCK>"
+	"footer": "<START_OPTION_INFO_BLOCK>Информация для абонентов - тел. 8-800-500-25-43 (бесплатно в домашнем регионе) |  <a href='ваша ссылка'>Правила подписки поставщика услуг</a> | <a href='#<LK_LINK_URL>'>Личный кабинет</a><END_OPTION_INFO_BLOCK>"
 },
 {
 	"page": "subscribe",
 	"title": "Готово к скачиванию",
 	"inputs": {
-		"MSISDN_INPUT": {
+		"phone": {
+			"id": "MSISDN_INPUT",
 			"label": "Введите ваш номер телефона:",
 			"class": "msisdn"
 		},
-		"SMS_CODE_INPUT": {
+		"sms": {
+			"id": "SMS_CODE_INPUT",
 			"label": "Введите код, присланный в СМС:",
 			"class": "text_input  capt"
 		},
-		"CAPTCHA_INPUT": {
+		"captcha": {
+			"id": "CAPTCHA_INPUT",
 			"label": "Введите код с картинки",
-			"class": "code"
-		},
+			"class": "code",
+			"src": "/col/mds4/adminif/css/newadminif/captcha_sample.png",
+			"reload": "CAPTCHA_RELOAD_ELEM"
+		}
 	},
 	"buttons": {
-		"submit": "Скачать контент",
+		"submit": "Скачать контент"
 	},
-	"footer": "<START_OPTION_INFO_BLOCK>/n  Нажатием на кнопку 'Смотреть' Вы подтверждаете свое согласие с подключением подписки SUBNAME и <a href='http://podpiski.megafon.ru/col/mds4/web/jsp/files/oferta.pdf'>Условиями предоставления подписки</a>. SUBPRICE. ACCOUNT. Услуга предоставляется Контент-провайдером PROVIDER. Информация для абонентов - тел. 8-800-500-25-43 (бесплатно в домашнем регионе) |  <a href='ваша ссылка'>Правила подписки поставщика услуг</a> | <a href='#<LK_LINK_URL>'>Личный кабинет</a>/n<END_OPTION_INFO_BLOCK>"
+	"footer": "<START_OPTION_INFO_BLOCK>  Нажатием на кнопку 'Смотреть' Вы подтверждаете свое согласие с подключением подписки SUBNAME и <a href='http://podpiski.megafon.ru/col/mds4/web/jsp/files/oferta.pdf'>Условиями предоставления подписки</a>. SUBPRICE. ACCOUNT. Услуга предоставляется Контент-провайдером PROVIDER. Информация для абонентов - тел. 8-800-500-25-43 (бесплатно в домашнем регионе) |  <a href='ваша ссылка'>Правила подписки поставщика услуг</a> | <a href='#<LK_LINK_URL>'>Личный кабинет</a><END_OPTION_INFO_BLOCK>"
 },
 {
 	"page": "describe",
 	"title": "Отмена вашей подписки от SUBNAME",
 	"inputs": {
-		"MSISDN_INPUT": {
+		"phone": {
+			"id": "MSISDN_INPUT",
 			"label": "Введите ваш номер телефона:",
 			"class": "msisdn"
 		},
-		"SMS_CODE_INPUT": {
+		"sms": {
+			"id": "SMS_CODE_INPUT",
 			"label": "Введите код, присланный в СМС:",
 			"class": "text_input  capt"
 		},
-		"CAPTCHA_INPUT": {
+		"captcha": {
+			"id": "CAPTCHA_INPUT",
 			"label": "Введите код с картинки",
-			"class": "code"
-		},
+			"class": "code",
+			"src": "/col/mds4/adminif/css/newadminif/captcha_sample.png",
+			"reload": "CAPTCHA_RELOAD_ELEM"
+		}
 	},
 	"buttons": {
-		"submit": "Отписаться",
+		"submit": "Да",
+		"cencel": "Нет"
 	},
-	"footer": "<START_OPTION_INFO_BLOCK>/n  Информация для абонентов - тел. 8-800-500-25-43 (бесплатно в домашнем регионе) |  <a href='ваша ссылка'>Правила подписки поставщика услуг</a> | <a href='#<LK_LINK_URL>'>Личный кабинет</a>/n<END_OPTION_INFO_BLOCK>"
+	"footer": "<START_OPTION_INFO_BLOCK>  Информация для абонентов - тел. 8-800-500-25-43 (бесплатно в домашнем регионе) |  <a href='ваша ссылка'>Правила подписки поставщика услуг</a> | <a href='#<LK_LINK_URL>'>Личный кабинет</a><END_OPTION_INFO_BLOCK>"
 }]
