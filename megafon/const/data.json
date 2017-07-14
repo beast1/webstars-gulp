@@ -50,7 +50,7 @@
 	"buttons": {
 		"submit": "Скачать контент"
 	},
-	"footer": "<START_OPTION_INFO_BLOCK>  Нажатием на кнопку 'Смотреть' Вы подтверждаете свое согласие с подключением подписки SUBNAME и <a href='http://podpiski.megafon.ru/col/mds4/web/jsp/files/oferta.pdf'>Условиями предоставления подписки</a>. SUBPRICE. ACCOUNT. Услуга предоставляется Контент-провайдером PROVIDER. Информация для абонентов - тел. 8-800-500-25-43 (бесплатно в домашнем регионе) |  <a href='ваша ссылка'>Правила подписки поставщика услуг</a> | <a href='#<LK_LINK_URL>'>Личный кабинет</a><END_OPTION_INFO_BLOCK>"
+	"footer": "<START_OPTION_INFO_BLOCK><p>Нажатием на кнопку 'Скачать контент' Вы подтверждаете свое согласие с подключением подписки SUBNAME и <a href='http://api.sdpays.com/_oferta_url.php?project_id=30497'>Правила подписки поставщика услуги</a> и <a href='http://podpiski.megafon.ru/col/mds4/web/jsp/files/oferta.pdf'>Условиями предоставления подписки</a>. Стоимость подписки SUBPRICE. ACCOUNT. Услуга предоставляется Контент-провайдером PROVIDER.</p><p>Информация для абонентов - тел. 8-800-500-25-43 (бесплатно в домашнем регионе)<a href='#<LK_LINK_URL>'>Личный кабинет</a>;</p><END_OPTION_INFO_BLOCK>"
 },
 {
 	"page": "describe",
@@ -78,5 +78,5 @@
 		"submit": "Да",
 		"cencel": "Нет"
 	},
-	"footer": "<START_OPTION_INFO_BLOCK>  Информация для абонентов - тел. 8-800-500-25-43 (бесплатно в домашнем регионе) |  <a href='ваша ссылка'>Правила подписки поставщика услуг</a> | <a href='#<LK_LINK_URL>'>Личный кабинет</a><END_OPTION_INFO_BLOCK>"
+	"footer": "<START_OPTION_INFO_BLOCK>Информация для абонентов - тел. 8 800 500-25-43 (бесплатно в домашнем регионе) | <a href='ваша ссылка'>Правила подписки поставщика услуг</a> | <a href='#<LK_LINK_URL>'>Личный кабинет</a><END_OPTION_INFO_BLOCK>"
 }]
