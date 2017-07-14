@@ -12,6 +12,7 @@ module.exports = function (gulp, p, s) {
 		    .pipe(p.browserSync.reload({stream: true}));
 		};
 	} else if (s.oss === 'megafon') {
+		return function() {
 			console.log(`---------- Сборка блоков из D:/webstars/megafon/${s.app}/html/blocks`);
 			console.log(`---------- Подстановка значений из D:/webstars/megafon/const/data.json`);
 			var data = require('D:/webstars/megafon/const/data.json');
@@ -43,6 +44,7 @@ module.exports = function (gulp, p, s) {
 				 .pipe(p.htmlBeautify())
 			   .pipe(gulp.dest(s.app))
 			   .pipe(p.browserSync.reload({stream: true}));
-			}
+			};
+		};
 	};
 };

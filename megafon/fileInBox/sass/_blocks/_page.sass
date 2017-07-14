@@ -1,12 +1,17 @@
 .page
 	display: flex
-	max-width: 1138px
+	max-width: 920px
 	width: 100%
 	margin: 0 auto
+
+	font-size: 1rem
 
 	background-color: $white
 	border-radius: 6px
 	overflow: hidden
+
+	@media (max-width: $s-sm) 
+		max-width: 600px	
 
 	&__left
 		@media (min-width: $s-sm) 
@@ -18,14 +23,15 @@
 			background-image: url("../img/bg-icons.jpg")
 
 	&__right
-		padding: 60px
+		width: 100%	
+		padding: 1.4em
 
 	&__title 
 		margin: 0
-		margin-bottom: 30px
+		margin-bottom: .8rem
 
-		font-size: 30px
-		line-height: 38px
+		font-size: 1.7em
+		line-height: 1
 		font-weight: 700
 		text-transform: uppercase
 		text-align: center

@@ -5,56 +5,48 @@
 	&__row
 		display: flex
 
+		&:not(:last-of-type)
+			margin-bottom: 1em
+
+	&__controls 
+		display: flex
+
+	&__control
+		&:not(:last-of-type)
+			margin-right: 1.33rem
+
 	&__item
-		max-width: 391px
+		max-width: 26rem
 		width: 100%
 
-		&:not(:last-of-type)
-			margin-bottom: 44px
-
-			@media (max-width: $sm)
-				margin-bottom: 30px	
+		font-size: 1.4rem	
 
 		&_captcha
-			padding-top: 43px
-			margin-left: 16px
+			padding-top: 
+			margin-left: 1rem
 
 	&__label
 		display: flex
 		flex-direction: column
-		margin-bottom: 12px
-
-		font-size: 22px
-
-		@media (max-width: $sm)
-				font-size: 19px	
+		font-size: 0.95em
 
 		&_captcha
 			width: 100%
 
 			@media (min-width: $sm)
-				max-width: 391px
+				max-width: 26rem
 
 	&__input
 		width: 100%
-		min-height: 66px
-		padding: 0 15px
+		min-height: 2em
+		padding: 0 1em
 		border: none
+		margin-top: 0.3em
 		
 		color: $black
-		font-size: 26px
 
 		background-color: $gray-ligten
-		border-radius: 3px
-
-		@media (min-width: $sm)
-			max-width: 391px
-
-		@media (max-width: $sm)
-			margin-top: 9px	
-
-		@media (max-width: $xs)
-			min-height: 50px
+		border-radius: 3px				
 
 	&__input-wrap
 		position: relative
@@ -63,33 +55,25 @@
 			content: ""
 			
 			position: absolute
-			left: 29px
-			bottom: 17px
+			left: 1em
+			bottom: 0em
 
-			width: 15px
-			height: 34px
+			width: 1em
+			height: 2em
 
 			background-image: url("../img/icon-form__phone.png")
 			background-repeat: no-repeat
 
-			@media (max-width: $xs)
-				bottom: 10px
-				left: 15px
-
 		input
-			padding-left : 70px
-
-			@media (max-width: $xs)
-				padding-left: 40px
+			padding-left: 2.4em
 
 	&__captcha-img
 		display: block
 
 	&__captcha-reload
 		color: inherit
-		font-size: 14px
+		font-size: 1rem
 
 
 	&__submit
-		margin-top: 20px
-		margin-bottom: 20px
+		margin: .4em auto 1em

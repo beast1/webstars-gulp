@@ -3,7 +3,7 @@
 
 var gulp = require('gulp');
 var p = require('gulp-load-plugins')({
-	pattern: ['browser-sync', 'merge-stream', 'gulp-*', 'gulp.*', '@*/gulp{-,.}*'],
+	pattern: ['browser-sync', 'del', 'merge-stream', 'gulp-*', 'gulp.*', '@*/gulp{-,.}*'],
 	lazy: false
 });
 
@@ -32,11 +32,16 @@ function getTask(task) {
 gulp.task('sass', getTask('sass'));
 gulp.task('zip', getTask('zip'));
 gulp.task('serve', getTask('serve'));
-gulp.task('watch', ['sass', 'html', 'serve'], getTask('watch'));
+// gulp.task('watch', ['sass', 'html', 'serve'], getTask('watch'));
 gulp.task('html', getTask('html'));
 gulp.task('build', ['sass', 'html'], getTask('build'));
 
 gulp.task('default', ['watch']);
+
+gulp.task('watch', ['sass', 'html', 'serve'], function() {
+	gulp.watch(s.app + '/sass/**/*.sass', ['sass']);	
+	gulp.watch(s.app + '/html/**/*.html', ['html']);
+});
 
 // gulp.task('sass', require('../global/gulp-tasks/sass')(gulp, p, s));
 // gulp.task('zip', require('../global/gulp-tasks/zip')(gulp, p, s));
