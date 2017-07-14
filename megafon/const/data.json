@@ -1,5 +1,5 @@
-{
-	"page": "авторизация",
+[{
+	"page": "sign-in",
 	"title": "Получить доступ к файлам",
 	"inputs": {
 		"MSISDN_INPUT": {
@@ -21,7 +21,7 @@
 	"footer": "<START_OPTION_INFO_BLOCK>/n  Информация для абонентов - тел. 8-800-500-25-43 (бесплатно в домашнем регионе) |  <a href='ваша ссылка'>Правила подписки поставщика услуг</a> | <a href='#<LK_LINK_URL>'>Личный кабинет</a>/n<END_OPTION_INFO_BLOCK>"
 },
 {
-	"page": "подписка",
+	"page": "subscribe",
 	"title": "Готово к скачиванию",
 	"inputs": {
 		"MSISDN_INPUT": {
@@ -43,7 +43,7 @@
 	"footer": "<START_OPTION_INFO_BLOCK>/n  Нажатием на кнопку 'Смотреть' Вы подтверждаете свое согласие с подключением подписки SUBNAME и <a href='http://podpiski.megafon.ru/col/mds4/web/jsp/files/oferta.pdf'>Условиями предоставления подписки</a>. SUBPRICE. ACCOUNT. Услуга предоставляется Контент-провайдером PROVIDER. Информация для абонентов - тел. 8-800-500-25-43 (бесплатно в домашнем регионе) |  <a href='ваша ссылка'>Правила подписки поставщика услуг</a> | <a href='#<LK_LINK_URL>'>Личный кабинет</a>/n<END_OPTION_INFO_BLOCK>"
 },
 {
-	"page": "отписка",
+	"page": "describe",
 	"title": "Отмена вашей подписки от SUBNAME",
 	"inputs": {
 		"MSISDN_INPUT": {
@@ -63,4 +63,4 @@
 		"submit": "Отписаться",
 	},
 	"footer": "<START_OPTION_INFO_BLOCK>/n  Информация для абонентов - тел. 8-800-500-25-43 (бесплатно в домашнем регионе) |  <a href='ваша ссылка'>Правила подписки поставщика услуг</a> | <a href='#<LK_LINK_URL>'>Личный кабинет</a>/n<END_OPTION_INFO_BLOCK>"
-}
+}]

@@ -32,8 +32,8 @@
 	},
 	"megafon": {
 		"projects": [{
-			"name": "purple",
-			"version": "14"
+			"name": "fileInBox",
+			"version": "2"
 		}],
 		"exec": "0",
 		"dirs": []
