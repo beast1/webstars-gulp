@@ -23,7 +23,7 @@
 			"wap": false
 		}, {
 			"name": "filesTree",
-			"version": "0",
+			"version": "2",
 			"wap": false
 		}],
 		"exec": "1",
@@ -40,7 +40,8 @@
 	"beeline": {
 		"projects": [{
 			"name": "archivStorageLoad",
-			"version": "0"
+			"version": "0",
+			"cssSeparate": "false"
 		}],
 		"exec": "0",
 		"dirs": {
@@ -48,7 +49,10 @@
 		}
 	},
 	"tele2": {
-		"projects": [],
+		"projects": [{
+			"name": "test",
+			"version": "0"
+		}],
 		"exec": "0",
 		"dirs": []
 	}

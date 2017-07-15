@@ -1,1 +1,235 @@
-order
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head>  
+
+    <title th:text="${isWebRequest} == false ? 'Подтверждение оплаты с баланса телефона' : 'Подтверждение оплаты с баланса телефона шаг 2 из 2'">Подтверждение оплаты с баланса телефона</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		
+    <!-- <style th:if="${isWebRequest} == false">
+      @@include('../css/style.css')
+    </style>
+    <style th:if="${isWebRequest} == true">
+      @@include('../css/style.css')
+    </style> -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+      .label-column label{
+        display: block;
+        margin-top: 20px;
+      }
+      #msisdn{
+        display: block;
+        margin-top: 20px;
+      }
+    </style>
+    <script type="text/javascript">
+      function overlay() {
+        el = document.getElementById("overlay");
+        el.style.display = (el.style.display == "block") ? "none" : "block";
+      }
+    </script>
+  </head>
+  <!-- <body th:if="${isWebRequest} ==false" class="lbody">
+    <form method="POST" action="/landing" th:attr="action=@{order.html(sessionId=${session_id})}" name="mainFrm">
+      <input type="hidden" name="requestId" th:value="${requestId}"/>
+      <input type="hidden" name="msisdn" th:value="${msisdn}"/>
+      <input type="hidden" name="repeatCode" value="false"/>
+
+      <div><br/></div>
+
+      <img src="data:image/png;base64,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"/>
+
+      <div style="font-size: 42px;white-space: nowrap;font-weight:bold;"><br/>Подтверждение оплаты с баланса телефона <br/></div>
+
+      <div th:replace="fragment/errors"></div>
+
+      <div>
+        <table width="95%" align="Left" border="0" cellspacing="2" cellpadding="2" class="content_block">
+          <colgroup>
+            <col width="60%" valign="top"/>
+            <col width="40%" valign="top"/>
+          </colgroup>
+          <tbody>
+            <tr>
+              <td colspan="2"><br/></td>
+            </tr>
+            <tr>
+              <td>Ваш номер телефона:</td>
+              <td th:text="'+7(' + ${#strings.substring(msisdn,1,4)} + ')' + ${#strings.substring(msisdn,4)}">+7(903)9770707</td>
+            </tr>
+            <tr>
+              <td width="40%" class="content_block">Контакты<br /> провайдера:</td>
+              <td class="content_block" th:utext="${#strings.replace(partnerContact,',',',&lt;br/&gt;')}"> ООО «Партнерские технологии»,<br/> 8-800-555-39-76,<br/> helpdesk@part-t.ru</td>
+            </tr>
+
+            <tr th:if="${issas == 'true'}">
+              <td class="label-column">
+                <label for="accountType">Тип списания</label>
+              </td>
+              <td>
+                <span id="accountType">Со специального авансового счёта</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2"></td>
+            </tr>
+            <div th:replace="fragment/captcha"></div>
+            <div th:replace="fragment/activation_code"></div>
+          </tbody>
+        </table>
+
+        <br/>
+
+        <table width="95%" align="Left" border="0" cellspacing="3" cellpadding="3" class="content_block">
+          <colgroup>
+            <col width="10%" valign="top"/>
+            <col width="45%" valign="top"/>
+            <col width="45%" valign="top"/>
+          </colgroup>
+          <tbody>
+            <tr>
+              <td colspan="3"><br/></td>
+            </tr>
+            <tr>
+              <td align="center" colspan="3"> <a href="http://moskva.beeline.ru/customers/products/mobile/services/details/uslugi-na-korotkikh-nomerakh/">Пользовательское соглашение</a> </td>
+            </tr>
+            <tr>
+              <td colspan="3"><br/></td>
+            </tr>
+            <tr>
+              <td colspan="3" align="center">
+                <div align="center" class="wap-button-group">
+                  <button id="wapSubmitBtn" type="submit" th:if="${useSmsLink}" class="btn" th:classappend="${!isWebRequest} ? 'wap'">
+                    Получить SMS
+                  </button>
+
+                  <button id="wapSubmitBtn" type="submit" class="btn" th:classappend="${!isWebRequest} ? 'wap'" th:if="${useSmsLink == null || useSmsLink == 'false'}">
+                    <span th:switch="${evalRequestType}">
+                      <span th:case="'single-request'">
+                        <span class="line1">Получить доступ</span>
+                        <br/>
+                        <span th:if="${tarifficationType == 1 and cpaRequestPriceCodePrice != null}" th:text="${cpaRequestPriceCodePrice} + ' руб.'" class="line2">13 руб.</span>
+                      </span>
+
+                      <span th:case="'subscription-request'">
+                        <span class="line1">Получить доступ</span>
+                        <br/>
+                        <span th:if="${cpaSubscriptionChargePeriodPriceCodePrice > 0}" th:text="${cpaSubscriptionChargePeriodPriceCodePrice} + ' руб.' + ' за ' + ${cpaSubscriptionChargePeriodStr}" class="line2">32 руб. за 10 дней</span>
+                      </span>
+
+                      <span th:case="'tnb-subscription-request'">
+                        <span class="line1">Получить доступ</span>
+                        <br/>
+
+                        <span th:text="${cpaSubscriptionChargePeriodPriceCodePrice > 0 ? cpaSubscriptionChargePeriodPriceCodePrice + ' руб.' : 'Бесплатно'} + ' ' + ${cpaTnbTryEndDate != null ? 'до ' + formatter.formatDate(cpaTnbTryEndDate, 'dd.MM.yyyy') : cpaSubscriptionPeriodStr}" class="line2">до ЧЧ.ММ.ГГ</span>
+
+                        <br/>
+
+                        <span th:if="${buy_cpaSubscriptionChargePeriodPriceCodePrice > 0}" th:text="'Далее ' + ${buy_cpaSubscriptionChargePeriodPriceCodePrice + ' руб.' + ' в ' + buy_cpaSubscriptionChargePeriodStr}" class="line3">32 руб. в 10 дней</span>
+                      </span>
+                    </span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </form>
+  </body> -->
+
+  <body th:if="${isWebRequest} == true">
+    <form method="POST" action="/landing" th:attr="action=@{order.html(sessionId=${session_id})}" name="mainFrm">
+      <div class="content_block_top" th:classappend="${!isWebRequest} ? 'wap'">
+        <div class="caption" th:utext="${isWebRequest} == false ? 'Подтверждение оплаты с баланса телефона' : 'Подтверждение оплаты с баланса телефона&lt;br /&gt;шаг 2 из 2'">Подтверждение оплаты с баланса телефона</div>
+      </div>
+
+      <div class="content_block_middle" th:classappend="${!isWebRequest} ? 'wap'">
+
+        <!-- <div th:replace="fragment/errors"></div> -->
+        @@include('../../const/fragments/errors.html')
+
+        <input type="hidden" name="requestId" th:value="${requestId}"/>
+        <input type="hidden" name="msisdn" th:value="${msisdn}"/>
+        <input type="hidden" name="repeatCode" value="false"/>
+
+        <table class="content" th:classappend="${!isWebRequest} ? 'wap'">
+          <tr>
+            <td class="label-column">
+              <label for="msisdn">Ваш номер телефона</label>
+            </td>
+            <td>
+              <span id="msisdn" th:text="'+7(' + ${#strings.substring(msisdn,1,4)} + ')' + ${#strings.substring(msisdn,4)}">+7(903)9770707</span>
+            </td>
+          </tr>
+
+          <!-- <tr th:if="${evalRequestType == 'subscription-request'}" th:include="fragment/subscription_info" th:remove="tag"></tr> -->
+          @@include('../../const/fragments/subscription_info.html')
+          <!-- <tr th:if="${evalRequestType == 'tnb-subscription-request'}" th:include="fragment/tnb_subscription_info" th:remove="tag"></tr> -->
+          <!-- @@include('../../const/fragments/tnb_subscription_info.html') -->
+          <!-- <tr th:if="${evalRequestType == 'single-request'}" th:include="fragment/single_request_info" th:remove="tag"></tr> -->
+          <!-- @@include('../../const/fragments/single_request_info.html') -->
+          <tr th:if="${issas == 'true'}">
+            <td class="label-column">
+              <label for="accountType">Тип списания</label>
+            </td>
+            <td>
+              <span id="accountType">Со специального авансового счёта</span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">&nbsp;</td>
+          </tr>
+          <div th:replace="fragment/captcha"></div>
+          <div th:replace="fragment/activation_code"></div>
+        </table>
+
+        <br/>
+
+        <div th:if="${isWebRequest} == true" class="button-group">
+          <button id="submitBtn" type="submit" class="btn" th:classappend="${!isWebRequest} ? 'wap'">ОК</button>
+        </div>
+        <div th:if="${isWebRequest} == false" class="wap-button-group">
+
+          <button id="wapSubmitBtn" type="submit" th:if="${useSmsLink}" class="btn" th:classappend="${!isWebRequest} ? 'wap'">
+            Получить SMS
+          </button>
+
+          <button id="wapSubmitBtn" type="submit" class="btn" th:classappend="${!isWebRequest} ? 'wap'" th:if="${useSmsLink == null || useSmsLink == 'false'}">
+            <span th:switch="${evalRequestType}">
+              <span th:case="'single-request'">
+                <span th:if="${tarifficationType == 1 and cpaRequestPriceCodePrice != null}" th:text="${cpaRequestPriceCodePrice} + ' руб.'" class="line1">13 руб.</span>
+                <span th:unless="${tarifficationType == 1 and cpaRequestPriceCodePrice != null}" class="line2">OK</span>
+              </span>
+
+              <span th:case="'subscription-request'">
+                <span>Получить доступ</span>
+                <br/>
+                <span th:if="${cpaSubscriptionChargePeriodPriceCodePrice > 0}" th:text="${cpaSubscriptionChargePeriodPriceCodePrice} + ' руб.' + ' за ' + ${cpaSubscriptionChargePeriodStr}" class="line3">32 руб. за 10 дней</span>
+                <span th:unless="${cpaSubscriptionChargePeriodPriceCodePrice > 0}" class="line4">OK</span>
+              </span>
+
+              <span th:case="'tnb-subscription-request'">
+                <span>Получить доступ</span>
+                <br/>
+
+                <span th:text="${cpaSubscriptionChargePeriodPriceCodePrice > 0 ? cpaSubscriptionChargePeriodPriceCodePrice + ' руб.' : 'Бесплатно'} + ' ' + ${cpaTnbTryEndDate != null ? 'до ' + formatter.formatDate(cpaTnbTryEndDate, 'dd.MM.yyyy') : cpaSubscriptionPeriodStr}" class="line5">до ЧЧ.ММ.ГГ</span>
+
+                <br/>
+
+                <span th:if="${buy_cpaSubscriptionChargePeriodPriceCodePrice > 0}" th:text="'Далее ' + ${buy_cpaSubscriptionChargePeriodPriceCodePrice + ' руб.' + ' в ' + buy_cpaSubscriptionChargePeriodStr}" class="line7">32 руб. в 10 дней</span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="content_block_bottom" th:classappend="${!isWebRequest} ? 'wap'">
+        <br/>
+        <br/>
+        <br/>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,1 +1,93 @@
-auth
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Билайн</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <div th:replace="fragment/styles"></div>
+  <link href="css/style.css" rel="stylesheet">
+
+  <script type="text/javascript">
+    function overlay() {
+      el = document.getElementById("overlay");
+      el.style.display = (el.style.display == "block") ? "none" : "block";
+    }
+  </script>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <form method="POST" action="/landing" th:attr="action=@{auth.html(sessionId=${session_id})}" name="mainFrm">
+          <div class="content_block_top" th:classappend="${!isWebRequest} ? 'wap'">
+            <div class="caption">шаг 1 <span>из 2</span></div>
+
+            <div class="caption__subtitle">
+              Регистрация пользователя
+            </div>
+            <div class="caption__desc">
+              На указанный вами номер телефона будет отправлено SMS с кодом подтверждения. Он потребуется вам для подтверждения оплаты.
+            </div>
+
+          </div>
+
+          <div class="content_block_middle" th:classappend="${!isWebRequest} ? 'wap'">
+
+            <div th:replace="fragment/errors"></div>
+
+            <table class="content">
+              <tr>
+                <td colspan="3">&nbsp;</td>
+              </tr>
+              <tr>
+                <td class="label-column">
+                  <label for="msisdn">Введите номер мобильного телефона</label>
+                  <div class="info">формат: <i>7XXXYYYYYYY</i></div>
+                </td>
+                <td class="item-column" colspan="2">
+                  <input id="msisdn" type="text" name="msisdn" th:value="${msisdn}" value="79031234567" maxlength="11"/>
+                </td>
+              </tr>
+        
+              <tr>
+                <td colspan="3">&nbsp;</td>
+              </tr>
+              <div th:replace="fragment/captcha"></div>
+              <tr>
+                <td colspan="3">&nbsp;</td>
+              </tr>
+              <tr>
+                <td  colspan="3"> <a href="http://moskva.beeline.ru/customers/products/mobile/services/details/uslugi-na-korotkikh-nomerakh/">Пользовательское соглашение</a> </td>
+              </tr>
+              <tr>
+                <td colspan="3" class="info">
+                  На указанный вами номер телефона будет бесплатно отправлено SMS c кодом подтверждения. Он потребуется вам для подтверждения оплаты.
+                </td>
+              </tr>
+            </table>
+
+            <div class="button-group">
+              <button id="submitBtn" class="btn" type="submit" th:classappend="${!isWebRequest} ? 'wap'">ОК</button>
+            </div>
+          </div>
+
+          <div class="content_block_bottom" th:classappend="${!isWebRequest} ? 'wap'">
+            <br/>
+            <br/>
+            <br/>
+          </div>
+        </form>
+
+      </div>
+      <div class="col-md-6">
+
+
+
+      </div>
+    </div><!--row-->
+  </div><!--container-->
+
+
+
+</body>
+</html>

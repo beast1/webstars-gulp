@@ -7,7 +7,7 @@ module.exports = function (gulp, p, s) {
 		}
 
 		if (s.oss === 'mts') {
-			getSubTask('del');
+			// getSubTask('del');
 			getSubTask('css');
 			getSubTask('html');
 			getSubTask('img');		
@@ -18,7 +18,7 @@ module.exports = function (gulp, p, s) {
 			getSubTask('img');
 			getSubTask('html');
 		} else {
-			getSubTask('del');
+			// getSubTask('del');
 			getSubTask('css');
 			getSubTask('img');
 			getSubTask('html');

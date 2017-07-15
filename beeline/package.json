@@ -1,5 +1,5 @@
 {
-  "name": "webstars.megafon-module",
+  "name": "webstars.beeline-module",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -28,6 +28,7 @@
     "gulp-replace": "^0.6.1",
     "gulp-rsync": "0.0.8",
     "gulp-sass": "^3.1.0",
+    "gulp-sequence": "^0.4.6",
     "gulp-uglify": "^2.1.2",
     "gulp-util": "^3.0.8",
     "gulp-zip": "^4.0.0",

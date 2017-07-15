@@ -4,7 +4,7 @@ module.exports = function (gulp, p, s) {
 		var buildImg = gulp.src(s.app + '/img/**/*')
 			.pipe(p.imagemin([
 	        p.imagemin.optipng({
-	            optimizationlevel: 3
+	            optimizationlevel: 7
 	        }),
 	        p.imagemin.jpegtran({
 	            progressive: true
