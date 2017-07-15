@@ -1,5 +1,4 @@
 node_modules
-
 ./global/config
 ./megafon/fileInBox
 ./mts/filesTree

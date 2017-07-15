@@ -1,0 +1,48 @@
+f<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Билайн</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <div th:replace="fragment/styles"></div>
+    </head>
+    <body>
+	
+	<div id="content">
+		<div id="container">
+			<div class="forminside">
+			
+				<form method="POST" action="/landing" th:attr="action=@{order.html(sessionId=${session_id})}" name="mainFrm">
+					<div class="content_block_top" th:classappend="${!isWebRequest} ? 'wap'">
+						<div class="caption">У вас недостаточно средств для заказа услуги</div>
+					</div>
+
+					<div class="content_block_middle" th:classappend="${!isWebRequest} ? 'wap'">
+						<div th:replace="fragment/errors"></div>
+						<br/>
+						<br/>
+
+						<input type="hidden" name="requestId" th:value="${requestId}"/>
+						<input id="action" type="hidden" name="action" value="rebilling" />
+						<input id="rebillingAgree" type="checkbox" name="rebillingAgree" value="true"/>
+						<label for="rebillingAgree">
+							Я даю согласие на предоставление в рассрочку текущей 
+							и последующих покупок в случае недостатка средств на счете мобильного телефона</label>
+
+						<div class="button-group">
+							<button id="submitBtn" class="btn" type="submit" th:classappend="${!isWebRequest} ? 'wap'">ОК</button>
+						</div>
+					</div>
+
+					<div class="content_block_bottom" th:classappend="${!isWebRequest} ? 'wap'">
+						<br/>
+						<br/>
+						<br/>
+					</div>
+				</form>
+				
+			</div><!-- /.forminside -->
+			
+		</div>
+	</div>
+<div class="align-middle"></div>
+</body>
+</html>

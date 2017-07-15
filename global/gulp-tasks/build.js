@@ -5,17 +5,23 @@ module.exports = function (gulp, p, s) {
 		function getSubTask(task) {
 		  return require('D:/webstars/global/gulp-tasks/build-sub-tasks/' + task)(gulp, p, s);
 		}
+
 		if (s.oss === 'mts') {
-			console.log('Start build for 3' + s.oss);
+			getSubTask('del');
 			getSubTask('css');
 			getSubTask('html');
 			getSubTask('img');		
 			getSubTask('js');
-		} else {
-			console.log('Start build for 2' + s.oss);
+		} else if (s.oss === 'beeline') {
+			// getSubTask('del');
 			getSubTask('css');
+			getSubTask('img');
 			getSubTask('html');
-			getSubTask('img');	
+		} else {
+			getSubTask('del');
+			getSubTask('css');
+			getSubTask('img');
+			getSubTask('html');
 		}	
 	};
 };

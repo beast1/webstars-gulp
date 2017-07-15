@@ -1,0 +1,57 @@
+@import "vars"
+
+html
+	box-sizing: border-box
+	height: 100%
+	
+	font-family: $default-font
+	color: $text-color
+	font-size: 93.75%
+	
+*
+	box-sizing: inherit
+
+body
+	display: flex
+	background-color: $body-bg
+
+a
+	color: $link-color
+
+.page
+	position: relative
+	bottom: -4em
+
+	max-width: 41em
+	width: 100%
+	padding: 1em 4em
+	border-left: .6em solid $color-success 
+	border-right: .6em solid $color-success 
+	margin: 0 auto
+
+	background-color: $white
+
+	&__header
+		position: relative
+		top: -4em
+
+		display: block
+
+		text-align: center
+
+	&__header-img
+		display: inline-block
+
+label
+	font-size: 1.66em
+
+input
+	height: 3.33em
+
+	&#ActivationCode
+		width: 100%
+
+	&#CaptchaCode
+		max-width: 62%
+		width: 100%
+		margin-right: 3%

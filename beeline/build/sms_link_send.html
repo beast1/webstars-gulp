@@ -1,0 +1,30 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Билайн</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <div th:replace="fragment/styles"></div>
+    </head>
+    <body>
+
+	<div id="content">
+		<div id="container">
+
+			<div class="forminside">
+				<div class="content_block_top" th:classappend="${!isWebRequest} ? 'wap'"></div>
+				<div class="content_block_middle" th:classappend="${!isWebRequest} ? 'wap'">
+					<div class="label-text">Вам выслано SMS-сообщение с ссылкой на контент</div>
+					<br/>
+					<br/>
+					<br/>
+				</div>
+				<div class="content_block_bottom" th:classappend="${!isWebRequest} ? 'wap'">
+			   
+				</div>
+
+			</div><!-- /.forminside -->
+			
+		</div>
+	</div>
+<div class="align-middle"></div>
+</body>
+</html>

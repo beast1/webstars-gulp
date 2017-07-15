@@ -1,5 +1,6 @@
 [{
 	"page": "sign-in",
+	"rusPage": "страница авторизации",
 	"title": "Получить доступ к файлам",
 	"inputs": {
 		"phone": {
@@ -17,7 +18,8 @@
 			"label": "Введите код с картинки",
 			"class": "code",
 			"src": "/col/mds4/adminif/css/newadminif/captcha_sample.png",
-			"reload": "CAPTCHA_RELOAD_ELEM"
+			"reloadId": "CAPTCHA_RELOAD_ELEM",
+			"reloadText": "Обновить код"
 		}
 	},
 	"buttons": {
@@ -27,6 +29,7 @@
 },
 {
 	"page": "subscribe",
+	"rusPage": "страница подписки",
 	"title": "Готово к скачиванию",
 	"inputs": {
 		"phone": {
@@ -44,7 +47,8 @@
 			"label": "Введите код с картинки",
 			"class": "code",
 			"src": "/col/mds4/adminif/css/newadminif/captcha_sample.png",
-			"reload": "CAPTCHA_RELOAD_ELEM"
+			"reloadId": "CAPTCHA_RELOAD_ELEM",
+			"reloadText": "Обновить код"
 		}
 	},
 	"buttons": {
@@ -54,6 +58,7 @@
 },
 {
 	"page": "describe",
+	"rusPage": "страница отписки",
 	"title": "Отмена вашей подписки от SUBNAME",
 	"inputs": {
 		"phone": {
@@ -71,7 +76,8 @@
 			"label": "Введите код с картинки",
 			"class": "code",
 			"src": "/col/mds4/adminif/css/newadminif/captcha_sample.png",
-			"reload": "CAPTCHA_RELOAD_ELEM"
+			"reloadId": "CAPTCHA_RELOAD_ELEM",
+			"reloadText": "Обновить код"
 		}
 	},
 	"buttons": {

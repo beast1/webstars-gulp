@@ -11,7 +11,17 @@ module.exports = function (gulp, p, s) {
 		    .pipe(gulp.dest(s.app))
 		    .pipe(p.browserSync.reload({stream: true}));
 		};
-	} else if (s.oss === 'megafon') {
+	} else if (s.oss === 'beeline') {
+		return function() {
+			return gulp.src(`${s.app}/html/*.html`)
+				.pipe(p.fileInclude({
+		      prefix: '@@',
+		      basepath: '@file'
+		    }))
+		    .pipe(gulp.dest(s.app))
+		    .pipe(p.browserSync.reload({stream: true}));
+		};
+	} if (s.oss === 'megafon') {
 		return function() {
 			console.log(`---------- Сборка блоков из D:/webstars/megafon/${s.app}/html/blocks`);
 			console.log(`---------- Подстановка значений из D:/webstars/megafon/const/data.json`);
@@ -23,6 +33,8 @@ module.exports = function (gulp, p, s) {
 			     prefix: '@@',
 			     basepath: '@file'
 			   }))
+				 .pipe(p.replace(`%headTitle`, `${data[i].rusPage}`))
+
 				 .pipe(p.replace(`%title`, `${data[i].title}`))
 				 .pipe(p.replace(`%footer`, `${data[i].footer}`))
 				 .pipe(p.replace(`%p.text`, `${data[i].inputs.phone.label}`))
@@ -33,7 +45,8 @@ module.exports = function (gulp, p, s) {
 				 .pipe(p.replace(`%c.id`, `${data[i].inputs.captcha.id}`))
 				 .pipe(p.replace(`%c.class`, `${data[i].inputs.captcha.class}`))
 				 .pipe(p.replace(`%c.src`, `${data[i].inputs.captcha.src}`))
-				 .pipe(p.replace(`%c.reload`, `${data[i].inputs.captcha.reload}`))
+				 .pipe(p.replace(`%c.reloadId`, `${data[i].inputs.captcha.reloadId}`))
+				 .pipe(p.replace(`%c.reloadText`, `${data[i].inputs.captcha.reloadText}`))
 
 				 .pipe(p.replace(`%s.text`, `${data[i].inputs.sms.label}`))
 				 .pipe(p.replace(`%s.id`, `${data[i].inputs.sms.id}`))

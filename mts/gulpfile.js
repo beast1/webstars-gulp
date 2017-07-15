@@ -37,6 +37,12 @@ gulp.task('build', ['sass', 'html'], getTask('build'));
 
 gulp.task('default', ['watch']);
 
+// gulp.task('watch', ['sass', 'html', 'serve'], function() {
+// 	gulp.watch(s.app + '/sass/**/*.sass', ['sass']);
+// 	gulp.watch(s.app + '/js/*.js', p.browserSync.reload);
+// 	gulp.watch(s.app + '/html/**/*.html', ['html']);
+// });
+
 // gulp.task('sass', require('../global/gulp-tasks/sass')(gulp, p, s));
 // gulp.task('zip', require('../global/gulp-tasks/zip')(gulp, p, s));
 // gulp.task('serve', require('../global/gulp-tasks/serve')(gulp, p, s));

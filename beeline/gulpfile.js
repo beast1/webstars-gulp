@@ -7,9 +7,9 @@ var p = require('gulp-load-plugins')({
 	lazy: false
 });
 
-var	oss            = "megafon",
+var	oss            = "beeline",
 		globalConfig   = require('../global/config.json').global,
-		localConfig 	 = require('../global/config.json').megafon,
+		localConfig 	 = require('../global/config.json').beeline,
 		defaultConfig  = require('../global/config.json').default,
 		project 			 = localConfig.projects[localConfig.exec],
 		app 					 = project.name,

@@ -18,15 +18,15 @@
 	},
 	"mts": {
 		"projects": [{
-			"name": "purple",
-			"version": "7",
+			"name": "fileInBox",
+			"version": "4",
 			"wap": false
 		}, {
-			"name": "red",
-			"version": "2",
+			"name": "filesTree",
+			"version": "0",
 			"wap": false
 		}],
-		"exec": "0",
+		"exec": "1",
 		"dirs": []
 	},
 	"megafon": {
@@ -39,11 +39,13 @@
 	},
 	"beeline": {
 		"projects": [{
-			"name": "purple",
-			"version": "1"
+			"name": "archivStorageLoad",
+			"version": "0"
 		}],
 		"exec": "0",
-		"dirs": []
+		"dirs": {
+			"fragments": "D:/webstars/beeline/const/fragments"
+		}
 	},
 	"tele2": {
 		"projects": [],

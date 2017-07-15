@@ -1,0 +1,42 @@
+<div th:if="${isWebRequest} == true" th:remove="tag">
+    <tr th:if="${cpaSubscribePriceCodePrice != null}">
+        <td class="label-column">
+            <label for="subscribeCost">Стоимость подключения подписки</label>
+        </td>
+        <td>
+            <span id="subscribeCost" th:text="${cpaSubscribePriceCodePrice} + ' руб.'">30 руб.</span>
+        </td>
+    </tr>
+    <tr th:if="${cpaSubscriptionChargePeriodPriceCodePrice != null}">
+        <td class="label-column">
+            <label for="userCharge">Абонентская плата за подписку <br/> (в день)</label>
+        </td>
+        <td>
+            <span id="userCharge" th:text="${cpaSubscriptionChargePeriodPriceCodePrice} + ' руб.'">30 руб.</span>
+        </td>
+    </tr>
+    <tr th:if="${cpaSubscriptionChargePeriodPriceCodePrice == null}">
+        <td class="label-column">
+            <label for="userCharge">Абонентская плата за подписку (в день)</label>
+        </td>
+        <td>
+            <span id="userCharge">0 руб.</span>
+        </td>
+    </tr>
+    <tr th:if="${cpaSubscriptionPeriod != null and cpaSubscriptionPeriod > 0}">
+        <td class="label-column">
+            <label for="subscribePeriod">Срок действия подписки</label>
+        </td>
+        <td th:with="now=${#dates.createNow()}">
+			<span id="subscribePeriod" th:text="${#dates.format(#dates.create(#dates.year(now),#dates.month(now),#dates.day(now) + 150,#dates.hour(now),#dates.minute(now),#dates.second(now),0), 'dd.MM.yyyy HH:mm:ss')}">4 дня</span>
+		</td>
+    </tr>
+</div>
+<tr th:if="${partnerContact != null}">
+    <td class="label-column">
+        <label for="partnerContact">Контакты провайдера</label>
+    </td>
+    <td>
+        <span id="partnerContact" th:text="${partnerContact}">ООО «Хелплайн», abonent@hlpline.ru,  <br/> 8(800)100-93-58</span>
+    </td>
+</tr>

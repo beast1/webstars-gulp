@@ -1,0 +1,16 @@
+<tr th:if="${tarifficationType == 1 and cpaRequestPriceCodePrice != null}">
+    <td class="label-column">
+        <label for="cost">Стоимость услуги</label>
+    </td>
+    <td>
+        <span id="cost" th:text="${cpaRequestPriceCodePrice} + ' руб.'">13 руб.</span>
+    </td>
+</tr>
+<tr th:if="${partnerContact != null}">
+    <td class="label-column">
+        <label for="partnerContact">Контакты провайдера</label>
+    </td>
+    <td>
+        <span id="partnerContact" th:text="${partnerContact}">контакт провайдера для абонента</span>
+    </td>
+</tr>

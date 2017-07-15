@@ -1,3 +1,5 @@
+"use strict";
+
 module.exports = function (gulp, p, s) {
 	if (s.oss === 'mts') {
 			var buildHtml = gulp.src([
@@ -16,15 +18,27 @@ module.exports = function (gulp, p, s) {
 				}))
 				.pipe(gulp.dest(s.build));
 			}
+	} else if (s.oss === 'beeline') {
+		var buildHtml = gulp.src([
+				`${s.app}/auth.html`,
+				`${s.app}/order.html`,
+				`${s.app}/styles.html`
+			])
+			.pipe(gulp.dest(s.build));
+		console.log(`---------- Подбрасываем фрагменты из ${s.localConfig.dirs.fragments}`);
+		var buildFragments = gulp.src([
+				`${s.localConfig.dirs.fragments}/*.html`
+			])
+			.pipe(gulp.dest(s.build));
 	} else if (s.oss === 'megafon') {
 		console.log(`---------- Корректируем пути к файлам и изображениям`);
 		var data = require('D:/webstars/megafon/const/data.json');
 		for (let i = 0; i < data.length; i++) {
-			var buildHtml = gulp.src(`${s.app} + '/${data[i].page}.html'`)
+			var buildHtml = gulp.src(`${s.app}/${data[i].page}.html`)
 				.pipe(p.replace('href="css/', 'href="'))
 				.pipe(p.replace('img/', ''))
 				.pipe(p.rename({
-					basename: `${data[i].name}`
+					basename: `${data[i].rusPage}`
 				}))
 				.pipe(gulp.dest(s.build));
 		}

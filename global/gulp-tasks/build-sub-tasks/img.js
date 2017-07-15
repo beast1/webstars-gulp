@@ -1,4 +1,5 @@
 module.exports = function (gulp, p, s) {
+	console.log(`---------- Оптимизируем изображения`);
 	if (s.oss === 'mts') { 
 		var buildImg = gulp.src(s.app + '/img/**/*')
 			.pipe(p.imagemin([
@@ -25,5 +26,7 @@ module.exports = function (gulp, p, s) {
 	    		verbose: true
 	    	}))
 			.pipe(gulp.dest(s.build));
+	} else {
+		console.log(`---------- Для билайн и теле2 пока вручную`);
 	}
 }

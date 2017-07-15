@@ -1,5 +1,4 @@
 <!-- CONTENT(START) -->
-<!-- <img src="//sync.rtb.mts.ru/collect" width="0" height="0" border="0" style="position: absolute; left: -9999px;"> -->
 <h1 id="subscr-name">Доступ к подписке «<span>http://getfiles.pro</span>»</h1>
 <div id="subscr-price">
 	Стоимость: <span> 20.32  руб. c НДС в день</span>. <br>Оказывается МТС с привлечением: <span>СДСП - Групп, ООО</span>.<br>Списание будет произведено с основного лицевого счета.
@@ -25,23 +24,19 @@
 							<img class="LBD_CaptchaImage" id="Captcha_CaptchaImage" src="/lp/BotDetectCaptcha.ashx?get=image&amp;c=Captcha&amp;t=745ddfc871d64d6094b5a53c7352f244" alt="CAPTCHA">
 						</a>
 					</div>
-					<script src="/lp/BotDetectCaptcha.ashx?get=clientScriptInclude" type="text/javascript"></script>
-					<script type="text/javascript">
-					//<![CDATA[
-					BotDetect.Init('Captcha', '745ddfc871d64d6094b5a53c7352f244', 'CaptchaCode', true, true, true, false, 1200, 7200, 0, true);
-					//]]>
-					</script>
-					<script type="text/javascript">
-					//<![CDATA[
-					try{(function(){var bdrsn = document.createElement('script'); bdrsn.type = 'text/javascript'; bdrsn.async = true; bdrsn.src = document.location.protocol + '//remote.captcha.com/include.js?i=ATABMAEwATMBMAIxNhRK-MdIVDCRkJVRR1iYciV_7_PtqA'; var fsn = document.getElementsByTagName('script')[0]; fsn.parentNode.insertBefore(bdrsn, fsn);})();} catch(err){}
-					//]]>
-					</script>
 					<input type="hidden" name="LBD_VCID_Captcha" id="LBD_VCID_Captcha" value="745ddfc871d64d6094b5a53c7352f244">
 					<input type="hidden" name="LBD_BackWorkaround_Captcha" id="LBD_BackWorkaround_Captcha" value="1">
 				</div>
 			</div>
-			<div class="f"><img class="arr" src="/lp/i/captcha-arrow.gif"><input autocomplete="off" class="b-common-ctrl" id="CaptchaCode" maxlength="20" name="CaptchaCode" tabindex="2" type="text" value="" style="text-transform: uppercase;"></div>
-			<div class="captcha-refresh"><span id="c_renew"><img class="captcha-throbber" src="/lp/i/next1.gif"><strong>показать другую картинку</strong></span></div>
+			<div class="f">
+				<img class="arr" src="/lp/i/captcha-arrow.gif">
+				<input autocomplete="off" class="b-common-ctrl" id="CaptchaCode" maxlength="20" name="CaptchaCode" tabindex="2" type="text" value="" style="text-transform: uppercase;">
+			</div>
+			<div class="captcha-refresh">
+				<span id="c_renew">
+					<img class="captcha-throbber" src="/lp/i/next1.gif"><strong>показать другую картинку</strong>
+				</span>
+			</div>
 			<div class="captcha-comment">
 				<div id="Captcha_Value_Validator" class="captcha-err">* Необходимо ввести символы с&nbsp;картинки.</div>
 				<div id="Captcha_Value_Validator1" class="captcha-err" style="">* Вы неверно ввели символы с&nbsp;картинки</div>
@@ -69,20 +64,11 @@
 <br><br><strong>Важно!</strong> Если Вы заметили несоответствие условий оказания услуги, размещенных на данной странице, условиям оказания услуги,
 размещенным на сайте контент-провайдера, просьба сообщить об этом по адресу <a href="mailto:moipodpiski@mts.ru">moipodpiski@mts.ru</a> или заполнив форму <a href="javascript:void(0)" onclick="$('#subscr-feedback').toggle();">обратной связи</a>.</p>
 </div>
-<script type="text/javascript">
-if (top === self) { } else { window.top.location = self.location; }
-</script>
 <div id="subscr-feedback" style="display: none;">
 <p id="title">Описание проблемы:</p>
 <p id="msgRequireErr" style="color:Red;display:none;">* введите текст сообщения</p>
 <textarea rows="2" cols="20" id="TextBoxFeedBackMessage" style="height:120px;width:486px;"></textarea><p><br></p>
 <input type="submit" value="" onclick="javascript:if(!requireFieldValidate('TextBoxFeedBackMessage','msgRequireErr')){return false;}sendFeedBack();return false;" id="ImageButtonFeedBack">
 </div>
-<script>
-$(function() {
-var isInteractiveActivationCode = false;
-Init(isInteractiveActivationCode);
-});
-</script>
 <span style="display:none;">Correct response</span>
 <!-- CONTENT(END) -->
