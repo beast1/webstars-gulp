@@ -11,6 +11,7 @@ var	oss            = "beeline",
 		globalConfig   = require('../global/config.json').global,
 		localConfig 	 = require('../global/config.json').beeline,
 		defaultConfig  = require('../global/config.json').default,
+		sequreConfig   = require('D:/sequre.json').tele2,
 		project 			 = localConfig.projects[localConfig.exec],
 		app 					 = project.name,
 		build  				 = defaultConfig.dirs.build;
@@ -20,6 +21,7 @@ var s = {
 	"globalConfig": globalConfig,
 	"localConfig": localConfig,
 	"defaultConfig": defaultConfig,
+	"sequreConfig": sequreConfig,
 	"project": project,
 	"app": app,
 	"build": build
@@ -28,13 +30,21 @@ var s = {
 function getTask(task) {
   return require('../global/gulp-tasks/' + task)(gulp, p, s);
 }
-
 gulp.task('sass', getTask('sass'));
+gulp.task('html', ['sass'], getTask('html'));
+gulp.task('style', ['sass', 'html'], function() {
+	// gulp.src(`${s.app}/*.html`)
+	// 	.pipe(p.wait(1000))
+	// 	.pipe(gulp.dest(s.app))
+	// 	.pipe(p.browserSync.reload());
+});
+
+
 gulp.task('zip', getTask('zip'));
 gulp.task('serve', getTask('serve'));
-gulp.task('watch', ['sass', 'html', 'serve'], getTask('watch'));
-gulp.task('html', getTask('html'));
-gulp.task('build', ['sass', 'html'], getTask('build'));
+gulp.task('watch', ['style', 'html', 'serve'], getTask('watch'));
+gulp.task('build', ['style', 'html'], getTask('build'));
+
 
 gulp.task('default', ['watch']);
 

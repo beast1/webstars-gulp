@@ -22,7 +22,14 @@
 <h2>В разработке</h2>
 <h3>Общее</h3>
 <ul>
-  <li>Создание нового проекта из консоли</li>
+  <li>
+    Создание нового проекта из консоли(По аналогии с <a href="NTHCB">пример 1</a>)
+    <ul>
+      <li>Ввод параметров проекта посредством терминала(как при npm init)</li>
+      <li>Запись параметров в конфиг</li>
+      <li>Создание папки проекта на основе введенных параметров и стартового шаблона</li>
+    </ul>
+  </li>
   <li>Подключение уже начатого проекта из консоли</li>
 </ul>
 <h3>МТС</h3>
@@ -31,18 +38,25 @@
 </ul>
 <h3>Билайн</h3>
 <ul>
-  <li>Добавление фрагментов html в билд по требованиям</li>
+  <li>Одноступенчатая сборка(т.е. без промежуточного шага как в <a href="NTH">пример 2</a>)</li>
   <li>Компиляция img в base64</li>
-  <li>Разбиение стилей для auth.html и order.html</li>
   <li>Включение стилей в html</li>
+  <li>Деплой на сервер по ftp</li>
 </ul>
 <h3>Теле2</h3>
 <ul>
+  <li>Система компонентов</li>
+  <li>Одноступенчатая сборка(т.е. без промежуточного шага как в <a href="NTH">пример 2</a>)</li>
   <li>Компиляция img в base64</li>
-  <li>Разбиение стилей для auth.html и order.html</li>
   <li>Включение стилей в html</li>
-  <li>Деплой на сервер</li>
+  <li>Деплой на сервер по ftp</li>
 </ul>
+<h2>Примеры</h2>
+<ol>
+  <oi id="NTHCB"><a href="https://github.com/nicothin/NTH-start-project/blob/master/createBlock.js">createBlock.js</a></oi>
+  <oi id="NTH"><a href="https://github.com/nicothin/NTH-start-project">NTH-start-project</a></oi>
+  <oi id="WDM">Пример двухступенчатой сборки(build генерируется в результате отдельного таска): <a href="https://github.com/agragregra/optimizedhtml-start-template">optimizedhtml-start-template</a></oi>
+<ol>
 <h2>Вопросы</h2>
 <ul>
   <li><a href="https://t.me/beast_hotline">Мой телеграм</a></li>
