@@ -25,6 +25,10 @@ module.exports = function (gulp, p, s) {
 					.pipe(gulp.dest(s.app + '/css'))
 					.pipe(p.browserSync.reload({stream: true}));
 			}
+		} else if (s.oss === 'tele2') {
+			// gulp.src(`${s.app}/sass/main.sass`)
+			// 	.pipe(p.sass({outputStyle: 'expand'}).on("error", p.notify.onError()))
+				
 		} else {
 			gulp.src(s.app + '/sass/main.sass')
 				.pipe(p.sass({outputStyle: 'expand'}).on("error", p.notify.onError()))
