@@ -51,9 +51,15 @@
 	"tele2": {
 		"projects": [{
 			"name": "fileInBox",
-			"version": "0"
+			"version": "1"
+		}, {
+			"name": "mnogoFiles",
+			"version": "1"
+		}, {
+			"name": "docsFilesDownload",
+			"version": "1"
 		}],
-		"exec": "0",
+		"exec": "2",
 		"dirs": []
-	}
+	}   
 }
