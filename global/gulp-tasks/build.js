@@ -14,6 +14,10 @@ module.exports = function (gulp, p, s) {
 			getSubTask('js');
 		} else if (s.oss === 'tele2') {
 			getSubTask('html');
+
+			var buildPreview = gulp.src(`${s.app}/preview/*`)
+				.pipe(gulp.dest(s.build));
+
 		} else if (s.oss === 'beeline') {
 			// getSubTask('del');
 			getSubTask('css');

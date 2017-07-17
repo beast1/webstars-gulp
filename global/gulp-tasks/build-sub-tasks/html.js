@@ -21,7 +21,8 @@ module.exports = function (gulp, p, s) {
 	} else if (s.oss === 'tele2') {
 		var cssLink = '<link href="css/common.css" rel="stylesheet">'
 		console.log(`---------- Заменим пути к изображениям на base64(они должны быть уже минимизированны)`);
-		console.log(`---------- Инлайново вставим стили в html\n--ВАЖНО!-- Для этого ссылка на стили должна выглядеть именно так: ${cssLink}`);
+		console.log(`---------- Инлайново вставим стили в html`);
+		console.log(`-ВАЖНО!- Подключать стили только так: ${cssLink}`);
 		var buildHtml = gulp.src([
 				`${s.app}/*.html`
 			])

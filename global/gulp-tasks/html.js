@@ -11,6 +11,16 @@ module.exports = function (gulp, p, s) {
 		    .pipe(gulp.dest(s.app))
 		    .pipe(p.browserSync.reload({stream: true}));
 		};
+	} else if (s.oss === 'tele2') {
+		return function() {
+			return gulp.src(`${s.app}/html/*.html`)
+				.pipe(p.fileInclude({
+		      prefix: '@@',
+		      basepath: '@file'
+		    }))
+		    .pipe(gulp.dest(s.app))
+		    .pipe(p.browserSync.reload({stream: true}));
+		};
 	} else if (s.oss === 'beeline') {
 		return function() {
 			return gulp.src(`${s.app}/html/*.html`)

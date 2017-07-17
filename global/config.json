@@ -61,7 +61,7 @@
 			"version": "1"
 		}, {
 			"name": "filesCloud",
-			"version": "1"
+			"version": "2"
 		}],
 		"exec": "3",
 		"dirs": []
