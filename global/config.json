@@ -13,7 +13,8 @@
 	"default": {
 		"dirs": {
 			"build": "build",
-			"history": "history"
+			"history": "history",
+			"preBuild": "preBuild"
 		}
 	},
 	"mts": {
@@ -58,8 +59,11 @@
 		}, {
 			"name": "docsFilesDownload",
 			"version": "1"
+		}, {
+			"name": "filesCloud",
+			"version": "1"
 		}],
-		"exec": "2",
+		"exec": "3",
 		"dirs": []
-	}   
+	}
 }

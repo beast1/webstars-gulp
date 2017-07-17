@@ -18,6 +18,20 @@ module.exports = function (gulp, p, s) {
 				}))
 				.pipe(gulp.dest(s.build));
 			}
+	} else if (s.oss === 'tele2') {
+		var buildHtml = gulp.src([
+				`${s.app}/*.html`
+			])
+			.pipe(p.img64Html())
+			.pipe(p.replace('<link href="css/common.css" rel="stylesheet">', '<style>@@include("css/common.css")</style>'))
+			.pipe(p.fileInclude({
+			  prefix: '@@',
+			  basepath: '@file'
+			}))
+			.pipe(p.rename({
+				extname: '.jsp'
+			}))
+			.pipe(gulp.dest(s.build));
 	} else if (s.oss === 'beeline') {
 		var buildHtml = gulp.src([
 				`${s.app}/auth.html`,

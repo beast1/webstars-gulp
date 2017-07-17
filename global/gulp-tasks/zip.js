@@ -8,8 +8,16 @@ module.exports = function (gulp, p, s) {
 			return +current + 1;
 		}
 
+		var getExtension = function() {
+			if (s.oss === 'tele2') {
+				return 'war'
+			} else {
+				return 'zip'
+			}
+		}
+
 		var buildArchiv = gulp.src(s.build + '/**/*.*')
-			.pipe(p.zip(s.oss + '-' + s.app + '.v' + getVersion() + '.zip'))
+			.pipe(p.zip(`${s.oss}-${s.app}.v${getVersion()}.${getExtension()}`))
 			.pipe(gulp.dest(s.defaultConfig.dirs.history))
 			.pipe(gulp.dest(s.globalConfig.dirs.history));
 
@@ -23,6 +31,7 @@ module.exports = function (gulp, p, s) {
 			    return json
 			  }))
 			  .pipe(gulp.dest("../global"));
+
 		} else if (s.oss === 'megafon') {
 			return gulp.src("../global/config.json")
 			  .pipe(p.jsonEditor(function(json) {
@@ -31,18 +40,20 @@ module.exports = function (gulp, p, s) {
 			    return json
 			  }))
 			  .pipe(gulp.dest("../global"));
+
 		} else if (s.oss === 'beeline') {
 			return gulp.src("../global/config.json")
 			  .pipe(p.jsonEditor(function(json) {
-			    json.mts.projects[s.localConfig.exec].version = getVersion() + "";
+			    json.beeline.projects[s.localConfig.exec].version = getVersion() + "";
 
 			    return json
 			  }))
 			  .pipe(gulp.dest("../global"));
+
 		} else if (s.oss === 'tele2') {
 			return gulp.src("../global/config.json")
 			  .pipe(p.jsonEditor(function(json) {
-			    json.mts.projects[s.localConfig.exec].version = getVersion() + "";
+			    json.tele2.projects[s.localConfig.exec].version = getVersion() + "";
 
 			    return json
 			  }))

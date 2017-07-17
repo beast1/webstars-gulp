@@ -5,6 +5,12 @@ module.exports = function (gulp, p, s) {
 				s.app + '/css/normalize.css'
 			])
 			.pipe(gulp.dest(s.build + '/css'));
+	} else if (s.oss === 'tele2') {
+		console.log(s.preBuild);
+		var buildCss = gulp.src([
+				`${s.app}/css/common.css`
+			])
+			.pipe(gulp.dest(s.build));
 	} else if (s.oss === 'megafon') {
 		var buildCss = gulp.src([
 				s.app + '/css/normalize.css',

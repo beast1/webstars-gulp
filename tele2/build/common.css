@@ -1,0 +1,181 @@
+.controls {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: .5rem 0;
+  color: white; }
+  .controls:last-child {
+    margin-bottom: 0; }
+  .controls__btn {
+    display: inline-block;
+    max-width: 48%;
+    width: 100%;
+    padding: .5em 1em;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer; }
+    .controls__btn:not(:last-child) {
+      margin-right: auto; }
+    .controls__btn_submit {
+      background-color: #3399db; }
+    .controls__btn_cencel {
+      background-color: #b3b3b3; }
+      .controls__btn_cencel:hover {
+        color: white; }
+
+html {
+  height: 100%;
+  font-size: 93.75%; }
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-image: url("../img/bg-teaser.jpg"); }
+
+* {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s; }
+
+a {
+  color: white; }
+  a:hover {
+    color: gray; }
+
+.page {
+  max-width: 620px;
+  width: 100%;
+  margin: 1em auto 0;
+  padding: 1em;
+  background-color: white; }
+  .page__title {
+    margin: 0;
+    margin-bottom: .8rem;
+    font-size: 1.7em;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center; }
+    @media (max-width: 920px) {
+      .page__title {
+        text-align: center; } }
+
+.page-header {
+  background-color: white; }
+  .page-header__container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 620px;
+    width: 100%;
+    padding: .5em 1em;
+    margin: 0 auto; }
+  .page-header__logo {
+    margin-right: auto; }
+
+.form__label {
+  display: block;
+  color: gray;
+  font-size: 1.3em;
+  font-weight: 700; }
+
+.form__input {
+  width: 100%;
+  padding: .4em .5em;
+  border: 1px solid #cccccc;
+  margin-top: .3em;
+  font-size: 1.2em;
+  -webkit-border-radius: 2px;
+          border-radius: 2px; }
+
+.form__small {
+  color: white;
+  font-size: .9em;
+  line-height: 1.2em; }
+  .form__small:first-of-type {
+    margin-top: .3em; }
+  .form__small_color_success {
+    color: #2cb054; }
+  .form__small_color_error {
+    color: #b60000; }
+
+.alert {
+  margin: 0 0 .5em;
+  color: #3399db; }
+  .alert__main {
+    display: block;
+    margin: 0;
+    margin-bottom: .1em;
+    font-size: 1.6em;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .alert__sub {
+    font-size: 1.2em; }
+  .alert__number {
+    font-size: 1.2em; }
+  .alert__link {
+    font-size: 1rem; }
+
+.logo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: auto; }
+  @media (max-width: 560px) {
+    .logo {
+      display: none; } }
+  .logo__img {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 114.4px;
+    height: 76px;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  .logo__adult {
+    margin-top: auto;
+    margin-left: .33em;
+    -o-object-fit: contain;
+       object-fit: contain; }
+
+.note {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: .5em 0;
+  background-color: white; }
+  .note_color_success {
+    color: #2cb054; }
+  .note_color_error {
+    color: #b60000; }
