@@ -46,8 +46,8 @@ To change this template use File | Settings | File Templates.
           <img class="logo__adult" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBDAQICAgICAgUDAwUKBwYHCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgr/wgARCAAcABwDAREAAhEBAxEB/8QAGQAAAwADAAAAAAAAAAAAAAAABggJBAcK/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAAfMlgblLeHP2M8CgPmGAgHFaRwCIw/A/B/8QALRAAAQQBAwQBAgUFAAAAAAAAAQIDBAUGBwgSCRETIQAxQRAVFhdRUnFygqH/2gAIAQEAAT8A6r/ViyLQXJJW2nbXPZZydllJyXJihLn5XzHJMdhKgUl4pIKlkEICgAOftGaal6jakXbmR6hZ7c3lg4vkubb2bsh0n/JxRPzaX1Kt0O03JYr9Hnc+/wAbQ4BOxO+mreivNfcNFZJjL/hbf+wWPR256+4Fue0bpda9Npil1lzG5+B7t5YrySUusOAH0tCwUn7H6gkEH5+5uN5Rrzaaua34pNySPZ3Myzs6hi0MNUyQ6txxKFvcFqS35FDmEgKKAQlSCQoZ3p1p9gG4vcVdU9LgmJ1+NZNBrcfustxJuypapT0lZMRMBMSV3ddaZcKFpjqCEsuAqbKwTk20bRLN9cNcQdTqbAoGKNWNljuMyhPdchRxMipYkPLjQZLS4impPpDLqngVN+uIJO2TfdrXtOwu00u0syMy6peQPyxLg+QMvLKG2vIgOJQsJUlpKgFJSrsfYB+dSjafke0/dFf0D1U6jHb6c9aYnOCD4nojqyssg/1sqV41D6+kq+ix3Ruu1zXnGS6h2eTV1nYZhKRKyVq6xeunQ576CoodXDkMLjhaCtfFQbBTzVxI5HvmmZ5XqNltjnObXj9nb20tcmfOkEFbziiST69AfYAAAAAAAD500+l7hNdtar7/AHIYW7+oshnOWiILw4OwYjiG0MtOAgkLKW/IQfafLxIBHzXzbno3udwJ7TbWvCY1zWLV5GPISh6K77AdZdT2U0sfyk+wSD3BIO/jajpzte12laa6e21zKr25HFC7eS046B/dtpA/586XXTV2twMGpdyN/js7Ici8vkgovpKHYkF1JBDjTKG0grH1Bc58SAU9j+H/xAAUEQEAAAAAAAAAAAAAAAAAAABA/9oACAECAQE/AAf/xAAUEQEAAAAAAAAAAAAAAAAAAABA/9oACAEDAQE/AAf/2Q==" alt="adult alert">
         </div>
         <table class="page-header__payment-info">
-          <%= request.getsession().getattribute("body")%="">
-        </%=></table>
+          <%= request.getsession().getattribute("body")%>
+        </table>
       </div>
     </header>
     <div class="page">
@@ -55,8 +55,8 @@ To change this template use File | Settings | File Templates.
         <h1 class="alert__main">Подтверждение регистрации</h1>
       </div>
       <table class="payment-info">
-        <%= request.getsession().getattribute("body")%="">
-      </%=></table>
+        <%= request.getsession().getattribute("body")%>
+      </table>
       <form name="form" class="form" id="form" method="get" action="&lt;%= (String) request.getSession().getAttribute(&quot;urlLocation&quot;)%&gt;&quot; onsubmit=&quot;return prepareForm(this);">
         <div class="form__row">
           <div class="form__item">

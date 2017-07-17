@@ -19,11 +19,14 @@ module.exports = function (gulp, p, s) {
 				.pipe(gulp.dest(s.build));
 			}
 	} else if (s.oss === 'tele2') {
+		var cssLink = '<link href="css/common.css" rel="stylesheet">'
+		console.log(`---------- Заменим пути к изображениям на base64(они должны быть уже минимизированны)`);
+		console.log(`---------- Инлайново вставим стили в html\n--ВАЖНО!-- Для этого ссылка на стили должна выглядеть именно так: ${cssLink}`);
 		var buildHtml = gulp.src([
 				`${s.app}/*.html`
 			])
 			.pipe(p.img64Html())
-			.pipe(p.replace('<link href="css/common.css" rel="stylesheet">', '<style>@@include("css/common.css")</style>'))
+			.pipe(p.replace(cssLink, '<style>@@include("css/common.css")</style>'))
 			.pipe(p.fileInclude({
 			  prefix: '@@',
 			  basepath: '@file'
@@ -31,6 +34,9 @@ module.exports = function (gulp, p, s) {
 			.pipe(p.rename({
 				extname: '.jsp'
 			}))
+			//Таск по непонятным причинам генерирует закрывающие теги тегов типа "<%= %>". Мы это исправим
+			.pipe(p.replace('%=""', '%'))
+			.pipe(p.replace('</%=>', ''))
 			.pipe(gulp.dest(s.build));
 	} else if (s.oss === 'beeline') {
 		var buildHtml = gulp.src([

@@ -1,7 +1,8 @@
 module.exports = function (gulp, p, s) {
 	if (s.oss === 'tele2') {
 		return function() {
-			console.log(`---------- Загружаем все файлы на сервер`);
+			console.log(`---------- Загружаем все файлы на сервер tele2`);
+			console.log(`---------- Протести этот таск `);
 			var conn = p.vinylFtp.create( {
 	        host:     s.sequreConfig.host,
 	        user:     s.sequreConfig.uname,

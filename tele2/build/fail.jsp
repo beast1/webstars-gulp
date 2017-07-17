@@ -20,8 +20,8 @@ To change this template use File | Settings | File Templates.
       <div class="note_color_error"><%=request.getsession().getattribute("successtext")%></%=request.getsession().getattribute("successtext")%></div>
       <div class="alink">
       <br>
-      <%= request.getsession().getattribute("furl")%="">
+      <%= request.getsession().getattribute("furl")%>
       <br>
-    </%=></div>
+    </div>
   </div></body>
 </html>

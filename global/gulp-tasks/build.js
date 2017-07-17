@@ -13,7 +13,6 @@ module.exports = function (gulp, p, s) {
 			getSubTask('img');		
 			getSubTask('js');
 		} else if (s.oss === 'tele2') {
-			getSubTask('css');
 			getSubTask('html');
 		} else if (s.oss === 'beeline') {
 			// getSubTask('del');
