@@ -20,14 +20,23 @@ module.exports = function (gulp, p, s) {
 			}
 	} else if (s.oss === 'tele2') {
 		var cssLink = '<link href="css/common.css" rel="stylesheet">'
-		console.log(`---------- Заменим пути к изображениям на base64 в css-файлах(они должны быть уже минимизированны)`);
-		console.log(`---------- В html подставлять base64 придется вручную. Читай README.md в ${s.app}/html/base64`);
-		console.log(`---------- Инлайново вставим стили в html`);
-		console.log(`-ВАЖНО!- Подключать стили только так: ${cssLink}`);
+		console.log(`-ВАЖНО!- Перед тем как создать архив проекта("gulp zip"), убедись что:\
+						 \n---------- Изображения сжаты: https://tinypng.com/\
+						 \n---------- Изображения в html подключены в виде base64. Читай README.md в ${s.app}/html/base64 для понимания\
+						 \n---------- Скроллов нет на всех страницах: http://mobalfa.net:8080/tele2/setValues.jsp\
+						 \n---------- index: http://mobalfa.net:8080/tele2/egor/${s.app}/index.jsp\
+						 \n---------- index3: http://mobalfa.net:8080/tele2/egor/${s.app}/index3.jsp\
+						 \n---------- fail: http://mobalfa.net:8080/tele2/egor/${s.app}/fail.jsp\
+						 \n---------- Скриншоты сделаны: http://mobalfa.net:8080/tele2/setValues.jsp\
+						 \n---------- Если по какому-то пункту не проходишь, исправь и перезапусти "gulp build"\
+		`);
+		// console.log(`---------- Заменим пути к изображениям на base64 в css-файлах(они должны быть уже минимизированны)`);
+		// console.log(`---------- В html подставлять base64 придется вручную. Читай README.md в ${s.app}/html/base64`);
+		// console.log(`---------- Инлайново вставим стили в html`);
+		// console.log(`-ВАЖНО!- Подключать стили только так: ${cssLink}`);
 		var buildHtml = gulp.src([
 				`${s.app}/*.html`
 			])
-			// .pipe(p.img64Html())
 			.pipe(p.replace(cssLink, '<style>@@include("css/common.css")</style>'))
 			.pipe(p.fileInclude({
 			  prefix: '@@',
@@ -36,9 +45,9 @@ module.exports = function (gulp, p, s) {
 			.pipe(p.rename({
 				extname: '.jsp'
 			}))
-			//Таск по непонятным причинам генерирует закрывающие теги тегов типа "<%= %>". Мы это исправим
-			.pipe(p.replace('%=""', '%'))
-			.pipe(p.replace('</%=>', ''))
+			.pipe(p.replace('<!-- DEV -->', ''))
+			.pipe(p.replace('<!-- <%', '<%'))
+			.pipe(p.replace('%> -->', '%>'))
 			.pipe(gulp.dest(s.build));
 	} else if (s.oss === 'beeline') {
 		var buildHtml = gulp.src([

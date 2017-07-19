@@ -2,7 +2,7 @@
 
 var gulp = require('gulp');
 var p = require('gulp-load-plugins')({
-	// DEBUG: true,
+	DEBUG: true,
 	pattern: ['browser-sync', 'del', 'vinyl-ftp', 'merge-stream', 'gulp-*', 'gulp.*', '@*/gulp{-,.}*'],
 	lazy: false
 });

@@ -1,0 +1,10 @@
+@@include('../../const/required/fail/top.html')
+    <div class="note">
+      <div class="note_color_success"><%=request.getSession().getAttribute("errText")%></div>
+      <div class="note_color_error"><%=request.getSession().getAttribute("successText")%></div>
+      <div class="alink">
+      <br/>
+      <%= request.getSession().getAttribute("fUrl")%>
+      <br/>
+    </div>
+@@include('../../const/required/fail/bottom.html')

@@ -1,0 +1,30 @@
+<!-- DEV -->
+<!-- <%--
+Created by IntelliJ IDEA.
+User: Zaborov-y
+Date: 14.01.13
+Time: 14:07
+To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %> -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- <%--<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>--%> -->
+<script LANGUAGE="JavaScript">
+function handleKeyPress(e, form) {
+var key = e.keyCode || e.which;
+if (key == 13) {
+e.preventDefault ? e.preventDefault() : e.returnValue = false;
+//            alert("для отсылки формы используйте кнопку подтверждения");
+}
+}
+function overlay() {
+el = document.getElementById("overlay");
+el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+}
+</script>
+<html>
+<head>
+  <title>Подтверждение оплаты</title>
+  <link href="css/common.css" rel="stylesheet">
+</head>
+<body>

@@ -21,7 +21,6 @@ module.exports = function (gulp, p, s) {
 		}
 	} else if (s.oss === 'tele2' || s.oss === 'beeline') {
 		return function() {
-
 			console.log(`---------- Текущий проект: tele2-${s.project.name}.v${s.project.version}`);
 			gulp.watch(`${s.app}/sass/**/*.sass`, ['sass']);
 			gulp.watch(`${s.app}/*.html`, ['html']);

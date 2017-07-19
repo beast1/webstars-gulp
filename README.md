@@ -19,6 +19,12 @@
   <li>Автоматическая подстановка всех обязательных значений по требованиям оператора</li>
   <li>Система компонентов(gulp-file-include)</li>
 </ul>
+<h3>Теле2</h3>
+<ul>
+  <li>Система компонентов</li>
+  <li>Компиляция img в base64</li>
+  <li>Включение стилей в html</li>
+</ul>
 <h2>В разработке</h2>
 <h3>Общее</h3>
 <ul>
@@ -45,10 +51,7 @@
 </ul>
 <h3>Теле2</h3>
 <ul>
-  <li>Система компонентов</li>
   <li>Одноступенчатая сборка(т.е. без промежуточного шага как в <a href="NTH">пример 2</a>)</li>
-  <li>Компиляция img в base64</li>
-  <li>Включение стилей в html</li>
   <li>Деплой на сервер по ftp</li>
 </ul>
 <h2>Примеры</h2>
@@ -56,7 +59,7 @@
   <li id="NTHCB"><a href="https://github.com/nicothin/NTH-start-project/blob/master/createBlock.js">createBlock.js</a></li>
   <li id="NTH"><a href="https://github.com/nicothin/NTH-start-project">NTH-start-project</a></li>
   <li id="WDM">Пример двухступенчатой сборки(build генерируется в результате отдельного таска): <a href="https://github.com/agragregra/optimizedhtml-start-template">optimizedhtml-start-template</a></li>
-<ol>
+</ol>
 <h2>Вопросы</h2>
 <ul>
   <li><a href="https://t.me/beast_hotline">Мой телеграм</a></li>

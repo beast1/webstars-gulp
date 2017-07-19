@@ -1,0 +1,41 @@
+<!-- DEV -->
+<!-- <%--
+Created by IntelliJ IDEA.
+To change this template use File | Settings | File Templates.
+--%> -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Подтверждение оплаты</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="google" content="notranslate" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--[if lte IE 8]>
+    <style type="text/css">
+    </style>
+    <![endif]-->
+    <script LANGUAGE="JavaScript">
+    function prepareForm() {
+    var formatted = frm.msisdn_formatted.value;
+    frm.msisdn.value = formatted.replace(/\ |\+|\(|\)|\-/g, '');
+    return true;
+    }
+    function overlay() {
+    el = document.getElementById("overlay");
+    el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+    }
+    function disableBackButton() {
+    window.history.forward();
+    }
+    function dummy4Firefox() {
+    }
+    function submitform() {
+    document.frm.submit();
+    }
+    </script>
+    
+    <link href="css/common.css" rel="stylesheet">
+    <!-- <%@ page contentType="text/html;charset=UTF-8" language="java" %> -->
+    <!-- [if lte IE 6]><link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection"><![endif] -->
+  </head>
+    <body>
