@@ -62,12 +62,8 @@
 		}, {
 			"name": "filesCloud",
 			"version": "3"
-		},
-		{
-			"name": "b-test",
-			"version": "0"
 		}],
-		"exec": "4",
+		"exec": "3",
 		"dirs": []
 	}
 }

@@ -2,7 +2,7 @@
 
 var gulp = require('gulp');
 var p = require('gulp-load-plugins')({
-	DEBUG: true,
+	// DEBUG: true,
 	pattern: ['browser-sync', 'del', 'vinyl-ftp', 'merge-stream', 'gulp-*', 'gulp.*', '@*/gulp{-,.}*'],
 	lazy: false
 });
@@ -35,12 +35,13 @@ function getTask(task) {
 
 gulp.task('deploy', getTask('deploy'));
 gulp.task('watch', getTask('watch'));
+gulp.task('del', getTask('del'));
 
 gulp.task('sass', getTask('sass'));
 gulp.task('zip', getTask('zip'));
 gulp.task('serve', getTask('serve'));
 gulp.task('watch', ['sass', 'html', 'serve'], getTask('watch'));
 gulp.task('html', getTask('html'));
-gulp.task('build', ['sass', 'html'], getTask('build'));
+gulp.task('build', ['del', 'sass', 'html'], getTask('build'));
 
 gulp.task('default', ['watch']);

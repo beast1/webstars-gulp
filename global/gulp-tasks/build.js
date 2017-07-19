@@ -1,3 +1,4 @@
+//getSubTask('html'); Всегда первый, потому что там удаляем папку build(пока только для теле2)
 "use strict";
 
 module.exports = function (gulp, p, s) {
@@ -7,9 +8,9 @@ module.exports = function (gulp, p, s) {
 		}
 
 		if (s.oss === 'mts') {
+			getSubTask('html');
 			// getSubTask('del');
 			getSubTask('css');
-			getSubTask('html');
 			getSubTask('img');		
 			getSubTask('js');
 		} else if (s.oss === 'tele2') {
@@ -19,15 +20,15 @@ module.exports = function (gulp, p, s) {
 				.pipe(gulp.dest(s.build));
 
 		} else if (s.oss === 'beeline') {
+			getSubTask('html');
 			// getSubTask('del');
 			getSubTask('css');
 			getSubTask('img');
-			getSubTask('html');
 		} else {
+			getSubTask('html');
 			// getSubTask('del');
 			getSubTask('css');
 			getSubTask('img');
-			getSubTask('html');
 		}	
 	};
 };

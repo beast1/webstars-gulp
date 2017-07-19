@@ -34,6 +34,9 @@ module.exports = function (gulp, p, s) {
 		// console.log(`---------- В html подставлять base64 придется вручную. Читай README.md в ${s.app}/html/base64`);
 		// console.log(`---------- Инлайново вставим стили в html`);
 		// console.log(`-ВАЖНО!- Подключать стили только так: ${cssLink}`);
+		// var delBuild = gulp.src(s.build)
+		// 	.pipe(p.clean());
+
 		var buildHtml = gulp.src([
 				`${s.app}/*.html`
 			])
@@ -48,6 +51,9 @@ module.exports = function (gulp, p, s) {
 			.pipe(p.replace('<!-- DEV -->', ''))
 			.pipe(p.replace('<!-- <%', '<%'))
 			.pipe(p.replace('%> -->', '%>'))
+			.pipe(gulp.dest(s.build));
+
+		var copyHtml = gulp.src(`const/build/**/*.*`)
 			.pipe(gulp.dest(s.build));
 	} else if (s.oss === 'beeline') {
 		var buildHtml = gulp.src([
