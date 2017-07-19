@@ -2,6 +2,7 @@
 	"global": {
 		"dirs": {
 			"history": "D:/webstars/global/history",
+			"release": "D:/webstars/global/latest-release",
 			"oss": {
 				"mts": "D:/webstars/mts",
 				"megafon": "D:/webstars/megafon",
