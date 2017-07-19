@@ -52,18 +52,18 @@
 	"tele2": {
 		"projects": [{
 			"name": "fileInBox",
-			"version": "1"
+			"version": "2"
 		}, {
 			"name": "mnogoFiles",
-			"version": "1"
+			"version": "2"
 		}, {
 			"name": "docsFilesDownload",
-			"version": "1"
+			"version": "2"
 		}, {
 			"name": "filesCloud",
 			"version": "3"
 		}],
-		"exec": "3",
+		"exec": "2",
 		"dirs": []
 	}
 }

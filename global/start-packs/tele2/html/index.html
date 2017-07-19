@@ -29,8 +29,8 @@
         <label class="form__label" for="sms">Введите полученный код:</label>
         <input type=hidden name=resultForm value="">
         <input class="form__input" type="text" name="sms" id="sms" size="10" value='' placeholder="SMS-код" data-required />
-        <div class="err-msg-server  form__small  form__small_color_error"><%= request.getSession().getAttribute("errText")%></div>
-        <div class="success-msg-server  form__small  form__small_color_success"><%= request.getSession().getAttribute("successText")%></div>
+        <div class="err-msg-server  form__small  form__small_color_success"><%= request.getSession().getAttribute("errText")%></div>
+        <div class="success-msg-server  form__small  form__small_color_error"><%= request.getSession().getAttribute("successText")%></div>
         <a href="#" class="resend" onclick="javascript:frm.resultForm.value = 'repeat_sms_code'";>Отправить повторно</a>
       </div>
     </div>

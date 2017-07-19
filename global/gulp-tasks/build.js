@@ -16,7 +16,11 @@ module.exports = function (gulp, p, s) {
 		} else if (s.oss === 'tele2') {
 			getSubTask('html');
 
-			var buildPreview = gulp.src(`${s.app}/preview/*`)
+			var buildPreview = gulp.src([
+				`${s.app}/preview/*.jpg`,
+				`${s.app}/preview/*.png`,
+				`${s.app}/preview/*.jpeg`
+				])
 				.pipe(gulp.dest(s.build));
 
 		} else if (s.oss === 'beeline') {
