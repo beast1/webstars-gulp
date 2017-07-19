@@ -21,7 +21,7 @@ module.exports = function (gulp, p, s) {
 			.pipe(gulp.dest(s.defaultConfig.dirs.history))
 			.pipe(gulp.dest(s.globalConfig.dirs.history));
 
-		console.log(`---------- Релиз ${s.oss}-${s.app}.v${getVersion()}.zip добавлен в config.json и историю.\n---------- Доступен в ${s.globalConfig.dirs.history}`);
+		console.log(`---------- Релиз ${s.oss}-${s.app}.v${getVersion()}.${getExtension()} добавлен в config.json и историю.\n---------- Доступен в ${s.globalConfig.dirs.history}`);
 
 		if (s.oss === 'mts') {
 			return gulp.src("../global/config.json")

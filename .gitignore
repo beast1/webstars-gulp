@@ -1,6 +1,20 @@
+# Список файлов, которые не должны попадать в репозиторий: https://github.com/beast1/webstars-gulp
+# Синтаксис: http://webnotes.by/docs/raznoe/pravila-sintaksisa-fayla-gitignore
+# Рекомендуется добавлять сюда папки ваших проектов
+
 node_modules
 
 design/
+
+tele2/build/
+mts/build/
+megafon/build/
+beeline/build/
+
+tele2/history/
+mts/history/
+megafon/history/
+beeline/history/
 
 global/config.json
 global/history/

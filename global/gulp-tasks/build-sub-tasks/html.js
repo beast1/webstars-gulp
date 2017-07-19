@@ -20,13 +20,14 @@ module.exports = function (gulp, p, s) {
 			}
 	} else if (s.oss === 'tele2') {
 		var cssLink = '<link href="css/common.css" rel="stylesheet">'
-		console.log(`---------- Заменим пути к изображениям на base64(они должны быть уже минимизированны)`);
+		console.log(`---------- Заменим пути к изображениям на base64 в css-файлах(они должны быть уже минимизированны)`);
+		console.log(`---------- В html подставлять base64 придется вручную. Читай README.md в ${s.app}/html/base64`);
 		console.log(`---------- Инлайново вставим стили в html`);
 		console.log(`-ВАЖНО!- Подключать стили только так: ${cssLink}`);
 		var buildHtml = gulp.src([
 				`${s.app}/*.html`
 			])
-			.pipe(p.img64Html())
+			// .pipe(p.img64Html())
 			.pipe(p.replace(cssLink, '<style>@@include("css/common.css")</style>'))
 			.pipe(p.fileInclude({
 			  prefix: '@@',

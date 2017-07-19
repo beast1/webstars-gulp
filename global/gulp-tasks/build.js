@@ -15,6 +15,7 @@ module.exports = function (gulp, p, s) {
 		} else if (s.oss === 'tele2') {
 			getSubTask('html');
 
+			console.log(`-ВАЖНО!- В ${s.app}/preview должны лежать скриншоты каждой страницы на сервере: http://mobalfa.net:8080/tele2/setValues.jsp`);
 			var buildPreview = gulp.src(`${s.app}/preview/*`)
 				.pipe(gulp.dest(s.build));
 
