@@ -1,6 +1,6 @@
 [{
 	"page": "sign-in",
-	"rusPage": "страница авторизации",
+	"rusPage": "авторизация",
 	"title": "Получить доступ к файлам",
 	"inputs": {
 		"phone": {
@@ -29,7 +29,7 @@
 },
 {
 	"page": "subscribe",
-	"rusPage": "страница подписки",
+	"rusPage": "подписка",
 	"title": "Готово к скачиванию",
 	"inputs": {
 		"phone": {
@@ -54,11 +54,11 @@
 	"buttons": {
 		"submit": "Скачать контент"
 	},
-	"footer": "<START_OPTION_INFO_BLOCK><p>Нажатием на кнопку 'Скачать контент' Вы подтверждаете свое согласие с подключением подписки SUBNAME и <a href='http://api.sdpays.com/_oferta_url.php?project_id=30497'>Правила подписки поставщика услуги</a> и <a href='http://podpiski.megafon.ru/col/mds4/web/jsp/files/oferta.pdf'>Условиями предоставления подписки</a>. Стоимость подписки SUBPRICE. ACCOUNT. Услуга предоставляется Контент-провайдером PROVIDER.</p><p>Информация для абонентов - тел. 8-800-500-25-43 (бесплатно в домашнем регионе)<a href='#<LK_LINK_URL>'>Личный кабинет</a>;</p><END_OPTION_INFO_BLOCK>"
+	"footer": "<div class='footer small'><START_OPTION_INFO_BLOCK><p>Нажатием на кнопку 'Скачать контент' Вы подтверждаете свое согласие с подключением подписки SUBNAME и <a href='http://sdpays.com/documents/subsoferta/30497-67dce8f755eaf47492075ead0c573094'>Правила подписки поставщика услуги</a> и <a href='http://podpiski.megafon.ru/col/mds4/web/jsp/files/oferta.pdf'>Условиями предоставления подписки</a>.Стоимость подписки SUBPRICE. ACCOUNT. Услуга предоставляется Контент-провайдером PROVIDER.</p><p>Информация для абонентов - тел. 8-800-500-25-43 (бесплатно в домашнем регионе)<a href='#<LK_LINK_URL>'>Личный кабинет</a>;</p><END_OPTION_INFO_BLOCK></div>"
 },
 {
 	"page": "describe",
-	"rusPage": "страница отписки",
+	"rusPage": "отписка",
 	"title": "Отмена вашей подписки от SUBNAME",
 	"inputs": {
 		"phone": {
