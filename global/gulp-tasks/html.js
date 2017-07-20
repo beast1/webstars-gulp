@@ -64,6 +64,8 @@ module.exports = function (gulp, p, s) {
 
 				 .pipe(p.replace(`%b.submit`, `${data[i].buttons.submit}`))
 				 .pipe(p.replace(`%b.cencel`, `${data[i].buttons.cencel}`))
+
+				 .pipe(p.replace("'", '"'))
 				 .pipe(p.htmlBeautify())
 			   .pipe(gulp.dest(s.app))
 			   .pipe(p.browserSync.reload({stream: true}));
