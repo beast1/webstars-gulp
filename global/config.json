@@ -22,19 +22,24 @@
 		"projects": [{
 			"name": "fileInBox",
 			"version": "4",
-			"wap": false
+			"wap": "false"
 		}, {
 			"name": "filesTree",
 			"version": "2",
-			"wap": false
+			"wap": "false"
+		}, {
+			"name": "topKachayFile",
+			"version": "4",
+			"wap": "false",
+			"style": "css"
 		}],
-		"exec": "1",
+		"exec": "2",
 		"dirs": []
 	},
 	"megafon": {
 		"projects": [{
 			"name": "fileInBox",
-			"version": "3"
+			"version": "4"
 		}],
 		"exec": "0",
 		"dirs": []
@@ -63,8 +68,14 @@
 		}, {
 			"name": "filesCloud",
 			"version": "3"
+		}, {
+			"name": "archivFileDownload",
+			"version": "2"
+		}, {
+			"name": "docBase",
+			"version": "3"
 		}],
-		"exec": "2",
+		"exec": "4",
 		"dirs": []
 	}
 }

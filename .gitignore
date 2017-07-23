@@ -18,6 +18,7 @@ beeline/history/
 
 global/config.json
 global/history/
+global/latest-release/
 
 beeline/archivStorageLoad/
 
@@ -25,8 +26,11 @@ megafon/fileInBox/
 
 mts/filesTree/
 mts/purple/
+mts/topKachayFile/
 
 tele2/docsFilesDownload/
 tele2/fileInBox/
 tele2/mnogoFiles/
 tele2/filesCloud/
+tele2/archivFileDownload/
+tele2/docBase/
