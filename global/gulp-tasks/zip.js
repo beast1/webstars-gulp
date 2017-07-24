@@ -9,11 +9,11 @@ module.exports = function (gulp, p, s) {
 		}
 
 		var getExtension = function() {
-			if (s.oss === 'tele2') {
-				return 'war'
-			} else {
+			// if (s.oss === 'tele2') {
+			// 	return 'war'
+			// } else {
 				return 'zip'
-			}
+			// }
 		}
 
 		var buildArchiv = gulp.src(s.build + '/**/*.*')

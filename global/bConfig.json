@@ -29,13 +29,9 @@
 			"wap": "false"
 		}, {
 			"name": "topKachayFile",
-			"version": "5",
+			"version": "4",
 			"wap": "false",
 			"style": "css"
-		}, {
-			"name": "fileFreeSearch",
-			"version": "0",
-			"wap": "false"
 		}],
 		"exec": "2",
 		"dirs": []

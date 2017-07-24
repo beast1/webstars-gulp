@@ -59,7 +59,7 @@
 {
 	"page": "describe",
 	"rusPage": "отписка",
-	"title": "Отмена вашей подписки от SUBNAME",
+	"title": "Отказ от подписки SUBNAME",
 	"inputs": {
 		"phone": {
 			"id": "MSISDN_INPUT",
@@ -84,5 +84,5 @@
 		"submit": "Да",
 		"cencel": "Нет"
 	},
-	"footer": "<START_OPTION_INFO_BLOCK>Информация для абонентов - тел. 8 800 500-25-43 (бесплатно в домашнем регионе) | <a href='ваша ссылка'>Правила подписки поставщика услуг</a> | <a href='#<LK_LINK_URL>'>Личный кабинет</a><END_OPTION_INFO_BLOCK>"
+	"footer": "<START_OPTION_INFO_BLOCK>Информация для абонентов - тел. 8 800 500-25-43 (бесплатно в домашнем регионе) | <a href='http://sdpays.com/documents/subsoferta/30497-67dce8f755eaf47492075ead0c573094'>Правила подписки поставщика услуг</a> | <a href='#<LK_LINK_URL>'>Личный кабинет</a><END_OPTION_INFO_BLOCK>"
 }]

@@ -3,12 +3,14 @@
 module.exports = function (gulp, p, s) {
 	if (s.oss === 'mts') {
 			var buildHtml = gulp.src([
-					s.app + '/full-page.html',
-					s.app + '/html/blocks/*.html'
+					`${s.app}/full-page.html`,
+					'const/build/offer.html',
+					'const/build/offer.mobile.html',
+					`${s.app}/html/blocks/*.html`
 				])
 				.pipe(gulp.dest(s.build));
 
-			if (s.project.wap === false) {
+			if (s.project.wap === 'false') {
 				var copyHtml = gulp.src([
 					s.build + '/header.html',
 					s.build + '/footer.html'

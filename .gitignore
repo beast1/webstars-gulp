@@ -21,12 +21,15 @@ global/history/
 global/latest-release/
 
 beeline/archivStorageLoad/
+beeline/fileFreeSearch/
 
 megafon/fileInBox/
+megafon/fileFreeSearch/
 
 mts/filesTree/
 mts/purple/
 mts/topKachayFile/
+mts/fileFreeSearch/
 
 tele2/docsFilesDownload/
 tele2/fileInBox/
@@ -34,3 +37,4 @@ tele2/mnogoFiles/
 tele2/filesCloud/
 tele2/archivFileDownload/
 tele2/docBase/
+tele2/fileFreeSearch/
