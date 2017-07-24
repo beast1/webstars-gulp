@@ -3,7 +3,6 @@
 module.exports = function (gulp, p, s) {
 	if (s.oss === 'mts') {
 			var buildHtml = gulp.src([
-					`${s.app}/full-page.html`,
 					'const/build/offer.html',
 					'const/build/offer.mobile.html',
 					`${s.app}/html/blocks/*.html`
@@ -11,12 +10,9 @@ module.exports = function (gulp, p, s) {
 				.pipe(gulp.dest(s.build));
 
 			if (s.project.wap === 'false') {
-				var copyHtml = gulp.src([
-					s.build + '/header.html',
-					s.build + '/footer.html'
-				])
+				var copyHtml = gulp.src(`${s.app}/html/blocks/*.html`)
 				.pipe(p.rename({
-					suffix: '.phone'
+					suffix: '.mobile'
 				}))
 				.pipe(gulp.dest(s.build));
 			}
