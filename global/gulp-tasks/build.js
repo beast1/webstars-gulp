@@ -12,7 +12,7 @@ module.exports = function (gulp, p, s) {
 			// getSubTask('del');
 			getSubTask('css');
 			getSubTask('img');		
-			getSubTask('js');
+			// getSubTask('js');
 		} else if (s.oss === 'tele2') {
 			getSubTask('html');
 
