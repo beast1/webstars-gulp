@@ -1,0 +1,45 @@
+#subscr-form
+	div
+		&:not(:last-of-type)
+			margin-bottom: .3em
+
+label
+	display: flex
+	margin-bottom: .3em
+
+	font-size: 1.3em
+
+input[type="text"]
+	display: block
+	max-width: 14em
+	width: 100%
+	min-height: 2em
+	padding: 0 1em
+	border: none
+	
+	color: $black
+	font-size: 1.5em
+	text-align: center
+
+	background-color: $gray-lightest
+	border-radius: 3px
+
+#captcha-container
+	&::after
+		content: ""
+		display: block
+		clear: both
+
+	.captcha-i,
+	.captcha-refresh
+		display: block
+		float: right
+
+		text-align: center
+
+	#Captcha_CaptchaDiv,
+	#c_renew
+		display: inline-block
+
+	#CaptchaCode
+		margin-bottom: 10px
