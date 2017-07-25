@@ -22,7 +22,7 @@ module.exports = function (gulp, p, s) {
 			.pipe(gulp.dest(s.globalConfig.dirs.history))
 			.pipe(gulp.dest(s.globalConfig.dirs.release));
 
-		console.log(`---------- Релиз ${s.oss}-${s.app}.v${getVersion()}.${getExtension()} добавлен в config.json и историю.\n---------- Доступен в ${s.globalConfig.dirs.history}`);
+		console.log(`---------- Релиз ${s.oss}-${s.app}.v${getVersion()}.${getExtension()} добавлен в config.json и историю.\n---------- История: ${s.globalConfig.dirs.history}\n---------- Последний релиз: ${s.globalConfig.dirs.release}`);
 
 		if (s.oss === 'mts') {
 			return gulp.src("../global/config.json")
