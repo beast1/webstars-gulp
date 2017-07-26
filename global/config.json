@@ -78,8 +78,11 @@
 		}, {
 			"name": "docBase",
 			"version": "3"
+		}, {
+			"name": "fileFreeSearch",
+			"version": "1"
 		}],
-		"exec": "4",
+		"exec": "6",
 		"dirs": []
 	}
 }

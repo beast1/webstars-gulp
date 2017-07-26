@@ -1,25 +1,25 @@
 html
+	box-sizing: border-box
 	height: 100%
 
-	font-size: 93.75%
-	// font-size: 15px
+	font-family: $default-font
+	color: $text-color
+	font-size: 15px
+	// font-size: 93.75%
 
-body 
-	box-sizing: border-box
+*
+	box-sizing: inherit
+
+body
+	display: flex
+	// align-items: center
+	height: 100%
 	margin: 0
 
-	font-family: $default-font
-	
+	background-color: $body-bg
+	background-position: center center
 	background-size: cover
-	background-image: url("../img/bg-teaser.jpg")
-	
-* 
-	box-sizing: inherit
-	transition-timing-function: ease;
-	transition-duration: 0.2s;
+	background-image: url("../img/bg-teaser.min.jpg")
 
 a
 	color: $link-color
-
-	&:hover
-		color: $link-color--hover

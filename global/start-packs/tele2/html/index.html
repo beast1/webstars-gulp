@@ -1,26 +1,22 @@
 @@include('../../const/required/index/top.html')
-<header class="page-header">
-  <div class="page-header__container">
-    <div class="logo  page-header__logo">
-      <img class="logo__img" src="img/logo-filesCloud.png" alt="docsFilesDownload" />
-      <img class="logo__adult" src="img/icon-adult.jpg" alt="adult alert" />
-    </div>
-    <table class="page-header__payment-info">
-      <%= request.getSession().getAttribute("body")%>
-    </table>
-  </div>
-</header>
 <div class="page">
-  <form class="form" name="chng_frm" method="get" action='<%= (String) request.getSession().getAttribute("urlLocation")%>'>
-    <div class="alert">
-      <span class="alert__main">Код подтверждения отправлен</span>
-      <span class="alert__sub">на&nbsp;номер&nbsp;</span><span class="alert__number"><%= request.getSession().getAttribute("telebody")%></span>
-      <input name="ButtonReturn" value="" type="hidden"/>
-      <input name="serviceId" value='<%= (String) request.getSession().getAttribute("serviceId")%>' type="hidden"/>
-      <a class="alert__link" href="#" onclick="javascript:chng_frm.submit();" class="resend">Изменить номер</a>
-      <br/>
-      <%= request.getSession().getAttribute("deactivate")%>
+  <header class="page-header">
+    <div class="page-header__container">
+      <table class="page-header__payment-info">
+        <%= request.getSession().getAttribute("body")%>
+      </table>
+      <img class="page-header__adult" src="@@include('base64/icon-adult.min.html')" alt="adult alert" />
     </div>
+  </header>
+  <form class="alert" name="chng_frm" method="get" action='<%= (String) request.getSession().getAttribute("urlLocation")%>'>
+    <span class="alert__main">Код подтверждения отправлен</span>
+    <span class="alert__sub">на&nbsp;номер&nbsp;</span><span class="alert__number"><%= request.getSession().getAttribute("telebody")%></span>
+    <input name="ButtonReturn" value="" type="hidden"/>
+    <input name="serviceId" value='<%= (String) request.getSession().getAttribute("serviceId")%>' type="hidden"/>
+    | <a class="alert__link" href="#" onclick="javascript:chng_frm.submit();" class="resend">Изменить номер</a>
+    <span class="alert__small">
+      <%= request.getSession().getAttribute("deactivate")%>
+    </span>
   </form>
   <form class="form" name="frm" method="get" action='<%= (String) request.getSession().getAttribute("urlLocation")%>" onkeypress="if (event.keyCode == 13)
     return false;'>
@@ -29,17 +25,17 @@
         <label class="form__label" for="sms">Введите полученный код:</label>
         <input type=hidden name=resultForm value="">
         <input class="form__input" type="text" name="sms" id="sms" size="10" value='' placeholder="SMS-код" data-required />
-        <div class="err-msg-server  form__small  form__small_color_success"><%= request.getSession().getAttribute("errText")%></div>
-        <div class="success-msg-server  form__small  form__small_color_error"><%= request.getSession().getAttribute("successText")%></div>
+        <span class="form__tip  form__tip_color_error"><%= request.getSession().getAttribute("errText")%></span>
+        <span class="form__tip  form__tip_color_success"><%= request.getSession().getAttribute("successText")%></span>
         <a href="#" class="resend" onclick="javascript:frm.resultForm.value = 'repeat_sms_code'";>Отправить повторно</a>
       </div>
     </div>
-    <div class="controls">
+    <div class="btn-list  btn-list_vertical">
       <input type=hidden name=ServiceId value='<%= (String) request.getSession().getAttribute("serviceId")%>'>
       <input type=hidden name=ButtonOK valuе="">
-      <button class="controls__btn  controls__btn_submit" type="submit" onclick="javascript:frm.ButtonOK.value = 'OK'";
+      <button class="btn  btn_submit" type="submit" onclick="javascript:frm.ButtonOK.value = 'OK'";
       javascript:frm.resultForm.value = 'OK'">Подтвердить</button>
-      <a class="controls__btn  controls__btn_cencel"
+      <a class="btn  btn_cencel"
         href="#"
         onclick="javascript:frm.ButtonOK.setAttribute('name', 'ButtonCancel');
         javascript:frm.ButtonCancel.value = 'Cancel';
