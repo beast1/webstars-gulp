@@ -15,7 +15,7 @@
 		},
 		"captcha": {
 			"id": "CAPTCHA_INPUT",
-			"label": "Введите код с картинки",
+			"label": "Введите код с картинки:",
 			"class": "code",
 			"src": "/col/mds4/adminif/css/newadminif/captcha_sample.png",
 			"reloadId": "CAPTCHA_RELOAD_ELEM",
@@ -44,7 +44,7 @@
 		},
 		"captcha": {
 			"id": "CAPTCHA_INPUT",
-			"label": "Введите код с картинки",
+			"label": "Введите код с картинки:",
 			"class": "code",
 			"src": "/col/mds4/adminif/css/newadminif/captcha_sample.png",
 			"reloadId": "CAPTCHA_RELOAD_ELEM",
@@ -73,7 +73,7 @@
 		},
 		"captcha": {
 			"id": "CAPTCHA_INPUT",
-			"label": "Введите код с картинки",
+			"label": "Введите код с картинки:",
 			"class": "code",
 			"src": "/col/mds4/adminif/css/newadminif/captcha_sample.png",
 			"reloadId": "CAPTCHA_RELOAD_ELEM",
