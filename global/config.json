@@ -44,8 +44,11 @@
 		"projects": [{
 			"name": "fileInBox",
 			"version": "4"
+		}, {
+			"name": "fileFreeSearch",
+			"version": "0"
 		}],
-		"exec": "0",
+		"exec": "1",
 		"dirs": []
 	},
 	"beeline": {

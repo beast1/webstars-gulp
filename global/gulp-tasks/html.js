@@ -36,6 +36,7 @@ module.exports = function (gulp, p, s) {
 			console.log(`---------- Сборка блоков из D:/webstars/megafon/${s.app}/html/blocks`);
 			console.log(`---------- Подстановка значений из D:/webstars/megafon/const/data.json`);
 			var data = require('D:/webstars/megafon/const/data.json');
+			var privatData = require(`D:/webstars/megafon/${s.app}/privatData.json`);
 
 			for (let i = 0; i < data.length; i++) {
 				let html = gulp.src(`${s.app}/html/${data[i].page}.html`)
@@ -43,6 +44,7 @@ module.exports = function (gulp, p, s) {
 			     prefix: '@@',
 			     basepath: '@file'
 			   }))
+				 .pipe(p.replace(`%offer`, `${privatData.offer}`))
 				 .pipe(p.replace(`%headTitle`, `${data[i].rusPage}`))
 
 				 .pipe(p.replace(`%title`, `${data[i].title}`))
