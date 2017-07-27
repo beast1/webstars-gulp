@@ -1,0 +1,26 @@
+<div th:if="${isWebRequest} == false" class="btn-list  btn-list_centered">
+  <button class="btn  btn_submit  btn_1-of-2" id="wapSubmitBtn" type="submit" th:if="${useSmsLink}" th:classappend="${!isWebRequest} ? 'wap'">
+  Получить SMS
+  </button>
+  <button class="btn  btn_submit  btn_1-of-2" id="wapSubmitBtn" type="submit" th:classappend="${!isWebRequest} ? 'wap'" th:if="${useSmsLink == null || useSmsLink == 'false'}">
+  <span th:switch="${evalRequestType}">
+  <span th:case="'single-request'">
+  <span th:if="${tarifficationType == 1 and cpaRequestPriceCodePrice != null}" th:text="${cpaRequestPriceCodePrice} + ' руб.'" class="line1">13 руб.</span>
+  <span th:unless="${tarifficationType == 1 and cpaRequestPriceCodePrice != null}" class="line2">OK</span>
+  </span>
+  <span th:case="'subscription-request'">
+  <span>Получить доступ</span>
+  <br/>
+  <span th:if="${cpaSubscriptionChargePeriodPriceCodePrice > 0}" th:text="${cpaSubscriptionChargePeriodPriceCodePrice} + ' руб.' + ' за ' + ${cpaSubscriptionChargePeriodStr}" class="line3">32 руб. за 10 дней</span>
+  <span th:unless="${cpaSubscriptionChargePeriodPriceCodePrice > 0}" class="line4">OK</span>
+  </span>
+  <span th:case="'tnb-subscription-request'">
+  <span>Получить доступ</span>
+  <br/>
+  <span th:text="${cpaSubscriptionChargePeriodPriceCodePrice > 0 ? cpaSubscriptionChargePeriodPriceCodePrice + ' руб.' : 'Бесплатно'} + ' ' + ${cpaTnbTryEndDate != null ? 'до ' + formatter.formatDate(cpaTnbTryEndDate, 'dd.MM.yyyy') : cpaSubscriptionPeriodStr}" class="line5">до ЧЧ.ММ.ГГ</span>
+  <br/>
+  <span th:if="${buy_cpaSubscriptionChargePeriodPriceCodePrice > 0}" th:text="'Далее ' + ${buy_cpaSubscriptionChargePeriodPriceCodePrice + ' руб.' + ' в ' + buy_cpaSubscriptionChargePeriodStr}" class="line7">32 руб. в 10 дней</span>
+  </span>
+  </span>
+  </button>
+</div>

@@ -22,13 +22,15 @@ module.exports = function (gulp, p, s) {
 	} else if (s.oss === 'beeline') {
 		return function() {
 			console.log(`---------- Текущий проект: beeline-${s.project.name}.v${s.project.version}`);
-			gulp.watch(s.app + '/sass/**/*.sass', ['style']);	
+			gulp.watch(`${s.app}/sass/**/*.sass`, ['sass']);
+			gulp.watch(`${s.app}/html/**/*.html`, ['html']);
+			gulp.watch(`const/fragments/*.html`, ['html']);
+			gulp.watch(`const/required/**/*.html`, ['html']);
 			// gulp.watch(`${s.app}/sass/**/*.sass`, function (event) {
 			//   p.sequence('sass', 'html')(function (err) {
 			//     if (err) console.log('---------- Ошибка в gulp-tasks.watch.beeline')
 			//   });
 			// });
-			gulp.watch(s.app + '/html/**/*.html', ['style']);
 		}
 	} else if (s.oss === 'tele2' || s.oss === 'beeline') {
 		return function() {

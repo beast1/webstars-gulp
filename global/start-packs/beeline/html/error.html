@@ -1,0 +1,10 @@
+@@include('../../const/required/error/top.html')
+<div class="page">
+	<div class="page__title" th:if="${errParentBlocked}">У вас подключена услуга Родительский контроль</div>
+	<div class="page__title" th:if="${errParentBlocked} == null">Ошибка выполнения запроса</div>
+	@@include("../../const/fragments/errors.html")
+	<div class="btn-list  btn-list_centered" th:if="${providerBackUrl != null}">
+		<a class="btn  btn_submit  btn_1-of-2" href="back" th:href="${providerBackUrl}" >Вернуться на сайт провайдера</a>
+  </div>
+</div>
+@@include('../../const/required/error/bottom.html')

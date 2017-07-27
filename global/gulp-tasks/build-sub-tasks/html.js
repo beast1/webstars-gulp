@@ -16,8 +16,9 @@ module.exports = function (gulp, p, s) {
 				}))
 				.pipe(gulp.dest(s.build));
 			}
+
 	} else if (s.oss === 'tele2') {
-		var cssLink = '<link href="css/common.css" rel="stylesheet">'
+		var cssLink = '<link href="css/common.css" rel="stylesheet">';
 		console.log(`-ВАЖНО!- Перед тем как создать архив проекта("gulp zip"), убедись что:\
 						 \n---------- Изображения сжаты: https://tinypng.com/\
 						 \n---------- Изображения в html подключены в виде base64. Читай README.md в ${s.app}/html/base64 для понимания\
@@ -32,8 +33,6 @@ module.exports = function (gulp, p, s) {
 		// console.log(`---------- В html подставлять base64 придется вручную. Читай README.md в ${s.app}/html/base64`);
 		// console.log(`---------- Инлайново вставим стили в html`);
 		// console.log(`-ВАЖНО!- Подключать стили только так: ${cssLink}`);
-		// var delBuild = gulp.src(s.build)
-		// 	.pipe(p.clean());
 
 		var buildHtml = gulp.src([
 				`${s.app}/*.html`
@@ -51,20 +50,49 @@ module.exports = function (gulp, p, s) {
 			.pipe(p.replace('%> -->', '%>'))
 			.pipe(gulp.dest(s.build));
 
-		var copyHtml = gulp.src(`const/build/**/*.*`)
-			.pipe(gulp.dest(s.build));
+		if (project.isWap === 'false') {
+			var copyHtml = gulp.src(`const/build/web/**/*.*`)
+				.pipe(gulp.dest(s.build));
+		} else {
+			var copyHtml = gulp.src(`const/build/wap/**/*.*`)
+				.pipe(gulp.dest(s.build));
+		}
+
 	} else if (s.oss === 'beeline') {
+		var cssLink = '<link href="css/common.css" rel="stylesheet">';
+
 		var buildHtml = gulp.src([
-				`${s.app}/auth.html`,
-				`${s.app}/order.html`,
-				`${s.app}/styles.html`
+				`${s.app}/html/*.html`
 			])
+			// Уберем инклуды фрагментов
+			.pipe(p.replace('@@include("../../const/fragments/errors.html")', '<div th:replace="fragment/errors"></div>'))
+			.pipe(p.replace('@@include("../../const/fragments/captcha.html")', '<div th:replace="fragment/captcha"></div>'))
+			.pipe(p.replace('@@include("../../const/fragments/activation_code.html")', '<div th:replace="fragment/activation_code"></div>'))
+
+			.pipe(p.replace('@@include("../../const/fragments/subscription_info.html")', '<tr th:if="${evalRequestType == \'subscription-request\'}" th:include="fragment/subscription_info" th:remove="tag"></tr>'))
+			.pipe(p.replace('@@include("../../const/fragments/tnb_subscription_info.html")', '<tr th:if="${evalRequestType == \'tnb-subscription-request\'}" th:include="fragment/tnb_subscription_info" th:remove="tag"></tr>'))
+			.pipe(p.replace('@@include("../../const/fragments/single_request_info.html")', '<tr th:if="${evalRequestType == \'single-request\'}" th:include="fragment/single_request_info" th:remove="tag"></tr>'))
+			// Подставим обязательные поля из const/required
+			.pipe(p.fileInclude({
+			  prefix: '@@',
+			  basepath: '@file'
+			}))
+			// Заменим ссылку на инлайн стили
+			.pipe(p.replace(cssLink, '<style>@@include("../css/common.css")</style>'))
+			// Подставим инлайн стили
+			.pipe(p.fileInclude({
+			  prefix: '@@',
+			  basepath: '@file'
+			}))
+			// Уберем "DEV" комментарии
+			.pipe(p.replace('<!--D', ''))
+			.pipe(p.replace('D-->', ''))
+
 			.pipe(gulp.dest(s.build));
-		console.log(`---------- Подбрасываем фрагменты из ${s.localConfig.dirs.fragments}`);
-		var buildFragments = gulp.src([
-				`${s.localConfig.dirs.fragments}/*.html`
-			])
+
+		var copyHtml = gulp.src(`const/fragments/*.html`)
 			.pipe(gulp.dest(s.build));
+
 	} else if (s.oss === 'megafon') {
 		console.log(`---------- Корректируем пути к файлам и изображениям`);
 		var data = require('D:/webstars/megafon/const/data.json');

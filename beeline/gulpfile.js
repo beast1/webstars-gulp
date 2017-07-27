@@ -30,20 +30,23 @@ var s = {
 function getTask(task) {
   return require('../global/gulp-tasks/' + task)(gulp, p, s);
 }
+
+function getStaffTask(task) {
+  return require(`../global/gulp-tasks/staff-tasks/${task}`)(gulp, p, s);
+}
+
+// Staff tasks
+gulp.task('del-release', getStaffTask('del-release'));
+gulp.task('del-build', getStaffTask('del-build'));
+gulp.task('zip-src', ['del-release'], getStaffTask('zip-src'));
+
 gulp.task('sass', getTask('sass'));
 gulp.task('html', ['sass'], getTask('html'));
-gulp.task('style', ['sass', 'html'], function() {
-	// gulp.src(`${s.app}/*.html`)
-	// 	.pipe(p.wait(1000))
-	// 	.pipe(gulp.dest(s.app))
-	// 	.pipe(p.browserSync.reload());
-});
 
-
-gulp.task('zip', getTask('zip'));
+gulp.task('zip', ['del-release'], getTask('zip'));
 gulp.task('serve', getTask('serve'));
-gulp.task('watch', ['style', 'html', 'serve'], getTask('watch'));
-gulp.task('build', ['style', 'html'], getTask('build'));
+gulp.task('watch', ['sass', 'html', 'serve'], getTask('watch'));
+gulp.task('build', ['del-build', 'sass', 'html'], getTask('build'));
 
 
 gulp.task('default', ['watch']);

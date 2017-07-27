@@ -25,9 +25,6 @@ module.exports = function (gulp, p, s) {
 
 		} else if (s.oss === 'beeline') {
 			getSubTask('html');
-			// getSubTask('del');
-			getSubTask('css');
-			getSubTask('img');
 		} else {
 			getSubTask('html');
 			// getSubTask('del');

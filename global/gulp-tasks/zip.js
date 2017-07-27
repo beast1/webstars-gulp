@@ -17,12 +17,12 @@ module.exports = function (gulp, p, s) {
 		}
 
 		var buildArchiv = gulp.src(s.build + '/**/*.*')
-			.pipe(p.zip(`${s.oss}-${s.app}.v${getVersion()}.${getExtension()}`))
+			.pipe(p.zip(`${s.app}-${s.oss}.v${getVersion()}.${getExtension()}`))
 			.pipe(gulp.dest(s.defaultConfig.dirs.history))
 			.pipe(gulp.dest(s.globalConfig.dirs.history))
 			.pipe(gulp.dest(s.globalConfig.dirs.release));
 
-		console.log(`---------- Релиз ${s.oss}-${s.app}.v${getVersion()}.${getExtension()} добавлен в config.json и историю.\n---------- История: ${s.globalConfig.dirs.history}\n---------- Последний релиз: ${s.globalConfig.dirs.release}`);
+		console.log(`---------- Релиз ${s.app}-${s.oss}.v${getVersion()}.${getExtension()} добавлен в config.json и историю.\n---------- История: ${s.globalConfig.dirs.history}\n---------- Последний релиз: ${s.globalConfig.dirs.release}`);
 
 		if (s.oss === 'mts') {
 			return gulp.src("../global/config.json")

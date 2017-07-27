@@ -1,1 +1,15 @@
-auth
+@@include('../../const/required/auth/top.html')
+<form class="page  form" method="POST" action="/landing" th:attr="action=@{auth.html(sessionId=${session_id})}" name="mainFrm">
+  <div class="page__title">Подтверждение оплаты с баланса телефона шаг 1 из 2</div>
+  @@include("../../const/fragments/errors.html")
+  @@include("blocks/phone.html")
+  @@include("../../const/fragments/captcha.html")
+  <p class="text-info">
+    <span><a class="text-info__link" href="http://moskva.beeline.ru/customers/products/mobile/services/details/uslugi-na-korotkikh-nomerakh/">Пользовательское соглашение</a></span>
+    <span>На указанный вами номер телефона будет бесплатно отправлено SMS c кодом подтверждения. Он потребуется вам для подтверждения оплаты.</span>
+  </p>
+  <div class="btn-list  btn-list_centered">
+    <button class="btn  btn_submit  btn_1-of-2" id="submitBtn" type="submit" th:classappend="${!isWebRequest} ? 'wap'">ОК</button>
+  </div>
+</form>
+@@include('../../const/required/auth/bottom.html')

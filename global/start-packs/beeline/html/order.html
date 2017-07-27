@@ -1,1 +1,82 @@
-order
+@@include('../../const/required/order/top.html')
+<!--D <body th:if="${isWebRequest} == false">
+  <form class="page  form" method="POST" action="/landing" th:attr="action=@{order.html(sessionId=${session_id})}" name="mainFrm">
+    <div class="page__title" th:utext="${isWebRequest} == false ? 'Подтверждение оплаты с баланса телефона' : 'Подтверждение оплаты с баланса телефона&lt;br /&gt;шаг 2 из 2'">Подтверждение оплаты с баланса телефона</div>
+    @@include("../../const/fragments/errors.html")
+    <input type="hidden" name="requestId" th:value="${requestId}"/>
+    <input type="hidden" name="msisdn" th:value="${msisdn}"/>
+    <input type="hidden" name="repeatCode" value="false"/>
+    <table class="payment-info" th:classappend="${!isWebRequest} ? 'wap'">
+      <tr>
+        <td class="label-column">
+          <label for="msisdn">Ваш номер телефона</label>
+        </td>
+        <td>
+          <span id="msisdn" th:text="'+7(' + ${#strings.substring(msisdn,1,4)} + ')' + ${#strings.substring(msisdn,4)}">+7(903)9770707</span>
+        </td>
+      </tr>
+      @@include("../../const/fragments/subscription_info.html")
+      @@include("../../const/fragments/tnb_subscription_info.html")
+      @@include("../../const/fragments/single_request_info.html")
+    </table>
+    @@include("../../const/fragments/captcha.html")
+    @@include("../../const/fragments/activation_code.html")
+    <div th:if="${isWebRequest} == true" class="btn-list  btn-list_centered">
+      <button class="btn  btn_submit  btn_1-of-2" id="submitBtn" type="submit" th:classappend="${!isWebRequest} ? 'wap'">ОК</button>
+    </div>
+  </form>
+</body> D-->
+<body th:if="${isWebRequest} == true">
+  <form class="page  form" method="POST" action="/landing" th:attr="action=@{order.html(sessionId=${session_id})}" name="mainFrm">
+    <div class="page__title" th:utext="${isWebRequest} == false ? 'Подтверждение оплаты с баланса телефона' : 'Подтверждение оплаты с баланса телефона&lt;br /&gt;шаг 2 из 2'">Подтверждение оплаты с баланса телефона</div>
+    @@include("../../const/fragments/errors.html")
+    <input type="hidden" name="requestId" th:value="${requestId}"/>
+    <input type="hidden" name="msisdn" th:value="${msisdn}"/>
+    <input type="hidden" name="repeatCode" value="false"/>
+    <table class="payment-info" th:classappend="${!isWebRequest} ? 'wap'">
+      <tr>
+        <td class="label-column">
+          <label for="msisdn">Ваш номер телефона</label>
+        </td>
+        <td>
+          <span id="msisdn" th:text="'+7(' + ${#strings.substring(msisdn,1,4)} + ')' + ${#strings.substring(msisdn,4)}">+7(903)9770707</span>
+        </td>
+      </tr>
+      @@include("../../const/fragments/subscription_info.html")
+      <!--D @@include("../../const/fragments/tnb_subscription_info.html") D-->
+      <!--D @@include("../../const/fragments/single_request_info.html") D-->
+    </table>
+    @@include("../../const/fragments/captcha.html")
+    @@include("../../const/fragments/activation_code.html")
+    <div th:if="${isWebRequest} == true" class="btn-list  btn-list_centered">
+      <button class="btn  btn_submit  btn_1-of-2" id="submitBtn" type="submit" th:classappend="${!isWebRequest} ? 'wap'">ОК</button>
+    </div>
+    <!--D <div th:if="${isWebRequest} == false" class="btn-list  btn-list_centered">
+      <button class="btn  btn_submit  btn_1-of-2" id="wapSubmitBtn" type="submit" th:if="${useSmsLink}" th:classappend="${!isWebRequest} ? 'wap'">
+      Получить SMS
+      </button>
+      <button class="btn  btn_submit  btn_1-of-2" id="wapSubmitBtn" type="submit" th:classappend="${!isWebRequest} ? 'wap'" th:if="${useSmsLink == null || useSmsLink == 'false'}">
+      <span th:switch="${evalRequestType}">
+      <span th:case="'single-request'">
+      <span th:if="${tarifficationType == 1 and cpaRequestPriceCodePrice != null}" th:text="${cpaRequestPriceCodePrice} + ' руб.'" class="line1">13 руб.</span>
+      <span th:unless="${tarifficationType == 1 and cpaRequestPriceCodePrice != null}" class="line2">OK</span>
+      </span>
+      <span th:case="'subscription-request'">
+      <span>Получить доступ</span>
+      <br/>
+      <span th:if="${cpaSubscriptionChargePeriodPriceCodePrice > 0}" th:text="${cpaSubscriptionChargePeriodPriceCodePrice} + ' руб.' + ' за ' + ${cpaSubscriptionChargePeriodStr}" class="line3">32 руб. за 10 дней</span>
+      <span th:unless="${cpaSubscriptionChargePeriodPriceCodePrice > 0}" class="line4">OK</span>
+      </span>
+      <span th:case="'tnb-subscription-request'">
+      <span>Получить доступ</span>
+      <br/>
+      <span th:text="${cpaSubscriptionChargePeriodPriceCodePrice > 0 ? cpaSubscriptionChargePeriodPriceCodePrice + ' руб.' : 'Бесплатно'} + ' ' + ${cpaTnbTryEndDate != null ? 'до ' + formatter.formatDate(cpaTnbTryEndDate, 'dd.MM.yyyy') : cpaSubscriptionPeriodStr}" class="line5">до ЧЧ.ММ.ГГ</span>
+      <br/>
+      <span th:if="${buy_cpaSubscriptionChargePeriodPriceCodePrice > 0}" th:text="'Далее ' + ${buy_cpaSubscriptionChargePeriodPriceCodePrice + ' руб.' + ' в ' + buy_cpaSubscriptionChargePeriodStr}" class="line7">32 руб. в 10 дней</span>
+      </span>
+      </span>
+      </button>
+    </div> D-->
+  </form>
+</body>
+@@include('../../const/required/order/bottom.html')

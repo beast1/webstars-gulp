@@ -1,0 +1,77 @@
+.form
+	display: flex
+	flex-direction: column
+
+	&__row
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+
+		&:not(:last-child)
+			margin-bottom: .6em
+
+	&__item
+		width: 100%
+
+		font-size: 1.4rem
+
+		&_1-of-2
+			width: 48%
+
+		&_captcha
+			padding-top: 
+			margin-left: 1rem
+
+	&__label
+		display: flex
+		flex-direction: column
+		font-size: 1.4rem
+
+		&_fieldset
+			width: 100%
+
+		&_captcha
+			width: 100%
+
+	&__input
+		width: 100%
+		padding: .1em .3em
+		border: none
+		margin-top: 0.2em
+		
+		color: $black
+		font-size: 1.3em
+
+		background-color: $gray-lighten
+		border-radius: 3px
+
+		&_1-of-2
+			width: 48%				
+
+		input
+			padding-left: 3em
+
+	&__captcha-img
+		display: block
+
+		object-fit: contain
+
+	&__captcha-reload
+		color: inherit
+		font-size: 1rem
+
+	&__tip
+		display: block
+		margin-top: .2rem
+		
+		color: $text-color
+		font-size: .9rem
+
+		&_link
+			color: $text-color
+
+		&_color
+			&_success
+				color: $color-success
+			&_error
+				color: $color-danger
