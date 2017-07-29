@@ -37,6 +37,8 @@ function getTask(task) {
 gulp.task('del-release', getStaffTask('del-release'));
 gulp.task('del-build', getStaffTask('del-build'));
 
+gulp.task('st', getTask('st'));
+
 gulp.task('sass', getTask('sass'));
 gulp.task('zip', getTask('zip'));
 gulp.task('serve', getTask('serve'));

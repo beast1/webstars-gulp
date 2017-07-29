@@ -12,12 +12,18 @@ module.exports = function (gulp, p, s) {
 		    .pipe(p.browserSync.reload({stream: true}));
 		};
 	} else if (s.oss === 'tele2') {
+		var privatData = require(`D:/webstars/tele2/${s.app}/privatData.json`);
+
 		return function() {
 			return gulp.src(`${s.app}/html/*.html`)
 				.pipe(p.fileInclude({
 		      prefix: '@@',
 		      basepath: '@file'
 		    }))
+		    // Подставим ссылку на оферту и название сервиса
+		    .pipe(p.replace(`%offer`, `${privatData.offer}`))
+		    .pipe(p.replace(`%serviceName`, `${privatData.serviceName}`))
+		    
 		    .pipe(gulp.dest(s.app))
 		    .pipe(p.browserSync.reload({stream: true}));
 		};

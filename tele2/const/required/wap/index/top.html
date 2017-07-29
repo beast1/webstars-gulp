@@ -1,0 +1,85 @@
+<!-- <%@ page contentType="text/html;charset=UTF-8" language="java" %> -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- <%--<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>--%> -->
+<script LANGUAGE="JavaScript">
+    function overlay() {
+        el = document.getElementById("overlay");
+        el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+    }
+
+    function submitform() {
+        document.frm.submit();
+    }
+
+    function logincheckboxCheck_1() {
+        el = document.getElementById("postme");
+        if (document.getElementById("checkbox1").checked) {
+            document.getElementById("checkboxDiv").className = "checkboxOn";
+            el.setAttribute("src", "data:image/png;base64,<%= (String) request.getSession().getAttribute("okOnb64")%>");
+            el.removeAttribute("disabled");
+
+        }
+        else {
+            document.getElementById("checkboxDiv").className = "checkboxOff";
+            el.setAttribute("src", "data:image/png;base64,<%= (String) request.getSession().getAttribute("okOffb64")%>");
+            el.setAttribute("disabled", "disabled");
+
+        }
+    }
+
+    function logincheckboxCheck_2() {
+        el = document.getElementById("postme");
+        if (document.getElementById("checkbox1").checked) {
+            document.getElementById("checkboxDiv").className = "checkboxOn";
+            el.removeAttribute("disabled");
+
+        }
+        else {
+            document.getElementById("checkboxDiv").className = "checkboxOff";
+            el.setAttribute("disabled", "disabled");
+
+        }
+    }
+    function logincheckboxCheck_3() {
+        el = document.getElementById("postme");
+        if (document.getElementById("checkbox1").checked) {
+            document.getElementById("checkboxDiv").className = "checkboxOn";
+            el.removeAttribute("disabled");
+
+        }
+        else {
+            document.getElementById("checkboxDiv").className = "checkboxOff";
+            el.setAttribute("disabled", "disabled");
+
+        }
+    }
+
+
+    function enable_ok(mark) {
+        el = document.getElementById("postme");
+        chk = document.getElementById("checky");
+        if (mark) {
+            el.removeAttribute("disabled");
+        }
+        else {
+            el.setAttribute("disabled", "disabled");
+        }
+//        el.style.visibility = (!mark) ? "hidden" : "visible";
+    }
+
+
+
+</script>
+<html>
+<head>
+<title>Подтверждение оплаты с баланса телефона</title>
+<!-- Meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="google" content="notranslate">
+<meta name="format-detection" content="telephone=no">
+<link href="css/common.css" rel="stylesheet">
+</head>
+<body>

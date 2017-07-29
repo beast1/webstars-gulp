@@ -45,6 +45,7 @@ gulp.task('zip-src', ['del-release'], getStaffTask('zip-src'));
 // Main tasks
 gulp.task('deploy', getTask('deploy'));
 gulp.task('watch', getTask('watch'));
+gulp.task('st', getTask('st'));
 
 gulp.task('sass', getTask('sass'));
 gulp.task('zip', ['del-release'], getTask('zip'));

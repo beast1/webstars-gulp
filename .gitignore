@@ -21,15 +21,17 @@ global/history/
 global/latest-release/
 
 beeline/archivStorageLoad/
-beeline/fileFreeSearch/
+beeline/linkTakeTracker/
 
 megafon/fileInBox/
-megafon/fileFreeSearch/
+megafon/linkTakeTracker/
 
 mts/filesTree/
 mts/purple/
 mts/topKachayFile/
-mts/fileFreeSearch/
+mts/linkTakeTracker/
+mts/justPoiskovik/
+mts/newVideoKachay/
 
 tele2/docsFilesDownload/
 tele2/fileInBox/
@@ -37,4 +39,8 @@ tele2/mnogoFiles/
 tele2/filesCloud/
 tele2/archivFileDownload/
 tele2/docBase/
-tele2/fileFreeSearch/
+tele2/linkTakeTracker/
+tele2/news_1/
+tele2/news_2/
+tele2/films_1/
+tele2/films_2/

@@ -33,11 +33,21 @@
 			"wap": "false",
 			"style": "css"
 		}, {
-			"name": "fileFreeSearch",
-			"version": "4",
+			"name": "linkTakeTracker",
+			"version": "6",
 			"wap": "false"
+		}, {
+			"name": "justPoiskovik",
+			"version": "4",
+			"wap": "false",
+			"style": "css"
+		}, {
+			"name": "newVideoKachay",
+			"version": "2",
+			"wap": "false",
+			"style": "css"
 		}],
-		"exec": "1",
+		"exec": "3",
 		"dirs": []
 	},
 	"megafon": {
@@ -45,8 +55,8 @@
 			"name": "fileInBox",
 			"version": "4"
 		}, {
-			"name": "fileFreeSearch",
-			"version": "1"
+			"name": "linkTakeTracker",
+			"version": "2"
 		}],
 		"exec": "1",
 		"dirs": []
@@ -57,7 +67,7 @@
 			"version": "0",
 			"cssSeparate": "false"
 		}, {
-			"name": "fileFreeSearch",
+			"name": "linkTakeTracker",
 			"version": "1",
 			"cssSeparate": "false"
 		}],
@@ -92,12 +102,12 @@
 			"version": "3",
 			"isWap": "false"
 		}, {
-			"name": "fileFreeSearch",
-			"version": "1",
+			"name": "linkTakeTracker",
+			"version": "2",
 			"isWap": "false"
 		}, {
 			"name": "news_1",
-			"version": "0",
+			"version": "1",
 			"isWap": "true"
 		}, {
 			"name": "news_2",
@@ -112,7 +122,7 @@
 			"version": "0",
 			"isWap": "true"
 		}],
-		"exec": "6",
+		"exec": "7",
 		"dirs": []
 	}
 }

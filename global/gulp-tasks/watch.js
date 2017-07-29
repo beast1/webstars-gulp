@@ -4,24 +4,21 @@ module.exports = function (gulp, p, s) {
 	if (s.oss === 'mts') {
 		if (s.project.style === 'css') {
 			return function() {
-				//Почему не происходит релоад при изменении js и css?
-				console.log(`---------- Текущий проект: mts-${s.project.name}.v${s.project.version}`);
+				console.log(`---------- Текущий проект: ${s.project.name}-mts.v${s.project.version}`);
 				gulp.watch(s.app + '/sass/**/*.sass', ['sass']);
-				gulp.watch(s.app + '/js/*.js', p.browserSync.reload());
 				gulp.watch(s.app + '/html/**/*.html', ['html']);
-				gulp.watch(`${s.app}/css/**/*.css}`, p.browserSync.reload());
+				// Сделать слежение за css
 			}
 		} else {
 			return function() {
-				console.log(`---------- Текущий проект: mts-${s.project.name}.v${s.project.version}`);
+				console.log(`---------- Текущий проект: ${s.project.name}-mts.v${s.project.version}`);
 				gulp.watch(s.app + '/sass/**/*.sass', ['sass']);
-				gulp.watch(s.app + '/js/*.js', p.browserSync.reload);
 				gulp.watch(s.app + '/html/**/*.html', ['html']);
 			}
 		}
 	} else if (s.oss === 'beeline') {
 		return function() {
-			console.log(`---------- Текущий проект: beeline-${s.project.name}.v${s.project.version}`);
+			console.log(`---------- Текущий проект: ${s.project.name}-beeline.v${s.project.version}`);
 			gulp.watch(`${s.app}/sass/**/*.sass`, ['sass']);
 			gulp.watch(`${s.app}/html/**/*.html`, ['html']);
 			gulp.watch(`const/fragments/*.html`, ['html']);
@@ -34,7 +31,7 @@ module.exports = function (gulp, p, s) {
 		}
 	} else if (s.oss === 'tele2' || s.oss === 'beeline') {
 		return function() {
-			console.log(`---------- Текущий проект: tele2-${s.project.name}.v${s.project.version}`);
+			console.log(`---------- Текущий проект: ${s.project.name}-tele2.v${s.project.version}`);
 			gulp.watch(`${s.app}/sass/**/*.sass`, ['sass']);
 			gulp.watch(`${s.app}/**/*.html`, ['html']);
 		};

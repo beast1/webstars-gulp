@@ -45,12 +45,16 @@ module.exports = function (gulp, p, s) {
 			.pipe(p.rename({
 				extname: '.jsp'
 			}))
+			// Убираем комментарии
+			.pipe(p.replace('<!--D', ''))
+			.pipe(p.replace('D-->', ''))
+			// Убираем комментарии (обратная совместимость)
 			.pipe(p.replace('<!-- DEV -->', ''))
 			.pipe(p.replace('<!-- <%', '<%'))
 			.pipe(p.replace('%> -->', '%>'))
 			.pipe(gulp.dest(s.build));
 
-		if (project.isWap === 'false') {
+		if (s.project.isWap === 'false') {
 			var copyHtml = gulp.src(`const/build/web/**/*.*`)
 				.pipe(gulp.dest(s.build));
 		} else {

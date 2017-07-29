@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.8.3
+Created-By: 1.6.0_12-b04 (Sun Microsystems Inc.)
+Implementation-Title: landing_mobile_tele2
+Specification-Title: landing page mobile tele2
+Specification-Version: 1.0
+Specification-Vendor: Bercut Ltd.
+Implementation-Version: 1.0.0.17
+Implementation-Vendor: Bercut Ltd.
+

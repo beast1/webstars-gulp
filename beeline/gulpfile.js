@@ -40,6 +40,8 @@ gulp.task('del-release', getStaffTask('del-release'));
 gulp.task('del-build', getStaffTask('del-build'));
 gulp.task('zip-src', ['del-release'], getStaffTask('zip-src'));
 
+gulp.task('st', getTask('st'));
+
 gulp.task('sass', getTask('sass'));
 gulp.task('html', ['sass'], getTask('html'));
 
