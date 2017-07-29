@@ -7,22 +7,22 @@ module.exports = function (gulp, p, s) {
 
 			return +current + 1;
 		}
-
-		var getExtension = function() {
-			// if (s.oss === 'tele2') {
-			// 	return 'war'
-			// } else {
-				return 'zip'
-			// }
+		var getSrc = function() {
+			if (s.oss === 'tele2') {
+				console.log(`${s.zipBufer}/**/*.*`);
+				return `${s.zipBufer}/**/*.*`
+			} else {
+				return s.build + '/**/*.*'
+			}
 		}
 
-		var buildArchiv = gulp.src(s.build + '/**/*.*')
-			.pipe(p.zip(`${s.app}-${s.oss}.v${getVersion()}.${getExtension()}`))
+		var buildArchiv = gulp.src(getSrc())
+			.pipe(p.zip(`${s.app}-${s.oss}.v${getVersion()}.zip`))
 			.pipe(gulp.dest(s.defaultConfig.dirs.history))
 			.pipe(gulp.dest(s.globalConfig.dirs.history))
 			.pipe(gulp.dest(s.globalConfig.dirs.release));
 
-		console.log(`---------- Релиз ${s.app}-${s.oss}.v${getVersion()}.${getExtension()} добавлен в config.json и историю.\n---------- История: ${s.globalConfig.dirs.history}\n---------- Последний релиз: ${s.globalConfig.dirs.release}`);
+		console.log(`---------- Релиз ${s.app}-${s.oss}.v${getVersion()}.zip добавлен в config.json и историю.\n---------- История: ${s.globalConfig.dirs.history}\n---------- Последний релиз: ${s.globalConfig.dirs.release}`);
 
 		if (s.oss === 'mts') {
 			return gulp.src("../global/config.json")
@@ -59,6 +59,6 @@ module.exports = function (gulp, p, s) {
 			    return json
 			  }))
 			  .pipe(gulp.dest("../global"));
-		}
+		};
 	};
 };

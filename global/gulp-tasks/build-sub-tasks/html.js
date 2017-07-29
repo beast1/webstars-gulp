@@ -19,7 +19,7 @@ module.exports = function (gulp, p, s) {
 
 	} else if (s.oss === 'tele2') {
 		var cssLink = '<link href="css/common.css" rel="stylesheet">';
-		console.log(`-ВАЖНО!- Перед тем как создать архив проекта("gulp zip"), убедись что:\
+		console.log(`-ВАЖНО!- Перед тем как создать архив проекта("gulp zip-pre, а потом gulp zip"), убедись что:\
 						 \n---------- Изображения сжаты: https://tinypng.com/\
 						 \n---------- Изображения в html подключены в виде base64. Читай README.md в ${s.app}/html/base64 для понимания\
 						 \n---------- Скроллов нет на всех страницах: http://mobalfa.net:8080/tele2/setValues.jsp\

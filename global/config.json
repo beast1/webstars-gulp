@@ -34,7 +34,7 @@
 			"style": "css"
 		}, {
 			"name": "linkTakeTracker",
-			"version": "6",
+			"version": "8",
 			"wap": "false"
 		}, {
 			"name": "justPoiskovik",
@@ -107,7 +107,7 @@
 			"isWap": "false"
 		}, {
 			"name": "news_1",
-			"version": "1",
+			"version": "0",
 			"isWap": "true"
 		}, {
 			"name": "news_2",
