@@ -1,0 +1,19 @@
+@@include('../../const/required/wap/fail/top.html')
+<div class="page">
+  @@include('blocks/page-header.html')
+  <form class="page-main" name="frm" method="get" action='<%= (String) request.getSession().getAttribute("urlLocation")%>" onkeypress="if (event.keyCode == 13)
+    return false;'>
+    <!--D <input type=hidden name=resultForm value=""> D-->
+    <button class="btn  btn_submit" id="postme" type="submit" onclick="javascript:frm.ButtonOK.value = 'OK';
+      javascript:frm.resultForm.value = 'OK'"><i class="btn__icon  btn__icon_left"></i>Подписаться</button>
+    <a class="btn  btn_cencel" href="#" onclick="javascript:frm.ButtonOK.setAttribute('name', 'ButtonCancel');
+      javascript:frm.ButtonCancel.value = 'Cancel';
+      javascript:frm.resultForm.value = 'OK';
+      javascript:frm.submit();">Отмена</a>
+    <!--D <%--<button class="button button-confirm"> <%= request.getSession().getAttribute("okButtonTag")%></button>--%> D-->
+    <!--D <input type="hidden" name="ServiceId" value='<%= (String) request.getSession().getAttribute("serviceId")%>'> D-->
+    <!--D <input type="hidden" name="ButtonOK" valuе=""> D-->
+  </form>
+  @@include('blocks/page-footer.html')
+</div>
+@@include('../../const/required/wap/fail/bottom.html')

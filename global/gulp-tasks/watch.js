@@ -1,25 +1,50 @@
 // return должен быть внутри условия
 
 module.exports = function (gulp, p, s) {
-	if (s.oss === 'mts') {
-		if (s.project.style === 'css') {
-			return function() {
-				console.log(`---------- Текущий проект: ${s.project.name}-mts.v${s.project.version}`);
-				gulp.watch(s.app + '/sass/**/*.sass', ['sass']);
-				gulp.watch(s.app + '/html/**/*.html', ['html']);
-				// Сделать слежение за css
-			}
+	var getStyleSrc = function() {
+		var ext = '';
+
+		if (s.project.style === 'scss') {
+			ext = 'scss';
+		} else if (s.project.style === 'sass') {
+			ext = 'sass';
+		} else if (s.project.style === 'css') 
+		// пока нет модуля для css{
+			ext = s.defaultConfig.style;
 		} else {
-			return function() {
-				console.log(`---------- Текущий проект: ${s.project.name}-mts.v${s.project.version}`);
-				gulp.watch(s.app + '/sass/**/*.sass', ['sass']);
-				gulp.watch(s.app + '/html/**/*.html', ['html']);
-			}
+			ext = s.defaultConfig.style;
+		}
+
+		return `${s.app}/${ext}/common.${ext}`
+	}
+
+	var getStyleTask = function() {
+		var task = '';
+
+		if (s.project.style === 'scss') {
+			task = 'scss';
+		} else if (s.project.style === 'sass') {
+			task = 'sass';
+		} else if (s.project.style === 'css') {
+			// пока нет модуля для css
+			task = s.defaultConfig.style;
+		} else {
+			task = s.defaultConfig.style;
+		}
+
+		return task
+	}
+
+	if (s.oss === 'mts') {
+		return function() {
+			console.log(`---------- Текущий проект: ${s.project.name}-mts.v${s.project.version}`);
+			gulp.watch(getStyleSrc(), [getStyleTask()]);
+			gulp.watch(s.app + '/html/**/*.html', ['html']);
 		}
 	} else if (s.oss === 'beeline') {
 		return function() {
 			console.log(`---------- Текущий проект: ${s.project.name}-beeline.v${s.project.version}`);
-			gulp.watch(`${s.app}/sass/**/*.sass`, ['sass']);
+			gulp.watch(getStyleSrc(), [getStyleTask()]);
 			gulp.watch(`${s.app}/html/**/*.html`, ['html']);
 			gulp.watch(`const/fragments/*.html`, ['html']);
 			gulp.watch(`const/required/**/*.html`, ['html']);
@@ -32,13 +57,13 @@ module.exports = function (gulp, p, s) {
 	} else if (s.oss === 'tele2' || s.oss === 'beeline') {
 		return function() {
 			console.log(`---------- Текущий проект: ${s.project.name}-tele2.v${s.project.version}`);
-			gulp.watch(`${s.app}/sass/**/*.sass`, ['sass']);
+			gulp.watch(getStyleSrc(), [getStyleTask()]);
 			gulp.watch(`${s.app}/**/*.html`, ['html']);
 		};
 	} else {
 		return function() {
 			console.log(`---------- Текущий проект: ${s.project.name}.v${s.project.version}`);
-			gulp.watch(s.app + '/sass/**/*.sass', ['sass']);	
+			gulp.watch(getStyleSrc(), [getStyleTask()]);	
 			gulp.watch(s.app + '/html/**/*.html', ['html']);
 		};
 	};

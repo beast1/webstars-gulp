@@ -16,7 +16,8 @@
 			"build": "build",
 			"history": "history",
 			"preBuild": "preBuild"
-		}
+		}, 
+		"style": "sass"
 	},
 	"mts": {
 		"projects": [{
@@ -46,8 +47,13 @@
 			"version": "2",
 			"wap": "false",
 			"style": "css"
+		}, {
+			"name": "newVideoLoad",
+			"version": "1",
+			"wap": "false",
+			"style": "scss"
 		}],
-		"exec": "3",
+		"exec": "6",
 		"dirs": []
 	},
 	"megafon": {
@@ -107,22 +113,30 @@
 			"isWap": "false"
 		}, {
 			"name": "news_1",
-			"version": "0",
+			"version": "2",
 			"isWap": "true"
 		}, {
 			"name": "news_2",
-			"version": "0",
+			"version": "1",
 			"isWap": "true"
 		}, {
 			"name": "weather_1",
-			"version": "0",
+			"version": "2",
 			"isWap": "true"
 		}, {
 			"name": "weather_2",
-			"version": "0",
+			"version": "1",
 			"isWap": "true"
+		}, {
+			"name": "newVideoKachay",
+			"version": "1",
+			"isWap": "false"
+		}, {
+			"name": "newVideoLoad",
+			"version": "1",
+			"isWap": "false"
 		}],
-		"exec": "7",
+		"exec": "10",
 		"dirs": []
 	}
 }

@@ -1,0 +1,11 @@
+@@include('../../const/required/wap/fail/top.html')
+<div class="page">
+  <header class="page-header">
+    <%=request.getSession().getAttribute("errText") == null ? "" : request.getSession().getAttribute("errText")%>
+    <%=request.getSession().getAttribute("successText") == null ? "" : request.getSession().getAttribute("successText")%>
+  </header>
+  <!-- <div class="page-main">
+  	<span class="btn  btn_submit"><%= request.getSession().getAttribute("fUrl") == null ? "" : request.getSession().getAttribute("fUrl")%></span>
+  </div> -->
+</div>
+@@include('../../const/required/wap/fail/bottom.html')

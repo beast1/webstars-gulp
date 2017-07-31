@@ -33,6 +33,7 @@ mts/topKachayFile/
 mts/linkTakeTracker/
 mts/justPoiskovik/
 mts/newVideoKachay/
+mts/newVideoLoad/
 
 tele2/docsFilesDownload/
 tele2/fileInBox/
@@ -45,3 +46,7 @@ tele2/news_1/
 tele2/news_2/
 tele2/films_1/
 tele2/films_2/
+tele2/newVideoKachay/
+tele2/newVideoLoad/
+tele2/weather_1/
+tele2/weather_2/

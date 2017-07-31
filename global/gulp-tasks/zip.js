@@ -9,7 +9,6 @@ module.exports = function (gulp, p, s) {
 		}
 		var getSrc = function() {
 			if (s.oss === 'tele2') {
-				console.log(`${s.zipBufer}/**/*.*`);
 				return `${s.zipBufer}/**/*.*`
 			} else {
 				return s.build + '/**/*.*'
