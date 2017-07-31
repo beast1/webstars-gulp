@@ -16,7 +16,7 @@
 			"build": "build",
 			"history": "history",
 			"preBuild": "preBuild"
-		}, 
+		},
 		"style": "sass"
 	},
 	"mts": {
@@ -49,7 +49,7 @@
 			"style": "css"
 		}, {
 			"name": "newVideoLoad",
-			"version": "1",
+			"version": "3",
 			"wap": "false",
 			"style": "scss"
 		}],

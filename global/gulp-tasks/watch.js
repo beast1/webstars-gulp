@@ -8,7 +8,7 @@ module.exports = function (gulp, p, s) {
 			ext = 'scss';
 		} else if (s.project.style === 'sass') {
 			ext = 'sass';
-		} else if (s.project.style === 'css') 
+		} else if (s.project.style === 'css') {
 		// пока нет модуля для css{
 			ext = s.defaultConfig.style;
 		} else {

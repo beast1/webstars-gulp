@@ -6,6 +6,8 @@ var p = require('gulp-load-plugins')({
 	lazy: false
 });
 
+var m = require('../global/methods.js');
+
 var	oss            = "mts",
 		globalConfig   = require('../global/config.json').global,
 		localConfig 	 = require('../global/config.json').mts,
@@ -24,39 +26,12 @@ var s = {
 	"build": build
 }
 
-var methods = require('../global/methods.js');
-
-var test = {
-	"hello": "bye"
-}
-
-console.dir(test);
-console.dir(methods);
-
-// var m = {
-	 // "getStyleSrc": function() {
-		// 	var ext = '';
-
-		// 	if (s.project.style === 'scss') {
-		// 		ext = 'scss';
-		// 	} else if (s.project.style === 'sass') {
-		// 		ext = 'sass';
-		// 	} else if (s.project.style === 'css') {
-		// 		ext = 'css';
-		// 	} else {
-		// 		ext = s.defaultConfig.style;
-		// 	}
-
-		// 	return `${s.app}/${ext}/common.${ext}`
-		// }
-// }
-
 function getTask(task) {
-  return require('../global/gulp-tasks/' + task)(gulp, p, s, methods);
+  return require('../global/gulp-tasks/' + task)(gulp, p, s, m);
 }
 
 function getStaffTask(task) {
-  return require(`../global/gulp-tasks/staff-tasks/${task}`)(gulp, p, s, methods);
+  return require(`../global/gulp-tasks/staff-tasks/${task}`)(gulp, p, s, m);
 }
 
 // Staff tasks

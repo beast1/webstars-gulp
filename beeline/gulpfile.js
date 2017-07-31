@@ -7,6 +7,8 @@ var p = require('gulp-load-plugins')({
 	lazy: false
 });
 
+var m = require('../global/methods.js');
+
 var	oss            = "beeline",
 		globalConfig   = require('../global/config.json').global,
 		localConfig 	 = require('../global/config.json').beeline,
@@ -28,11 +30,11 @@ var s = {
 }
 
 function getTask(task) {
-  return require('../global/gulp-tasks/' + task)(gulp, p, s);
+  return require('../global/gulp-tasks/' + task)(gulp, p, s, m);
 }
 
 function getStaffTask(task) {
-  return require(`../global/gulp-tasks/staff-tasks/${task}`)(gulp, p, s);
+  return require(`../global/gulp-tasks/staff-tasks/${task}`)(gulp, p, s, m);
 }
 
 // Staff tasks
