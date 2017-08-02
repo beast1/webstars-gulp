@@ -1,10 +1,10 @@
 //getSubTask('html'); Всегда первый, потому что там удаляем папку build(пока только для теле2)
 "use strict";
 
-module.exports = function (gulp, p, s) {
+module.exports = function (gulp, p, s, m) {
 	return function () {
 		function getSubTask(task) {
-		  return require('D:/webstars/global/gulp-tasks/build-sub-tasks/' + task)(gulp, p, s);
+		  return require('D:/webstars/global/gulp-tasks/build-sub-tasks/' + task)(gulp, p, s, m);
 		}
 
 		if (s.oss === 'mts') {

@@ -1,16 +1,24 @@
 "use strict";
 
-module.exports = function (gulp, p, s) {
+module.exports = function (gulp, p, s, m) {
 	if (s.oss === 'mts') {
+			var privatData = require(`D:/webstars/${s.oss}/${s.app}/privatData.json`);
+
+			m.validateData([privatData.serviceLink]);
+
 			var buildHtml = gulp.src([
 					'const/build/offer.html',
 					'const/build/offer.mobile.html',
 					`${s.app}/html/blocks/*.html`
 				])
+				.pipe(p.replace('%serviceURL', `${privatData.serviceURL}`))
+				// Сохранено для обратной совместимости лп мтс до 02.08.17
+				.pipe(p.replace('%serviceLink', `${privatData.serviceLink}`))
 				.pipe(gulp.dest(s.build));
 
 			if (s.project.wap === 'false') {
 				var copyHtml = gulp.src(`${s.app}/html/blocks/*.html`)
+				.pipe(p.replace('%serviceLink', `${privatData.serviceLink}`))
 				.pipe(p.rename({
 					suffix: '.mobile'
 				}))
@@ -34,6 +42,8 @@ module.exports = function (gulp, p, s) {
 		// console.log(`---------- Инлайново вставим стили в html`);
 		// console.log(`-ВАЖНО!- Подключать стили только так: ${cssLink}`);
 
+		var privatData = require(`D:/webstars/${s.oss}/${s.app}/privatData.json`);
+
 		var buildHtml = gulp.src([
 				`${s.app}/*.html`
 			])
@@ -45,6 +55,9 @@ module.exports = function (gulp, p, s) {
 			.pipe(p.rename({
 				extname: '.jsp'
 			}))
+			// Подставим приват-параметры
+			.pipe(p.replace('%serviceURL', `${privatData.serviceURL}`))
+			.pipe(p.replace('%offer', `${privatData.offer}`))
 			// Убираем комментарии
 			.pipe(p.replace('<!--D', ''))
 			.pipe(p.replace('D-->', ''))

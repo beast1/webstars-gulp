@@ -34,6 +34,41 @@
 			"wap": "false",
 			"style": "css"
 		}, {
+			"name": "topKachayFile_2",
+			"version": "0",
+			"wap": "false",
+			"style": "scss"
+		}, {
+			"name": "topKachayFile_3",
+			"version": "1",
+			"wap": "false",
+			"style": "scss"
+		}, {
+			"name": "getFiles",
+			"version": "1",
+			"wap": "true",
+			"style": "scss"
+		}, {
+			"name": "getFiles_2",
+			"version": "0",
+			"wap": "true",
+			"style": "scss"
+		}, {
+			"name": "getFiles_3",
+			"version": "0",
+			"wap": "true",
+			"style": "scss"
+		}, {
+			"name": "getFiles_4",
+			"version": "0",
+			"wap": "true",
+			"style": "scss"
+		}, {
+			"name": "getFiles_5",
+			"version": "0",
+			"wap": "true",
+			"style": "scss"
+		}, {
 			"name": "linkTakeTracker",
 			"version": "8",
 			"wap": "false"
@@ -49,11 +84,16 @@
 			"style": "css"
 		}, {
 			"name": "newVideoLoad",
-			"version": "3",
+			"version": "4",
+			"wap": "false",
+			"style": "scss"
+		}, {
+			"name": "ero69",
+			"version": "10",
 			"wap": "false",
 			"style": "scss"
 		}],
-		"exec": "6",
+		"exec": "14",
 		"dirs": []
 	},
 	"megafon": {
@@ -135,8 +175,24 @@
 			"name": "newVideoLoad",
 			"version": "1",
 			"isWap": "false"
+		}, {
+			"name": "adult_1",
+			"version": "1",
+			"isWap": "true"
+		}, {
+			"name": "adult_2",
+			"version": "0",
+			"isWap": "true"
+		}, {
+			"name": "fileShering_1",
+			"version": "0",
+			"isWap": "true"
+		}, {
+			"name": "fileShering_2",
+			"version": "0",
+			"isWap": "true"
 		}],
-		"exec": "10",
+		"exec": "13",
 		"dirs": []
 	}
 }
