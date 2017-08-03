@@ -3,6 +3,19 @@
 module.exports = (function() {
 	var methods = {};
 
+	methods.getStyleExt = function(s) {
+		if (s.project.style === 'scss') {
+			return 'scss';
+		} else if (s.project.style === 'sass') {
+			return 'sass';
+		} else if (s.project.style === 'css') {
+			// пока нет модуля для css
+			return s.defaultConfig.style;
+		} else {
+			return s.defaultConfig.style;
+		}
+	}
+
 	methods.getStyleSrc = function(s, task) {
 		var ext = '';
 

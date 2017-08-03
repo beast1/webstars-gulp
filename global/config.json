@@ -70,7 +70,7 @@
 			"style": "scss"
 		}, {
 			"name": "linkTakeTracker",
-			"version": "8",
+			"version": "9",
 			"wap": "false"
 		}, {
 			"name": "justPoiskovik",
@@ -84,27 +84,35 @@
 			"style": "css"
 		}, {
 			"name": "newVideoLoad",
-			"version": "4",
+			"version": "6",
 			"wap": "false",
 			"style": "scss"
 		}, {
 			"name": "ero69",
-			"version": "10",
+			"version": "12",
 			"wap": "false",
 			"style": "scss"
+		}, {
+			"name": "coolContent",
+			"ticket": "2508",
+			"version": "5",
+			"platform": "wap",
+			"style": "scss"
 		}],
-		"exec": "14",
+		"exec": "15",
 		"dirs": []
 	},
 	"megafon": {
 		"projects": [{
 			"name": "fileInBox",
-			"version": "4"
+			"version": "4",
+			"style": "sass"
 		}, {
 			"name": "linkTakeTracker",
-			"version": "2"
+			"version": "4",
+			"style": "sass"
 		}],
-		"exec": "1",
+		"exec": "2",
 		"dirs": []
 	},
 	"beeline": {
@@ -114,7 +122,7 @@
 			"cssSeparate": "false"
 		}, {
 			"name": "linkTakeTracker",
-			"version": "1",
+			"version": "2",
 			"cssSeparate": "false"
 		}],
 		"exec": "1",
@@ -149,7 +157,7 @@
 			"isWap": "false"
 		}, {
 			"name": "linkTakeTracker",
-			"version": "2",
+			"version": "4",
 			"isWap": "false"
 		}, {
 			"name": "news_1",
@@ -169,11 +177,11 @@
 			"isWap": "true"
 		}, {
 			"name": "newVideoKachay",
-			"version": "1",
+			"version": "2",
 			"isWap": "false"
 		}, {
 			"name": "newVideoLoad",
-			"version": "1",
+			"version": "2",
 			"isWap": "false"
 		}, {
 			"name": "adult_1",
@@ -191,8 +199,27 @@
 			"name": "fileShering_2",
 			"version": "0",
 			"isWap": "true"
+		}, {
+			"name": "getFiles",
+			"version": "8",
+			"isWap": "false",
+			"clones": [{
+				"name": "prototype"
+			}, {
+				"name": "clone_1"
+			}, {
+				"name": "clone_2"
+			}]
+		}, {
+			"name": "justPoiskovik",
+			"version": "2",
+			"isWap": "false"
 		}],
-		"exec": "13",
+		"controls": {
+			"exec": "6",
+			"isProto": "false",
+			"execClone": "1"
+		},
 		"dirs": []
 	}
 }

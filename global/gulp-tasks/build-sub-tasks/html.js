@@ -11,12 +11,12 @@ module.exports = function (gulp, p, s, m) {
 					'const/build/offer.mobile.html',
 					`${s.app}/html/blocks/*.html`
 				])
-				.pipe(p.replace('%serviceURL', `${privatData.serviceURL}`))
+				.pipe(p.replace('%serviceURL', `http://${privatData.serviceURL}`))
 				// Сохранено для обратной совместимости лп мтс до 02.08.17
 				.pipe(p.replace('%serviceLink', `${privatData.serviceLink}`))
 				.pipe(gulp.dest(s.build));
 
-			if (s.project.wap === 'false') {
+			if (s.project.platform !== 'mixed') {
 				var copyHtml = gulp.src(`${s.app}/html/blocks/*.html`)
 				.pipe(p.replace('%serviceLink', `${privatData.serviceLink}`))
 				.pipe(p.rename({

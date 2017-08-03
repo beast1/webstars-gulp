@@ -2,11 +2,6 @@
 
 module.exports = function (gulp, p, s, m) {
 	return function() {
-		// var getVersion = function() {
-		// 	var current = s.project.version;
-
-		// 	return +current + 1;
-		// }
 		var getSrc = function() {
 			if (s.oss === 'tele2') {
 				return `${s.zipBufer}/**/*.*`
@@ -53,7 +48,7 @@ module.exports = function (gulp, p, s, m) {
 		} else if (s.oss === 'tele2') {
 			return gulp.src("../global/config.json")
 			  .pipe(p.jsonEditor(function(json) {
-			    json.tele2.projects[s.localConfig.exec].version = m.getVersion(s) + "";
+			    json.tele2.projects[s.localConfig.controls.exec].version = m.getVersion(s) + "";
 
 			    return json
 			  }))

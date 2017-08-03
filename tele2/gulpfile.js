@@ -14,7 +14,7 @@ var	oss            = "tele2",
 		localConfig 	 = require('../global/config.json').tele2,
 		defaultConfig  = require('../global/config.json').default,
 		sequreConfig   = require('D:/sequre.json').tele2,
-		project 			 = localConfig.projects[localConfig.exec],
+		project 			 = localConfig.projects[localConfig.controls.exec],
 		app 					 = project.name,
 		build  				 = defaultConfig.dirs.build,
 		preBuild       = defaultConfig.dirs.preBuild;
@@ -31,6 +31,8 @@ var s = {
 	"preBuild": preBuild,
 	"zipBufer": "preZip"
 }
+
+console.log(Object.keys(s));
 
 function getTask(task) {
   return require('../global/gulp-tasks/' + task)(gulp, p, s, m);
@@ -50,7 +52,8 @@ gulp.task('zip-src', ['del-release'], getStaffTask('zip-src'));
 // Main tasks
 gulp.task('deploy', getTask('deploy'));
 gulp.task('watch', getTask('watch'));
-gulp.task('st', getTask('st'));
+gulp.task('st', getTask('status'));
+gulp.task('co', getTask('checkout'));
 
 gulp.task('sass', getTask('sass'));
 gulp.task('zip', getTask('zip'));
@@ -59,18 +62,20 @@ gulp.task('watch', ['sass', 'html', 'serve'], getTask('watch'));
 gulp.task('html', getTask('html'));
 gulp.task('build', ['del-zb', 'del-build', 'sass', 'html'], getTask('build'));
 
+gulp.task('zip', ['del-zb', 'zip-pre'], getTask('zip'));
+
 /*
-* Нужно последовательно выполнить три таска: zip-pre(собрать в папку файлы для будущего архива(буфер)), gulp-zip(создать архив), del-zb(удалить буфер)
-* Пример 1:
-* zip-pre не дождется del-zb и zip сформирует пустой архив
-* gulp.task('del-zb', getStaffTask('del-zipBufer'));
-* gulp.task('zip-pre', ['del-zb'], getStaffTask('zip-pre'));
-* Если gulp.task('zip', ['zip-pre'], getTask('zip'));
-* Пример 2:
-* то же самое
-* gulp.task('createZip', ['zip-pre'], getTask('zip'));
-* gulp.task('del-zipBufer', ['createZip'], getStaffTask('del-zipBufer'));
-* gulp.task('zip', ['createZip', 'del-zipBufer']);
+ Нужно последовательно выполнить три таска: zip-pre(собрать в папку файлы для будущего архива(буфер)), gulp-zip(создать архив), del-zb(удалить буфер)
+ Пример 1:
+ zip-pre не дождется del-zb и zip сформирует пустой архив
+ gulp.task('del-zb', getStaffTask('del-zipBufer'));
+ gulp.task('zip-pre', ['del-zb'], getStaffTask('zip-pre'));
+ Если gulp.task('zip', ['zip-pre'], getTask('zip'));
+ Пример 2:
+ то же самое
+ gulp.task('createZip', ['zip-pre'], getTask('zip'));
+ gulp.task('del-zipBufer', ['createZip'], getStaffTask('del-zipBufer'));
+ gulp.task('zip', ['createZip', 'del-zipBufer']);
 */
 
 gulp.task('default', ['watch']);
