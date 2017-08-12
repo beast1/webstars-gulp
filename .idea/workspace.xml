@@ -2,64 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="946f68a4-2a5d-4bb9-9e2d-e9cc809ffddb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/beeline/html/auth.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/beeline/html/blocks/phone.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/beeline/html/error.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/beeline/html/order.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/beeline/html/styles.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/beeline/sass/_blocks/_btn.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/beeline/sass/_blocks/_errors.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/beeline/sass/_blocks/_form.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/beeline/sass/_blocks/_logo.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/beeline/sass/_blocks/_page.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/beeline/sass/_blocks/_payment-info.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/beeline/sass/_blocks/_small.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/beeline/sass/_blocks/_text-info.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/beeline/sass/_scaffolding.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/beeline/sass/_vars.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/beeline/sass/common.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/megafon/html/blocks/bottom.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/megafon/html/blocks/captcha.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/megafon/html/blocks/phone.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/megafon/html/blocks/sms.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/megafon/html/blocks/top.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/megafon/html/describe.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/megafon/html/sign-in.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/megafon/html/subscribe.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/megafon/privatData.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/megafon/sass/_blocks/_btn.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/megafon/sass/_blocks/_form.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/megafon/sass/_blocks/_logo.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/megafon/sass/_blocks/_page.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/megafon/sass/_blocks/_small.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/megafon/sass/_scaffolding.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/megafon/sass/_vars.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/megafon/sass/main.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/global/start-packs/web-mts/img/img-adult.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/megafon/const/describe/footer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/megafon/const/sign-in/footer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/megafon/const/subscribe/footer.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/beeline/gulpfile.js" afterPath="$PROJECT_DIR$/beeline/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global/config.json" afterPath="$PROJECT_DIR$/global/config.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global/gulp-tasks/checkout.js" afterPath="$PROJECT_DIR$/global/gulp-tasks/checkout.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global/gulp-tasks/status.js" afterPath="$PROJECT_DIR$/global/gulp-tasks/status.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global/gulp-tasks/zip.js" afterPath="$PROJECT_DIR$/global/gulp-tasks/zip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global/start-packs/web-mts/html/blocks/footer.html" afterPath="$PROJECT_DIR$/global/start-packs/web-mts/html/blocks/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global/start-packs/web-mts/html/full-page.html" afterPath="$PROJECT_DIR$/global/start-packs/web-mts/html/full-page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global/start-packs/web-tele2/html/index.html" afterPath="$PROJECT_DIR$/global/start-packs/web-tele2/html/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global/start-packs/web-tele2/html/index3.html" afterPath="$PROJECT_DIR$/global/start-packs/web-tele2/html/index3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global/start-packs/web-tele2/sass/_blocks/_btn.sass" afterPath="$PROJECT_DIR$/global/start-packs/web-tele2/sass/_blocks/_btn.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global/start-packs/web-tele2/sass/_blocks/_form.sass" afterPath="$PROJECT_DIR$/global/start-packs/web-tele2/sass/_blocks/_form.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global/start-packs/web-tele2/sass/_blocks/_page-header.sass" afterPath="$PROJECT_DIR$/global/start-packs/web-tele2/sass/_blocks/_page-header.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global/start-packs/web-tele2/sass/_blocks/_page.sass" afterPath="$PROJECT_DIR$/global/start-packs/web-tele2/sass/_blocks/_page.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global/start-packs/web-tele2/sass/_scaffolding.sass" afterPath="$PROJECT_DIR$/global/start-packs/web-tele2/sass/_scaffolding.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global/start-packs/web-tele2/sass/_vars.sass" afterPath="$PROJECT_DIR$/global/start-packs/web-tele2/sass/_vars.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/global/start-packs/web-tele2/sass/common.sass" afterPath="$PROJECT_DIR$/global/start-packs/web-tele2/sass/common.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megafon/gulpfile.js" afterPath="$PROJECT_DIR$/megafon/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mts/const/onlyForSrc/wap/body.v1.html" afterPath="$PROJECT_DIR$/mts/const/onlyForSrc/wap/body.v1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mts/gulpfile.js" afterPath="$PROJECT_DIR$/mts/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tele2/gulpfile.js" afterPath="$PROJECT_DIR$/tele2/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -76,8 +19,8 @@
       <file leaf-file-name="config.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/global/config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
-              <caret line="297" column="21" lean-forward="false" selection-start-line="297" selection-start-column="21" selection-end-line="297" selection-end-column="21" />
+            <state relative-caret-position="6237">
+              <caret line="297" column="8" lean-forward="false" selection-start-line="297" selection-start-column="8" selection-end-line="297" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -86,8 +29,8 @@
       <file leaf-file-name="zip.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/global/gulp-tasks/zip.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="63" column="23" lean-forward="false" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
+            <state relative-caret-position="278">
+              <caret line="64" column="29" lean-forward="false" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -96,9 +39,13 @@
       <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tele2/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="39" column="2" lean-forward="false" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
-              <folding />
+            <state relative-caret-position="819">
+              <caret line="67" column="2" lean-forward="false" selection-start-line="67" selection-start-column="2" selection-end-line="67" selection-end-column="2" />
+              <folding>
+                <marker date="1502549510146" expanded="true" signature="1742:1978" ph="{&quot;oss&quot;: oss...}" />
+                <marker date="1502549510146" expanded="true" signature="2003:2071" ph="{...}" />
+                <marker date="1502549510146" expanded="true" signature="2101:2181" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -130,8 +77,8 @@
         <option value="$PROJECT_DIR$/mts/topKachayFile_2/html/blocks/footer.html" />
         <option value="$PROJECT_DIR$/mts/topKachayFile_3/html/blocks/footer.html" />
         <option value="$PROJECT_DIR$/global/config.json" />
-        <option value="$PROJECT_DIR$/global/gulp-tasks/zip.js" />
         <option value="$PROJECT_DIR$/tele2/gulpfile.js" />
+        <option value="$PROJECT_DIR$/global/gulp-tasks/zip.js" />
       </list>
     </option>
   </component>
@@ -153,9 +100,10 @@
     <handled-path value="$PROJECT_DIR$/global/node_modules" />
     <handled-path value="$PROJECT_DIR$/megafon/node_modules" />
     <handled-path value="$PROJECT_DIR$/mts/node_modules" />
+    <handled-path value="$PROJECT_DIR$/node_modules" />
     <handled-path value="$PROJECT_DIR$/tele2/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-1513" />
     <option name="width" value="1546" />
     <option name="height" value="829" />
@@ -296,11 +244,12 @@
       <workItem from="1501862255873" duration="4936000" />
       <workItem from="1501922564903" duration="4816000" />
       <workItem from="1501928014550" duration="1973000" />
+      <workItem from="1502559061686" duration="118000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11725000" />
+    <option name="totallyTimeSpent" value="11843000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -312,7 +261,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1689" y="16" width="1698" height="1028" extended-state="6" />
+    <frame x="-1689" y="16" width="1698" height="1028" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19503331" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -372,6 +321,34 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/global/config.json">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6237">
+          <caret line="297" column="21" lean-forward="false" selection-start-line="297" selection-start-column="21" selection-end-line="297" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tele2/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="39" column="2" lean-forward="false" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
+          <folding>
+            <marker date="1502549510146" expanded="true" signature="1742:1978" ph="{&quot;oss&quot;: oss...}" />
+            <marker date="1502549510146" expanded="true" signature="2003:2071" ph="{...}" />
+            <marker date="1502549510146" expanded="true" signature="2101:2181" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/global/gulp-tasks/zip.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1323">
+          <caret line="63" column="23" lean-forward="false" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/global/config.json">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4788">
           <caret line="228" column="27" lean-forward="false" selection-start-line="228" selection-start-column="27" selection-end-line="228" selection-end-column="27" />
           <folding />
@@ -382,7 +359,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="17" column="35" lean-forward="false" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-          <folding />
+          <folding>
+            <marker date="1502549510146" expanded="true" signature="1742:1978" ph="{&quot;oss&quot;: oss...}" />
+            <marker date="1502549510146" expanded="true" signature="2003:2071" ph="{...}" />
+            <marker date="1502549510146" expanded="true" signature="2101:2181" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -558,24 +539,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tele2/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="39" column="2" lean-forward="false" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
-          <folding />
+        <state relative-caret-position="819">
+          <caret line="67" column="2" lean-forward="false" selection-start-line="67" selection-start-column="2" selection-end-line="67" selection-end-column="2" />
+          <folding>
+            <marker date="1502549510146" expanded="true" signature="1742:1978" ph="{&quot;oss&quot;: oss...}" />
+            <marker date="1502549510146" expanded="true" signature="2003:2071" ph="{...}" />
+            <marker date="1502549510146" expanded="true" signature="2101:2181" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/global/config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="297" column="21" lean-forward="false" selection-start-line="297" selection-start-column="21" selection-end-line="297" selection-end-column="21" />
+        <state relative-caret-position="6237">
+          <caret line="297" column="8" lean-forward="false" selection-start-line="297" selection-start-column="8" selection-end-line="297" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/global/gulp-tasks/zip.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="63" column="23" lean-forward="false" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
+        <state relative-caret-position="278">
+          <caret line="64" column="29" lean-forward="false" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
           <folding />
         </state>
       </provider>
