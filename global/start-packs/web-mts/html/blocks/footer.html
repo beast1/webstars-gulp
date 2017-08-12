@@ -1,8 +1,49 @@
 	</div>
 	<div id="footerText"></div>
-	<a href="#" id="backBtn">Вернуться</a>
+	<a href="%serviceURL" id="backBtn">Вернуться</a>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-	<script src="js/script.js"></script>
+	<style>
+		#subscr-name,
+		#subscr-price,
+		#subscr-msisdn,
+		.captcha-comment,
+		#captcha-container .f .arr,
+		#submit-container label,
+		#disclaimer-details,
+		#template-unplug-contentblock,
+		#template-caption,
+		#template-price {
+			display: none;
+		}
+
+		#template-caption-pilot {
+			display: block!important;
+		}
+	</style>
+
+	<script type="text/javascript">
+        var customFooter = document.getElementById("footerText");
+        var customBackBtn = document.getElementById("backBtn");
+
+        var mtsFooter = document.getElementById("template-caption-pilot");
+        var mtsForm = document.getElementById("subscr-form");
+        var mtsSubmit = document.getElementById("ButtonSubmit");
+
+        customFooter.appendChild(mtsFooter);
+
+        function insertAfter(elem, refElem) {
+            return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
+        }
+
+        insertAfter(customFooter, mtsForm);
+        insertAfter(customBackBtn, mtsSubmit);
+	</script>
+
+	<script type="text/javascript">
+        if (top === self) {
+        } else {
+            window.top.location = self.location;
+        }
+	</script>
 </body>
 </html>

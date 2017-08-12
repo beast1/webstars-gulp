@@ -14,7 +14,7 @@ var	oss            = "beeline",
 		localConfig 	 = require('../global/config.json').beeline,
 		defaultConfig  = require('../global/config.json').default,
 		sequreConfig   = require('D:/sequre.json').tele2,
-		project 			 = localConfig.projects[localConfig.exec],
+		project 			 = localConfig.projects[localConfig.controls.exec],
 		app 					 = project.name,
 		build  				 = defaultConfig.dirs.build;
 
@@ -43,6 +43,7 @@ gulp.task('del-build', getStaffTask('del-build'));
 gulp.task('zip-src', ['del-release'], getStaffTask('zip-src'));
 
 gulp.task('st', getTask('status'));
+gulp.task('go', getTask('switch'));
 
 gulp.task('sass', getTask('sass'));
 gulp.task('html', ['sass'], getTask('html'));

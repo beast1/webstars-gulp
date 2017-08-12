@@ -3,9 +3,9 @@
   <header class="page-header">
     <div class="page-header__container">
       <table class="page-header__payment-info">
+        <tr><td>Услуга: подписка на сервис "%serviceURL"</td></tr>
         <%= request.getSession().getAttribute("body")%>
       </table>
-      <img class="page-header__adult" src="@@include('base64/icon-adult.min.html')" alt="adult alert" />
     </div>
   </header>
   <form class="alert" name="chng_frm" method="get" action='<%= (String) request.getSession().getAttribute("urlLocation")%>'>
@@ -21,7 +21,7 @@
   <form class="form" name="frm" method="get" action='<%= (String) request.getSession().getAttribute("urlLocation")%>" onkeypress="if (event.keyCode == 13)
     return false;'>
     <div class="form__row">
-      <div class="form__item">
+      <div class="form__item  form__item_align_center">
         <label class="form__label" for="sms">Введите полученный код:</label>
         <input type=hidden name=resultForm value="">
         <input class="form__input" type="text" name="sms" id="sms" size="10" value='' placeholder="SMS-код" data-required />
@@ -30,11 +30,11 @@
         <a href="#" class="resend" onclick="javascript:frm.resultForm.value = 'repeat_sms_code'";>Отправить повторно</a>
       </div>
     </div>
-    <div class="btn-list  btn-list_vertical">
+    <div class="btn-list  btn-list_vertical  btn-list_centered">
       <input type=hidden name=ServiceId value='<%= (String) request.getSession().getAttribute("serviceId")%>'>
       <input type=hidden name=ButtonOK valuе="">
       <button class="btn  btn_submit" type="submit" onclick="javascript:frm.ButtonOK.value = 'OK'";
-      javascript:frm.resultForm.value = 'OK'">Подтвердить</button>
+      javascript:frm.resultForm.value = 'OK'">Подписаться</button>
       <a class="btn  btn_cencel"
         href="#"
         onclick="javascript:frm.ButtonOK.setAttribute('name', 'ButtonCancel');
@@ -43,6 +43,7 @@
         javascript:frm.submit();"
       >Отмена</a>
     </div>
+    @@include('../../const/required/web/index/footer.html')
   </form>
 </div>
 @@include('../../const/required/web/index/bottom.html')

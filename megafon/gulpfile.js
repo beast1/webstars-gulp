@@ -13,7 +13,7 @@ var	oss            = "megafon",
 		globalConfig   = require('../global/config.json').global,
 		localConfig 	 = require('../global/config.json').megafon,
 		defaultConfig  = require('../global/config.json').default,
-		project 			 = localConfig.projects[localConfig.exec],
+		project 			 = localConfig.projects[localConfig.controls.exec],
 		app 					 = project.name,
 		build  				 = defaultConfig.dirs.build;
 
@@ -40,6 +40,7 @@ gulp.task('del-release', getStaffTask('del-release'));
 gulp.task('del-build', getStaffTask('del-build'));
 
 gulp.task('st', getTask('status'));
+gulp.task('go', getTask('switch'));
 
 gulp.task('sass', getTask('sass'));
 gulp.task('zip', ['del-release'], getTask('zip'));

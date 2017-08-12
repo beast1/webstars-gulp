@@ -10,37 +10,48 @@
 	background: none
 
 	&_submit
-		padding: .3em .5em
+		padding: .2em 1em
+		border:  .25em solid $btn-submit-border-color
 		
-		font-size: 1.7em	
+		color: $btn-submit-color
+		font-size: 1.8em	
 		white-space: nowrap
+		text-shadow: 2px 1px 2px fade-out($black, .8)
 
-		background-color: $color-main
-		border-radius: 5px
-		box-shadow: 13px 18px 47px 1px rgba(0, 0, 0, 0.71)
+		background-color: $btn-submit-bg
+		border-radius: 60px
+		box-shadow: $btn-submit-shadow
 
 	&_cencel
-		padding: .3em .8em
-		margin-top: 1em
+		padding: .4em 2em
+		border: 0px solid $btn-cencel-border-color
+		margin-top: 1.5em
+		margin-bottom: 1em	
+		
+		color: $btn-cencel-color
+		font-size: 1.5em	
 
-		font-size: 1.4em	
-
-		background-color: $color-cencel
-		border-radius: 8px
+		background-color: $btn-cencel-bg
+		box-shadow: $btn-cencel-shadow
+		border-radius: 20px
 
 	a
 		color: inherit
 		text-decoration: none
 
 	&__icon
-		width: 1em / 100 * 131.25
-		width: calc(1em / 100 * 131.25)
-		height: 1em
-		
 		background-size: contain
 		background-position: center center
 		background-repeat: no-repeat
-		background-image: url("../img/icon-newspaper.png")
 
-		&_left
-			margin-right: .2em
+		&_submit
+			width: $btn-submit-icon-width
+			height: $btn-submit-icon-height
+
+			background-image: $btn-submit-icon-url
+
+		&_submit.btn__icon_left
+			margin-right: $btn-submit-icon-margin
+
+		&_submit.btn__icon_right
+			margin-left: $btn-submit-icon-margin

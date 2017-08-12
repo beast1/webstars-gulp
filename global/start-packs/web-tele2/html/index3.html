@@ -1,39 +1,31 @@
 @@include('../../const/required/web/index3/top.html')
-    <div class="page">
-      <header class="page-header">
-        <div class="page-header__container">
-          <table class="page-header__payment-info">
-            <%= request.getSession().getAttribute("body")%>
-          </table>
-          <img class="page-header__adult" src="@@include('base64/icon-adult.min.html')" alt="adult alert" />
-        </div>
-      </header>
-      <h1 class="page__title">Подтверждение регистрации</h1>
-      <form name="form" class="form" id="form" method="get" action='<%= (String) request.getSession().getAttribute("urlLocation")%>" onsubmit="return prepareForm(this);'>
-        <div class="form__row">
-          <div class="form__item">
-            <label class="form__label">Укажите свой номер телефона:</label>
-            <input type=hidden name=resultForm value="">
-            <input class="form__input" type="text" name="msisdn_formatted" placeholder="+7 (___) ___-__-__" data-validate="phone" data-required="true" value='<%=request.getSession().getAttribute("msisdn_cp")%>' />
-            <input type=hidden name="msisdn" value="">
-          </div>
-        </div>
-        <div class="btn-list  btn-list_vertical">
-          <input type=hidden name="msisdn_cp" value='<%= (String) request.getSession().getAttribute("msisdn_cp")%>'>
-          <input type=hidden name="ButtonOK" valuе="">
-          <input type=hidden name="ServiceId" value='<%= (String) request.getSession().getAttribute("serviceId")%>'>
-          <button class="btn  btn_submit" type="submit" onclick="javascript:frm.ButtonOK.value = 'OK';
-          javascript:frm.msisdn_formatted.setAttribute('disabled', true);
-          javascript:frm.resultForm.value = 'OK'" value="OK">Подтвердить</button>
-          <a class="btn  btn_cencel"
-            href="#"
-            onclick="javascript:frm.ButtonOK.setAttribute('name', 'ButtonCancel');
-            javascript:frm.ButtonCancel.value = 'Cancel';
-            javascript:frm.resultForm.value = 'OK';
-            javascript:frm.msisdn_formatted.setAttribute('disabled', true);
-            javascript:frm.submit();"
-          >Отмена</a>
-        </div>
-      </form>
+<div class="page">
+  <h1 class="page__title">Подтверждение регистрации</h1>
+  <form name="form" class="form" id="form" method="get" action='<%= (String) request.getSession().getAttribute("urlLocation")%>" onsubmit="return prepareForm(this);'>
+    <div class="form__row">
+      <div class="form__item  form__item_align_center">
+        <label class="form__label">Укажите свой номер телефона:</label>
+        <input type=hidden name=resultForm value="">
+        <input class="form__input" type="text" name="msisdn_formatted" placeholder="+7 (___) ___-__-__" data-validate="phone" data-required="true" value='<%=request.getSession().getAttribute("msisdn_cp")%>' />
+        <input type=hidden name="msisdn" value="">
+      </div>
     </div>
-    @@include('../../const/required/web/index3/bottom.html')
+    <div class="btn-list  btn-list_vertical  btn-list_centered">
+      <input type=hidden name="msisdn_cp" value='<%= (String) request.getSession().getAttribute("msisdn_cp")%>'>
+      <input type=hidden name="ButtonOK" valuе="">
+      <input type=hidden name="ServiceId" value='<%= (String) request.getSession().getAttribute("serviceId")%>'>
+      <button class="btn  btn_submit" type="submit" onclick="javascript:frm.ButtonOK.value = 'OK';
+      javascript:frm.msisdn_formatted.setAttribute('disabled', true);
+      javascript:frm.resultForm.value = 'OK'" value="OK">Подтвердить</button>
+      <a class="btn  btn_cencel"
+        href="#"
+        onclick="javascript:frm.ButtonOK.setAttribute('name', 'ButtonCancel');
+        javascript:frm.ButtonCancel.value = 'Cancel';
+        javascript:frm.resultForm.value = 'OK';
+        javascript:frm.msisdn_formatted.setAttribute('disabled', true);
+        javascript:frm.submit();"
+      >Отмена</a>
+    </div>
+  </form>
+</div>
+@@include('../../const/required/web/index3/bottom.html')

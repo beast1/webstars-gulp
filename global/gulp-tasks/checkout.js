@@ -1,8 +1,3 @@
-/*
-Перенести getFiles-tele2
-Добавить два клона
-Протестировать
-*/
 "use strict";
 
 module.exports = function (gulp, p, s, m) {
@@ -12,19 +7,25 @@ module.exports = function (gulp, p, s, m) {
 	if (s.oss === 'tele2') {
 		if (isWap === 'false') {
 			if (isProto === 'true') {
-				var clone = s.project.clones[s.localConfig.controls.execClone];
-				
 				return function() {
-					var appendVars = gulp.src([`${s.app}/clones/${clone}/_vars.${styleExt}`])
+					var clone = s.project.clones[s.localConfig.controls.execClone];
+
+					console.log(`---------- Текущий прототип: ${s.project.name}[${s.project.ticket}].v${s.project.version}`);
+					console.log(`---------- Текущий клон: ${clone.name}[${clone.ticket}]`);
+
+					var appendVars = gulp.src([`${s.app}/clones/${clone.name}/_vars.${styleExt}`])
 						.pipe(gulp.dest(`${s.app}/${styleExt}`));
 
-					var appendImg = gulp.src([`${s.app}/clones/${clone}/img/*.{png,jpg,jpeg,svg,gif}`])
+					var appendImg = gulp.src([`${s.app}/clones/${clone.name}/img/*.{png,jpg,jpeg,svg,gif}`])
 						.pipe(gulp.dest(`${s.app}/img`));
 
-					var appendPreview = gulp.src([`${s.app}/clones/${clone}/preview/*.{png,jpg,jpeg}`])
+					var appendPreview = gulp.src([`${s.app}/clones/${clone.name}/preview/*.{png,jpg,jpeg}`])
 						.pipe(gulp.dest(`${s.app}/preview`));
+
+					var appendData = gulp.src([`${s.app}/clones/${clone.name}/privatData.json`])
+						.pipe(gulp.dest(`${s.app}`));
 				}
 			}
 		}
 	}
-};
+}

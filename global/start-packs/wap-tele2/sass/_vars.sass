@@ -15,25 +15,65 @@ $gray-lighter:      hsl(0, 0%, 80%)
 $gray-lightest:     hsl(0, 0%, 90%)
 $white:             hsl(0, 0%, 100%)
 
-$color-main:        #ff0000
+$color-main:        #495af6
 $color-success:     #0f69b6
 $color-danger:      #b60000
 $color-warning:     hsl(35, 84%, 62%)
 $color-cencel: 		  #464646
 
-$text-color:        $white
+$text-color:        $black
 $text-color--muted: $gray
-$body-bg:           #3a6075
 $border-color:      $gray-light
 
-//links colors
+//COMPONENTS controls
+
+//links
 $link-color:        $text-color
 $link-color--hover: fade-out($link-color, .3)
 
-//btn colors
-$btn-background: #ff0000
-$bgn-color: $text-color
-$btn-border-color: #ff0000
+//body
+$body-bg-color: #d5d8dd
+$body-bg-img: none
+//END body
+
+//page-header
+$page-header-color: $text-color
+$page-header-bg-color: $body-bg-color
+$page-header-bg-img: none
+//END page-header
+
+//page-main
+$page-main-color: $text-color
+$page-main-bg-color: transparent
+$page-main-bg-img: url("../img/bg-body.jpg")
+//END page-main
+
+//page-footer
+$page-footer-color: $text-color
+$page-footer-bg-color: $body-bg-color
+$page-footer-bg-img: none
+//END page-footer
+
+//btn_submit
+$btn-submit-bg: #d5d8dd
+$btn-submit-color: #626262
+$btn-submit-border-color: rgba(0, 0, 0, 0.15)
+$btn-submit-shadow: 9px 11px 32px rgba(0, 0, 0, 0.3), 1px 2px 6px rgba(0, 0, 0, 0.46)
+
+$btn-submit-icon-url: url("../img/icon-download.png")
+$btn-submit-icon-height: 1.6em
+$btn-submit-icon-width: 1.6em
+$btn-submit-icon-margin: .4em
+//END btn_submit
+
+//btn_cencel
+$btn-cencel-bg: #7b7b7b
+$btn-cencel-color: $white
+$btn-cencel-border-color: $color-cencel
+$btn-cencel-shadow: none
+//END btn_cencel
+
+//END COMPONENTS controls
 
 //breakepoints
 $mp: 920px

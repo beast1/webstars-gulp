@@ -1,8 +1,19 @@
 .page-main
 	display: flex
 	flex-direction: column
-	justify-content: center
+	justify-content: flex-end
 	align-items: center
 	height: 100%
 	margin: 0	
+
+	color: $page-main-color
+	
+	background-color: $page-main-bg-color
+	background-repeat: no-repeat	
+	background-size: cover
+	background-position: center -69px
+	background-image: $page-main-bg-img
+
+	@media (orientation: landscape)
+		background-image: none
 

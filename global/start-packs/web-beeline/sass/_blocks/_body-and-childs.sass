@@ -1,0 +1,50 @@
+body 
+	box-sizing: border-box
+	display: flex
+	flex-direction: column
+	align-items: center
+	margin: 0
+	height: 100%
+	padding: 1rem
+
+	font-family: $default-font
+	
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center center
+	background-image: url("../img/bg-body.jpg")
+
+.logo
+	display: flex
+	width: 100%
+	padding: .5em 0 .7em
+	margin-bottom: .5em
+
+	&__img
+		display: inline-block
+		margin: 0 auto
+		
+		color: $white
+
+.page
+	max-width: 42em
+	width: 100%
+	padding: 1em
+	margin: auto
+
+	font-size: 1rem
+
+	background-color: $white
+	border-radius: 6px
+	overflow: hidden
+
+	&__title 
+		margin: 0
+		margin-bottom: .8rem
+		
+		color: $color-main
+		font-size: 1.7em
+		line-height: 1
+		font-weight: 700
+		text-transform: uppercase
+		text-align: center

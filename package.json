@@ -1,0 +1,24 @@
+{
+  "name": "webstars.origin",
+  "version": "0.0.1",
+  "description": "Объеденяем четыре модуля в один",
+  "main": "index.js",
+  "scripts": {
+    "cg": "node D:/webstars/global/node-tasks/switch.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beast1/webstars-gulp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beast1/webstars-gulp/issues"
+  },
+  "homepage": "https://github.com/beast1/webstars-gulp#readme",
+  "devDependencies": {
+    "jsonfile": "^3.0.1",
+    "prompt": "^1.0.0"
+  }
+}

@@ -4,6 +4,7 @@
   "description": "",
   "main": "new.js",
   "scripts": {
+    "cg": "node node-tasks/switch.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

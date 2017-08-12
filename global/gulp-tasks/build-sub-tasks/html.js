@@ -42,7 +42,16 @@ module.exports = function (gulp, p, s, m) {
 		// console.log(`---------- Инлайново вставим стили в html`);
 		// console.log(`-ВАЖНО!- Подключать стили только так: ${cssLink}`);
 
-		var privatData = require(`D:/webstars/${s.oss}/${s.app}/privatData.json`);
+		var getPrivatData = function() {
+			if (s.project.data === undefined) {
+				return require(`D:/webstars/${s.oss}/${s.app}/privatData.json`)
+			} else {
+				return s.project.data
+			}
+		}
+ 
+		// var privatData = require(`D:/webstars/${s.oss}/${s.app}/privatData.json`);
+		var privatData = getPrivatData();
 
 		var buildHtml = gulp.src([
 				`${s.app}/*.html`
@@ -57,6 +66,9 @@ module.exports = function (gulp, p, s, m) {
 			}))
 			// Подставим приват-параметры
 			.pipe(p.replace('%serviceURL', `${privatData.serviceURL}`))
+			.pipe(p.replace('%btnText', `${privatData.btnText}`))
+			// Обратная совместимость до 08.08
+			// .pipe(p.replace('%serviceURL', `${privatData.serviceName}`))
 			.pipe(p.replace('%offer', `${privatData.offer}`))
 			// Убираем комментарии
 			.pipe(p.replace('<!--D', ''))
@@ -115,7 +127,7 @@ module.exports = function (gulp, p, s, m) {
 		var data = require('D:/webstars/megafon/const/data.json');
 		for (let i = 0; i < data.length; i++) {
 			var buildHtml = gulp.src(`${s.app}/${data[i].page}.html`)
-				.pipe(p.replace('href="css/', 'href="'))
+				.pipe(p.replace('href="css/common.css', 'href="style.css'))
 				.pipe(p.replace('img/', ''))
 				.pipe(p.rename({
 					basename: `${data[i].rusPage}`
